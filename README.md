@@ -10,3 +10,10 @@ But at the same time, the course program does not include a lot of important thi
 Anyway, I find it very helpful.
 
 
+
+
+Screenshots of the finished course
+
+ TEST1
+
+	- https://classroom.udacity.com/courses/ud595  - Linux Command Line Basics
