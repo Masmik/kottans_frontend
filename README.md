@@ -1,6 +1,6 @@
 # kottans_frontend
 
- #### **Impressions**
+ ## **Task 0**
 
 It was a great opportunity to refresh knowledge and get experience with a pull request, its something new for me. 
 Sometimes during the course, i thought - cool, i got it, but when i need to answer the questioning doubt crept in. Did I really get it?
@@ -12,7 +12,7 @@ But at the same time, the course program does not include a lot of important thi
 Anyway, I find it very helpful.
 
 
- ### **TEST1**
+ ## **Task 1**
  
- * (task_1/Configuring_Linux_Web_Servers.png)
+ 1. [](https://github.com/Masmik/kottans_frontend/blob/master/task_1/Networking_for_Web_Developers.png)
 
