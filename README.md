@@ -28,6 +28,9 @@ Anyway, I find it very helpful.
    
 1. What is Version Control
  ![What is Version Control](task_2/Version_Control.png?raw=true "Optional Title")
+ 
+2. GitHub & Collaboration
+ ![GitHub & Collaboration](task_2/GitHub_Collaboration.png?raw=true "Optional Title")
   
  
  
