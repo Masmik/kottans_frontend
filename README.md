@@ -27,22 +27,25 @@ So this lesson really taught me a lot.
 
  
 1. Linux Command Line Basics
-  ![Linux_Command_Line_Basics_End](task_1/Linux_Command_Line_Basics_End.png?raw=true "Optional Title")
+![Linux_Command_Line_Basics_End](task_1/Linux_Command_Line_Basics_End.png?raw=true "Optional Title")
 
 2. Configuring Linux Web Servers
-  ![Configuring Linux_Web_Servers](task_1/Configuring_Linux_Web_Servers.png?raw=true "Optional Title")
+![Configuring Linux_Web_Servers](task_1/Configuring_Linux_Web_Servers.png?raw=true "Optional Title")
   
 3. Networking for Web Developers  
-  ![Networking_for_Web_Developers](task_1/Networking_for_Web_Developers.png?raw=true "Optional Title")
+![Networking_for_Web_Developers](task_1/Networking_for_Web_Developers.png?raw=true "Optional Title")
   
   
  ## **Task 2**
+ 
+The first course was very boring and was repeating the same thing from the task 0 several times. It's not cool, really.
+But from the second course, I discovered a few new features, such as rebase, an option squash and the best practice of naming a point to the source repository - upstream.
    
 1. What is Version Control
- ![What is Version Control](task_2/Version_Control.png?raw=true "Optional Title")
+![What is Version Control](task_2/Version_Control.png?raw=true "Optional Title")
  
 2. GitHub & Collaboration
- ![GitHub & Collaboration](task_2/GitHub_Collaboration.png?raw=true "Optional Title")
+![GitHub & Collaboration](task_2/GitHub_Collaboration.png?raw=true "Optional Title")
   
  
  
