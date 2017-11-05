@@ -14,6 +14,18 @@ Anyway, I find it very helpful.
 
  ## **Task 1**
  
+ 
+I'm a seasoned terminal fighter))). So the course Linux Command Line Basics was very familiar for me and I passed it repeating what I knew.
+The courses Configuring Linux Web Servers and Networking for Web Developers forced me to start really thinking about it and revised the material several times to clearly understood.
+I have seen a similar material in Bauman lecture of OSI model.
+
+But the biggest challenge for me was working with RSA algorithm. I knew about cryptosystems from the Harvard course CS50. It was a challenge only because of my inattention. Instead of authorized_keys I created an authorized_key (without s in the end) file and spent a lot of hours to understand why my ssh keys didn't work. I investigated this problem, so it caused me repeat all the steps several times,  read and researched a lot of technical articles, comments on stack overflow. 
+
+Maybe I spent less time to understand where I made mistake if I did not disable login via password and leave input through keys that did not work.
+
+So this lesson really taught me a lot.
+
+ 
 1. Linux Command Line Basics
   ![Linux_Command_Line_Basics_End](task_1/Linux_Command_Line_Basics_End.png?raw=true "Optional Title")
 
