@@ -47,5 +47,10 @@ But from the second course, I discovered a few new features, such as rebase, an 
 2. GitHub & Collaboration
 ![GitHub & Collaboration](task_2/GitHub_Collaboration.png?raw=true "Optional Title")
   
+  
+  ## **Task 3**
+  
+  1. Intro to HTML & CSS
+  ![Intro to HTML & CSS](task_3/Intro_to_HTML_CSS.png?raw=true "Optional Title")
  
  
