@@ -62,6 +62,8 @@ But from the second course, I discovered a few new features, such as rebase, an 
   The most useful for me was to practice in responsive patterns.
   Responsive Tables its also something new for me.
   
+  Flexbox Froggy I already passed and Grid Garden game - not bad. I like this kind of games.
+  
   1. Responsive Web Design Fundamentals
   ![Responsive Web Design Fundamentals](task_4/Responsive_Web_Design_Fundamentals.png?raw=true "Optional Title")
  
