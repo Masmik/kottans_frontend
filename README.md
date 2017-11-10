@@ -58,7 +58,7 @@ But from the second course, I discovered a few new features, such as rebase, an 
   
   ## **Task 4**
   
-  I found out some new fitches from this course.
+  I learned some new fitches from this course.
   The most useful for me was to practice in responsive patterns.
   Responsive Tables its also something new for me.
   
