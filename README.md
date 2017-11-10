@@ -58,8 +58,8 @@ But from the second course, I discovered a few new features, such as rebase, an 
   
   ## **Task 4**
   
-  I knew some new fitches from this course.
-  The most useful for me was to practice in responsive patterns. I already use some of them but don\`t know how do they call.
+  I found out some new fitches from this course.
+  The most useful for me was to practice in responsive patterns.
   Responsive Tables its also something new for me.
   
   1. Responsive Web Design Fundamentals
