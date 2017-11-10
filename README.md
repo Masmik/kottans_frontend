@@ -50,7 +50,19 @@ But from the second course, I discovered a few new features, such as rebase, an 
   
   ## **Task 3**
   
-  1. Intro to HTML & CSS
+  Repetition is also a good idea
+  New experience - find the way how to reinstall git prompt.
+  
+  * Intro to HTML & CSS
   ![Intro to HTML & CSS](task_3/Intro_to_HTML_CSS.png?raw=true "Optional Title")
+  
+  ## **Task 4**
+  
+  I knew some new fitches from this course.
+  The most useful for me was to practice in responsive patterns. I already use some of them but don\`t know how do they call.
+  Responsive Tables its also something new for me.
+  
+  1. Responsive Web Design Fundamentals
+  ![Responsive Web Design Fundamentals](task_4/Responsive_Web_Design_Fundamentals.png?raw=true "Optional Title")
  
  
