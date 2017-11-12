@@ -46,6 +46,11 @@ So this lesson really taught me a lot.
  
 The first course was very boring and was repeating the same thing from the task 0 several times. It's not cool, really.
 But from the second course, I discovered a few new features, such as rebase, an option squash and the best practice of naming a point to the source repository - upstream.
+
+#### **Extra materials**
+
+The first article includes a lot of tips how not to go mad and not grow old correcting mistakes.
+
    
 1. What is Version Control
 ![What is Version Control](task_2/Version_Control.png?raw=true "Optional Title")
