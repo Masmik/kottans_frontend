@@ -49,7 +49,7 @@ But from the second course, I discovered a few new features, such as rebase, an 
 
 #### **Extra materials**
 
-The first article includes a lot of tips how not to go mad and not grow old correcting mistakes.
+The first and the second articles includes a lot of tips how not to go mad and not grow old correcting mistakes.
 
    
 1. What is Version Control
