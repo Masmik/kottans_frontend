@@ -23,6 +23,12 @@ But the biggest challenge for me was working with RSA algorithm. I knew about cr
 
 Maybe I spent less time to understand where I made mistake if I did not disable login via password and leave input through keys that did not work.
 
+#### **Extra materials**
+
+In the first article was written a plan for studying the Python. I think, the general idea of this article is that before starting studying you need to have a general plan that will already be adjusted in the process. It will help to see the progress and understand the way how to move on.
+
+But the second article was really very sensible. Earlier I heard few words about WebSockets and nothing about HTTP2/SSE, after reading I understood the main principles, differences between them. And want to try to create and establish WebSockets connection.
+
 So this lesson really taught me a lot.
 
  
