@@ -27,10 +27,15 @@ Maybe I spent less time to understand where I made mistake if I did not disable 
 
 In the first article was written a plan for studying the Python. I think, the general idea of this article is that before starting studying you need to have a general plan that will already be adjusted in the process. It will help to see the progress and understand the way how to move on.
 
-But the second article was really very sensible. Earlier I heard a few words about WebSockets and nothing about HTTP2/SSE, after reading I understood the main principles, differences between them. And want to try to create and establish WebSockets connection.
+But the second article was really very sensible. Earlier I heard a few words about WebSockets and nothing about HTTP2/SSE, after reading I understood the main principles, differences between them. 
 
 So this lesson really taught me a lot.
 
+
+#### **TO DO**
+
+- [ ] Try to create and establish WebSockets connection
+- [ ] Try to install Linux, nginx, MySQL, PHP (LEMP) stack
  
 1. Linux Command Line Basics
 ![Linux_Command_Line_Basics_End](task_1/Linux_Command_Line_Basics_End.png?raw=true "Optional Title")
@@ -63,6 +68,15 @@ The first and the second articles includes a lot of tips how not to go mad and n
   
   Repetition is also a good idea
   New experience - find the way how to reinstall git prompt.
+  
+  #### **Extra materials**
+  
+  I like htmlacadamy, especially the part where it is necessary to play with Pandalf. I passed this course before but during     this time there were new tasks. It was very interesting to get acquainted with SVG, try to draw the most primitive things.
+  
+  From the hexlet course, i found out about the Open Graph protocol, make out how it works.
+  
+  #### **TO DO**
+  - [ ] Pass the freecodecamp.org
   
   * Intro to HTML & CSS
   ![Intro to HTML & CSS](task_3/Intro_to_HTML_CSS.png?raw=true "Optional Title")
