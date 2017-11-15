@@ -37,13 +37,13 @@ So this lesson really taught me a lot.
 - [ ] Try to create and establish WebSockets connection
 - [ ] Try to install Linux, nginx, MySQL, PHP (LEMP) stack
  
-1. Linux Command Line Basics
+- Linux Command Line Basics
 ![Linux_Command_Line_Basics_End](task_1/Linux_Command_Line_Basics_End.png?raw=true "Optional Title")
 
-2. Configuring Linux Web Servers
+- Configuring Linux Web Servers
 ![Configuring Linux_Web_Servers](task_1/Configuring_Linux_Web_Servers.png?raw=true "Optional Title")
   
-3. Networking for Web Developers  
+- Networking for Web Developers  
 ![Networking_for_Web_Developers](task_1/Networking_for_Web_Developers.png?raw=true "Optional Title")
   
   
@@ -57,10 +57,10 @@ But from the second course, I discovered a few new features, such as rebase, an 
 The first and the second articles includes a lot of tips how not to go mad and not grow old correcting mistakes.
 
    
-1. What is Version Control
+- What is Version Control
 ![What is Version Control](task_2/Version_Control.png?raw=true "Optional Title")
  
-2. GitHub & Collaboration
+- GitHub & Collaboration
 ![GitHub & Collaboration](task_2/GitHub_Collaboration.png?raw=true "Optional Title")
   
   
@@ -89,7 +89,13 @@ The first and the second articles includes a lot of tips how not to go mad and n
   
   Flexbox Froggy I already passed and Grid Garden game - not bad. I like this kind of games.
   
-  1. Responsive Web Design Fundamentals
+  - Responsive Web Design Fundamentals
   ![Responsive Web Design Fundamentals](task_4/Responsive_Web_Design_Fundamentals.png?raw=true "Optional Title")
+  
+  
+    ## **Task 5**
+    
+  - Intro to JS
+  ![Intro to JS](task_5/Intro_to_JS.png?raw=true "Optional Title")
  
  
