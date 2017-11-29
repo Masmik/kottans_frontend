@@ -97,5 +97,12 @@ The first and the second articles includes a lot of tips how not to go mad and n
     
   - Intro to JS
   ![Intro to JS](task_5/Intro_to_JS.png?raw=true "Optional Title")
+  
+   ## **Task 6**
+   
+   - Object Oriented JS
+     ![Object Oriented JS](task_6/Object_Oriented_JS.png?raw=true "Optional Title")
+     
+   - ![Frogger game](https://github.com/Masmik/frontend-nanodegree-arcade-game)
  
  
