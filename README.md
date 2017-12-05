@@ -87,7 +87,15 @@ The first and the second articles includes a lot of tips how not to go mad and n
   The most useful for me was to practice in responsive patterns.
   Responsive Tables its also something new for me.
   
+    #### **Extra materials**
+  
   Flexbox Froggy I already passed and Grid Garden game - not bad. I like this kind of games.
+  I read about Specificity earlier but going through assignments I caught myself several times on doing mistakes with pseudo-   classes.
+  
+  On the article 11 things, I learned reading the flexbox spec I concluded then I really need to learn and practice in        flexbox.
+  
+    #### **TO DO**
+   - [ ] Practice in flexbox
   
   - Responsive Web Design Fundamentals
   ![Responsive Web Design Fundamentals](task_4/Responsive_Web_Design_Fundamentals.png?raw=true "Optional Title")
