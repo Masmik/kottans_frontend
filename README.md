@@ -103,6 +103,13 @@ The first and the second articles includes a lot of tips how not to go mad and n
   
     ## **Task 5**
     
+   I really like this course. Guys explained so simply and understandably and a lot of tasks forced not only listen but call  to mind and sometimes get angry when something is going wrong.
+   
+    #### **TO DO**
+    
+   - [ ] Algorithms
+   - [ ] Algorithms, Part I
+    
   - Intro to JS
   ![Intro to JS](task_5/Intro_to_JS.png?raw=true "Optional Title")
   
