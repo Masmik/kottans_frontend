@@ -118,12 +118,18 @@ The first and the second articles includes a lot of tips how not to go mad and n
    - Object Oriented JS
      ![Object Oriented JS](task_6/Object_Oriented_JS.png?raw=true "Optional Title")
      
-   - ![Frogger game](https://github.com/Masmik/frontend-nanodegree-arcade-game)
+   - [Frogger game](https://github.com/Masmik/frontend-nanodegree-arcade-game)
    
       ## **Task 7**
       
   - Offline Web Applications
   ![Offline Web Applications](task_7/Offline_Web_Applications.png?raw=true "Optional Title")
+  
+     ## **Task 8**
+     
+   - Memory Pair Game
+   - [Memory Pair Game](https://github.com/Masmik/kottans_frontend/tree/master/task_8/memory_game)
+   
   
  
  
