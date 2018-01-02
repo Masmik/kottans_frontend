@@ -127,7 +127,6 @@ The first and the second articles includes a lot of tips how not to go mad and n
   
      ## **Task 8**
      
-   - Memory Pair Game
    - [Memory Pair Game](https://github.com/Masmik/kottans_frontend/tree/master/task_8/memory_game)
    
   
