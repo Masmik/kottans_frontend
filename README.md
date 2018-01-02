@@ -87,13 +87,28 @@ The first and the second articles includes a lot of tips how not to go mad and n
   The most useful for me was to practice in responsive patterns.
   Responsive Tables its also something new for me.
   
+    #### **Extra materials**
+  
   Flexbox Froggy I already passed and Grid Garden game - not bad. I like this kind of games.
+  I read about Specificity earlier but going through assignments I caught myself several times on doing mistakes with pseudo-   classes.
+  
+  On the article 11 things, I learned reading the flexbox spec I concluded then I really need to learn and practice in        flexbox.
+  
+    #### **TO DO**
+   - [ ] Practice in flexbox
   
   - Responsive Web Design Fundamentals
   ![Responsive Web Design Fundamentals](task_4/Responsive_Web_Design_Fundamentals.png?raw=true "Optional Title")
   
   
     ## **Task 5**
+    
+   I really like this course. Guys explained so simply and understandably and a lot of tasks forced not only listen but call  to mind and sometimes get angry when something is going wrong.
+   
+    #### **TO DO**
+    
+   - [ ] Algorithms
+   - [ ] Algorithms, Part I
     
   - Intro to JS
   ![Intro to JS](task_5/Intro_to_JS.png?raw=true "Optional Title")
@@ -104,5 +119,11 @@ The first and the second articles includes a lot of tips how not to go mad and n
      ![Object Oriented JS](task_6/Object_Oriented_JS.png?raw=true "Optional Title")
      
    - ![Frogger game](https://github.com/Masmik/frontend-nanodegree-arcade-game)
+   
+      ## **Task 7**
+      
+  - Offline Web Applications
+  ![Offline Web Applications](task_7/Offline_Web_Applications.png?raw=true "Optional Title")
+  
  
  
