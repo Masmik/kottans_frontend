@@ -8,15 +8,16 @@
   margin: 0 auto; }
   .wrapper h1 {
     text-align: center;
-    padding-top: 20px;
+    padding-top: 2%;
     font-family: 'Open Sans', sans-serif;
     font-size: 36px;
-    padding-bottom: 20px;
+    padding-bottom: 2%;
     color: #252d40;
     font-weight: 600; }
   .wrapper .cards-container {
     cursor: pointer;
-    max-width: 880px; }
+    max-width: 880px;
+    margin: 0 auto; }
   .wrapper .card {
     float: left;
     margin: 10px;
