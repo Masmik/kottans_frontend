@@ -133,6 +133,8 @@ The first and the second articles includes a lot of tips how not to go mad and n
      
    - Sources https://github.com/Masmik/kottans_frontend/tree/master/task_8/memory_game
    
-  
- 
+    ## **Task 9**
+    
+   - Website_Performance_Optimization
+    ![Website Performance Optimization](task_9/Website_Performance_Optimization.png?raw=true "Optional Title")
  
