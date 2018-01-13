@@ -1,0 +1,10 @@
+.container {
+  padding: 200px 430px; }
+  .container #city-search {
+    width: 400px;
+    height: 30px; }
+  .container #getWeather {
+    border: 1px solid black;
+    padding: 8px; }
+
+/*# sourceMappingURL=main.css.map */
