@@ -6,9 +6,10 @@
     <title>Weather app</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/skycons/1396634940/skycons.min.js'></script>
     <script src="js/weather.js"></script>
 </head>
 <body>
@@ -40,24 +41,46 @@
         <button class="searchWeather__button" id="getWeather">Search</button>
     </div>
 
-    <div class="currentCityWeather">
-        <h2 class="currentCityName">Kyiv</h2>
-        <h3 class="currentRegion">Ukraine</h3>
-        <section class="weatherCard">
+    <section class="currentCityWeather">
+        <h2 class="currentCityName"></h2>
+        <h3 class="currentRegion"></h3>
+
+        <div class="currentDate">
+            <span class="date"></span>
+        </div>
+        <div class="weatherCard">
             <div class="weatherDescription">
-                <span class="weatherIcon"></span>
-                <span class="description">Partly Cloudy</span>
+                <canvas class="weatherIcon" width="50" height="50"></canvas>
+                <span class="description"></span>
             </div>
             <div class="temperature">
-                <span class="temperatureValue">-8</span>
+                <span class="temperatureValue"></span>
                 <span class="degreeIcon">°</span>
             </div>
             <div class="unit-control">
-                <button class="celsius">C</button>
-                <button class="Fahrenheit">F</button>
+                <button class="measure celsius">C</button>
+                <button class="measure fahrenheit">F</button>
             </div>
-        </section>
-    </div>
+        </div>
+    </section>
+
+    <section class="detailedInfo">
+
+        <div class="addFuncBlock weeklyForecast">
+            <h3 class="titleFuncBlock weeklyTitle">Forecast</h3>
+            <div class="forecast">
+            </div>
+        </div>
+
+        <div class="addFuncBlock recentHistory">
+            <h3 class="titleFuncBlock recentHistoryTitle">Recently viewed</h3>
+        </div>
+
+        <div class="addFuncBlock favorite">
+            <h3 class="titleFuncBlock favoriteTitle">Favorite</h3>
+        </div>
+    </section>
+
     <div id="map"></div>
 
 

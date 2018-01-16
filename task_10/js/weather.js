@@ -17,6 +17,10 @@ var weather = {
 
     currentCityForecast: {},
 
+    weeklyForecast: [],
+
+    // recentHistory: [],
+
 
     init: function () {
 
@@ -25,7 +29,16 @@ var weather = {
 
         weather.insertGoogleScript();
         weather.getAutoLocation();
+
         // @todo add event listener for button get current location
+
+        $(".findLocation").click(function (e) {
+            e.preventDefault();
+            weather.actionGetCurrentLocation();
+        });
+
+        weather.recentHistory();
+
     },
 
     actionGetCurrentLocation: function () {
@@ -35,6 +48,8 @@ var weather = {
 
         weather.requestParams.lat = weather.currentLocation.lat;
         weather.requestParams.long = weather.currentLocation.long;
+
+        console.log("Current location", weather.currentLocation.lat);
         weather.getWeather();
     },
 
@@ -62,7 +77,7 @@ var weather = {
             // @TODO popup cant find your location
         }, {
             enableHighAccuracy: true,
-            timeout: 6000,
+            timeout: 10000,
             maximumAge: 0
         })
     },
@@ -70,22 +85,49 @@ var weather = {
     getWeather: function () {
 
         var api_call = weather.requestParams.url + weather.requestParams.key + "/" + weather.requestParams.lat + "," + weather.requestParams.long;
-        console.log(api_call);
+
 
         $.ajax({
             url: api_call,
             dataType: "jsonp",
-            success: function (data) {
-                console.log("data", data);
-                weather.currentCityForecast.tempFahr = data.currently.temperature;
-                weather.currentCityForecast.weatherIcon = data.currently.icon;
-                weather.currentCityForecast.locationName = data.timezone;
-                console.log("weather.currentCityForecast", weather.currentCityForecast);
+            success: function (forecast) {
 
-                window.location.hash = "lat=" + weather.requestParams.lat + "&long=" + weather.requestParams.long;
-
+                if (typeof forecast == "undefined") {
+                    return;
+                }
+                weather.handleSuccessRequest(forecast);
             }
+
         });
+
+
+    },
+
+    handleSuccessRequest: function (forecast) {
+
+        console.log("forecast", forecast);
+        weather.currentCityForecast.locationName = forecast.timezone;
+        weather.currentCityForecast.tempF = forecast.currently.temperature;
+        weather.currentCityForecast.description = forecast.currently.summary;
+        weather.currentCityForecast.icon = forecast.currently.icon;
+
+
+        // Loop through daily forecasts
+        for (var i = 0, l = forecast.daily.data.length; i < l - 1; i++) {
+
+            var dailyObj = {
+                icon: forecast.daily.data[i].icon,
+                temperatureMax: forecast.daily.data[i].temperatureMax,
+                temperatureMin: forecast.daily.data[i].temperatureMin,
+                date: new Date(forecast.daily.data[i].time * 1000)
+            };
+            weather.weeklyForecast.push(dailyObj);
+        }
+
+        console.log("weather.currentCityForecast", weather.currentCityForecast);
+        weather.showWeather();
+        // weather.skycons();
+        window.location.hash = "lat=" + weather.requestParams.lat + "&long=" + weather.requestParams.long;
     },
 
     fahrenToCelsius: function (fahrenheit) {
@@ -100,7 +142,6 @@ var weather = {
         var result = hash.split('&').reduce(function (result, item) {
             var parts = item.split('=');
             result[parts[0]] = parts[1];
-            console.log(result);
             return result;
         }, {});
 
@@ -142,6 +183,40 @@ var weather = {
             weather.requestParams.lat = lat.toFixed(4);
             weather.requestParams.long = long.toFixed(4);
             weather.getWeather();
+        });
+    },
+
+    //Show Weather
+
+    showWeather: function () {
+        weather.renderToday();
+        weather.skycons();
+
+    },
+
+    renderToday: function () {
+        $('.currentCityName').text(weather.currentCityForecast.locationName.split('/')[1]);
+        $('.currentRegion').text(weather.currentCityForecast.locationName.split('/')[0]);
+        $('.temperatureValue').text(weather.currentCityForecast.tempF);
+        $('.description').text(weather.currentCityForecast.description);
+
+    },
+
+    skycons: function () {
+
+        var skycons = new Skycons({
+            "color": "#FFFFFF"
+        });
+        var weatherIcon = $(".weatherIcon")[0];
+        skycons.add(weatherIcon, weather.currentCityForecast.icon);
+
+        skycons.play();
+    },
+
+    recentHistory: function () {
+        //RecentHistory
+        $('#getWeather').click(function () {
+            weather.recentHistory.push($('#city-search').val());
         });
     }
 
