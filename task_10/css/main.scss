@@ -3,6 +3,11 @@ body {
   background-image: url(../img/stormy_clouds.jpg);
 }
 
+a{
+  color: #fff;
+  text-decoration: none;
+}
+
 .wrapper {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
@@ -110,7 +115,10 @@ body {
     }
 
     .weatherDescription {
-      margin-top: 1em;
+
+      .weatherIcon {
+        vertical-align: bottom;
+      }
       .description {
         font-size: 1.6em;
         font-weight: 400;
@@ -119,8 +127,9 @@ body {
     .temperature {
       display: inline-block;
       font-weight: 100;
+      margin-top: 1em;
       .temperatureValue {
-        font-size: 8em;
+        font-size: 7em;
       }
       .degreeIcon {
         vertical-align: top;
@@ -130,6 +139,7 @@ body {
     .unit-control {
       display: inline-block;
       margin-left: -2px;
+      cursor: pointer;
 
       .measure {
         border-color: transparent;
@@ -141,8 +151,10 @@ body {
         font-size: 1.6em;
         font-weight: 300;
         color: #fff;
+        cursor: pointer;
+
       }
-      .fahrenheit {
+      .inactive{
         color: #878c93;
       }
     }
@@ -157,9 +169,11 @@ body {
     .addFuncBlock {
       display: inline-block;
       background-color: rgba(0, 0, 0, .54);
-      max-width: 40%;
+      width: 25%;
       padding: 10px;
       margin: 10px;
+      vertical-align: top;
+      text-align: left;
 
       .titleFuncBlock {
         color: #fff;
@@ -170,6 +184,54 @@ body {
         padding-bottom: 4px;
         line-height: 1.5em;
       }
+
+      .day {
+        display: block;
+        border: 0;
+        border-bottom: 1px rgba(255, 255, 255, .12) dotted;
+        font-size: 1em;
+        outline: 0;
+        padding-top: 2px;
+        padding-bottom: 2px;}
+
+      .byDays {
+        color: #fff;
+
+          .nameOfTheDay{
+            display: inline-block;
+            vertical-align: middle;
+            width: 25%;
+          }
+          .dayWeatherIcon{
+            display: inline-block;
+            text-align: center;
+            width: 30%;
+          }
+          .humidity{
+            display: inline-block;
+
+            .humidityIcon{
+              width: 24px;
+              height: 24px;
+            }
+          }
+          .dayMinTemp{
+            display: inline-block;
+          }
+          .dayMaxTemp{
+            display: inline-block;
+          }
+      }
+
+    }
+
+    .recentHistory{
+      width: 15%;
+
+    }
+
+    .favorite{
+      width: 15%;
     }
   }
 

@@ -19,7 +19,13 @@ var weather = {
 
     weeklyForecast: [],
 
-    // recentHistory: [],
+    favoriteCity: {
+        city: []
+    },
+
+    historyCity: {
+        city: []
+    },
 
 
     init: function () {
@@ -27,17 +33,54 @@ var weather = {
         // @todo store lat and long from request url param hash
         weather.getLatLongFromURL();
 
+        window.onhashchange = function () {
+            weather.getLatLongFromURL();
+        };
+
         weather.insertGoogleScript();
         weather.getAutoLocation();
-
-        // @todo add event listener for button get current location
 
         $(".findLocation").click(function (e) {
             e.preventDefault();
             weather.actionGetCurrentLocation();
         });
 
-        weather.recentHistory();
+        $('.favoriteCity').on('click', function (e) {
+            e.preventDefault();
+            weather.favorite();
+        });
+
+        $('.celsius').on('click', function (e) {
+            e.preventDefault();
+            $('.celsius').removeClass('inactive');
+            $('.fahrenheit').addClass('inactive');
+            weather.fahrenToCelsius($('.temperatureValue').html());
+        });
+
+        $('.fahrenheit').on('click', function (e) {
+            e.preventDefault();
+            $('.fahrenheit').removeClass('inactive');
+            $('.celsius').addClass('inactive');
+            $('.temperatureValue').html(weather.currentCityForecast.tempF);
+        });
+
+        // $('#getWeather').on('click', function (e) {
+        //     e.preventDefault();
+        //     weather.addToHistory();
+        // });
+        //
+        // $('#city-search').on('keypress', function (e) {
+        //     if (e.which === 13) {
+        //         //Disable textbox to prevent multiple submit
+        //         $(this).attr("disabled", "disabled");
+        //         weather.addToHistory();
+        //         $(this).removeAttr("disabled");
+        //     }
+        // });
+
+
+        weather.renderFavorite();
+        weather.renderHistory();
 
     },
 
@@ -45,6 +88,8 @@ var weather = {
         if (!weather.currentLocation.isAllowed) {
             return;
         }
+
+        $('#city-search').val('');
 
         weather.requestParams.lat = weather.currentLocation.lat;
         weather.requestParams.long = weather.currentLocation.long;
@@ -89,7 +134,7 @@ var weather = {
 
         $.ajax({
             url: api_call,
-            dataType: "jsonp",
+            dataType: "jsonp", // JSONP its ability to make a cross-domain request, that is why it works.
             success: function (forecast) {
 
                 if (typeof forecast == "undefined") {
@@ -100,17 +145,15 @@ var weather = {
 
         });
 
-
     },
 
     handleSuccessRequest: function (forecast) {
 
         console.log("forecast", forecast);
         weather.currentCityForecast.locationName = forecast.timezone;
-        weather.currentCityForecast.tempF = forecast.currently.temperature;
+        weather.currentCityForecast.tempF = forecast.currently.temperature.toFixed(0);
         weather.currentCityForecast.description = forecast.currently.summary;
         weather.currentCityForecast.icon = forecast.currently.icon;
-
 
         // Loop through daily forecasts
         for (var i = 0, l = forecast.daily.data.length; i < l - 1; i++) {
@@ -124,15 +167,15 @@ var weather = {
             weather.weeklyForecast.push(dailyObj);
         }
 
-        console.log("weather.currentCityForecast", weather.currentCityForecast);
         weather.showWeather();
-        // weather.skycons();
         window.location.hash = "lat=" + weather.requestParams.lat + "&long=" + weather.requestParams.long;
+        weather.addToHistory();
     },
 
     fahrenToCelsius: function (fahrenheit) {
-        var celsius = ((fahrenheit - 32) * 5 / 9).toFixed(2);
-        return celsius;
+        var celsius = ((fahrenheit - 32) * 5 / 9).toFixed(0);
+
+        $('.temperatureValue').html(celsius);
     },
 
 
@@ -151,6 +194,9 @@ var weather = {
 
         weather.requestParams.lat = result.lat;
         weather.requestParams.long = result.long;
+
+        console.log("weather.requestParams = ", weather.requestParams);
+
         weather.getWeather();
     },
 
@@ -195,6 +241,7 @@ var weather = {
     },
 
     renderToday: function () {
+
         $('.currentCityName').text(weather.currentCityForecast.locationName.split('/')[1]);
         $('.currentRegion').text(weather.currentCityForecast.locationName.split('/')[0]);
         $('.temperatureValue').text(weather.currentCityForecast.tempF);
@@ -213,14 +260,120 @@ var weather = {
         skycons.play();
     },
 
-    recentHistory: function () {
-        //RecentHistory
-        $('#getWeather').click(function () {
-            weather.recentHistory.push($('#city-search').val());
-        });
+    favorite: function () {
+
+        if ($('#city-search').val() == "") {
+            return;
+        }
+        var favoriteLocalStorage = localStorage.getItem("favorite");
+
+        if (favoriteLocalStorage && favoriteLocalStorage.length > 0) {
+            var favoritesObj = JSON.parse(favoriteLocalStorage);
+            weather.favoriteCity = favoritesObj;
+        }
+
+        var currentAddFav = {};
+
+        currentAddFav.name = $('#city-search').val().split(',')[0];
+        currentAddFav.url = window.location.href;
+
+        for (var i = 0; i < weather.favoriteCity.city.length; i++) {
+            if (weather.favoriteCity.city[i].name == currentAddFav.name) {
+                return;
+            }
+        }
+
+        weather.favoriteCity.city.push(currentAddFav);
+
+        var serialFavoriteCity = JSON.stringify(weather.favoriteCity); //сериализуем его
+        localStorage.setItem("favorite", serialFavoriteCity);
+
+        weather.renderFavorite();
+
+    },
+
+    addToHistory: function () {
+        if ($('#city-search').val() == "") {
+            return;
+        }
+
+        var historyLocalStorage = localStorage.getItem("history");
+
+        if (historyLocalStorage && historyLocalStorage.length > 0) {
+            var historyObj = JSON.parse(historyLocalStorage);
+            weather.historyCity = historyObj;
+        }
+
+        var recentHistory = {};
+
+        recentHistory.name = $('#city-search').val().split(',')[0];
+        recentHistory.url = window.location.href;
+
+        for (var i = 0; i < weather.historyCity.city.length; i++) {
+            if (weather.historyCity.city[i].name == recentHistory.name) {
+                return;
+            }
+        }
+
+        console.log("Rrecently history", recentHistory);
+
+        weather.historyCity.city.push(recentHistory);
+
+        var serialHistoryCity = JSON.stringify(weather.historyCity); //сериализуем его
+        localStorage.setItem("history", serialHistoryCity);
+
+        weather.renderHistory();
+    },
+
+    renderFavorite: function () {
+
+        var returnFavoriteCity = JSON.parse(localStorage.getItem("favorite"));
+
+        if (!returnFavoriteCity || !returnFavoriteCity["city"] || returnFavoriteCity.city.length == 0) {
+            return;
+        }
+
+        if ($("ul").has("li")) {
+            $(".favoriteList").empty();
+
+
+            for (var i = returnFavoriteCity.city.length - 1; i >= 0; i--) {
+
+                var li = $('<li/>').addClass('list').appendTo($(".favoriteList"));
+                var urlFav = $('<a/>').attr('href', returnFavoriteCity.city[i].url).text(returnFavoriteCity.city[i].name).appendTo(li);
+            }
+        } else {
+            for (var i = returnFavoriteCity.city.length; i >= 0; i--) {
+                var li = $('<li/>').addClass('list').appendTo($(".favoriteList"));
+                var urlFav = $('<a/>').attr('href', returnFavoriteCity.city[i].url).text(returnFavoriteCity.city[i].name).appendTo(li);
+            }
+        }
+    },
+
+    renderHistory: function () {
+
+        var returnHistoryCity = JSON.parse(localStorage.getItem("history"));
+
+        console.log("recent History", returnHistoryCity);
+
+        if (!returnHistoryCity || !returnHistoryCity["city"] || returnHistoryCity.city.length == 0) {
+            return;
+        }
+
+        if ($("ul").has("li")) {
+            $(".historyList").empty();
+
+            for (var i = returnHistoryCity.city.length - 1; i >= 0; i--) {
+                var li = $('<li/>').addClass('list').appendTo($(".historyList"));
+                var urlFav = $('<a/>').attr('href', returnHistoryCity.city[i].url).text(returnHistoryCity.city[i].name).appendTo(li);
+            }
+        } else {
+            for (var i = returnHistoryCity.city.length; i >= 0; i--) {
+                var li = $('<li/>').addClass('list').appendTo($(".historyList"));
+                var urlFav = $('<a/>').attr('href', returnHistoryCity.city[i].url).text(returnHistoryCity.city[i].name).appendTo(li);
+            }
+        }
     }
-
-
 };
 
 document.addEventListener('DOMContentLoaded', function () {

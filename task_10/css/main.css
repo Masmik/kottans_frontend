@@ -2,6 +2,10 @@ body {
   background-size: 100%;
   background-image: url(../img/stormy_clouds.jpg); }
 
+a {
+  color: #fff;
+  text-decoration: none; }
+
 .wrapper {
   font-family: 'Roboto', sans-serif;
   font-weight: 300; }
@@ -81,22 +85,24 @@ body {
       display: block;
       font-weight: 100;
       font-size: 1em; }
-    .wrapper .currentCityWeather .weatherDescription {
-      margin-top: 1em; }
-      .wrapper .currentCityWeather .weatherDescription .description {
-        font-size: 1.6em;
-        font-weight: 400; }
+    .wrapper .currentCityWeather .weatherDescription .weatherIcon {
+      vertical-align: bottom; }
+    .wrapper .currentCityWeather .weatherDescription .description {
+      font-size: 1.6em;
+      font-weight: 400; }
     .wrapper .currentCityWeather .temperature {
       display: inline-block;
-      font-weight: 100; }
+      font-weight: 100;
+      margin-top: 1em; }
       .wrapper .currentCityWeather .temperature .temperatureValue {
-        font-size: 8em; }
+        font-size: 7em; }
       .wrapper .currentCityWeather .temperature .degreeIcon {
         vertical-align: top;
         font-size: 7em; }
     .wrapper .currentCityWeather .unit-control {
       display: inline-block;
-      margin-left: -2px; }
+      margin-left: -2px;
+      cursor: pointer; }
       .wrapper .currentCityWeather .unit-control .measure {
         border-color: transparent;
         text-transform: capitalize;
@@ -106,8 +112,9 @@ body {
         display: block;
         font-size: 1.6em;
         font-weight: 300;
-        color: #fff; }
-      .wrapper .currentCityWeather .unit-control .fahrenheit {
+        color: #fff;
+        cursor: pointer; }
+      .wrapper .currentCityWeather .unit-control .inactive {
         color: #878c93; }
   .wrapper .detailedInfo {
     display: block;
@@ -116,9 +123,11 @@ body {
     .wrapper .detailedInfo .addFuncBlock {
       display: inline-block;
       background-color: rgba(0, 0, 0, 0.54);
-      max-width: 40%;
+      width: 25%;
       padding: 10px;
-      margin: 10px; }
+      margin: 10px;
+      vertical-align: top;
+      text-align: left; }
       .wrapper .detailedInfo .addFuncBlock .titleFuncBlock {
         color: #fff;
         border-bottom: 1px solid #fff;
@@ -127,5 +136,36 @@ body {
         margin-bottom: 4px;
         padding-bottom: 4px;
         line-height: 1.5em; }
+      .wrapper .detailedInfo .addFuncBlock .day {
+        display: block;
+        border: 0;
+        border-bottom: 1px rgba(255, 255, 255, 0.12) dotted;
+        font-size: 1em;
+        outline: 0;
+        padding-top: 2px;
+        padding-bottom: 2px; }
+      .wrapper .detailedInfo .addFuncBlock .byDays {
+        color: #fff; }
+        .wrapper .detailedInfo .addFuncBlock .byDays .nameOfTheDay {
+          display: inline-block;
+          vertical-align: middle;
+          width: 25%; }
+        .wrapper .detailedInfo .addFuncBlock .byDays .dayWeatherIcon {
+          display: inline-block;
+          text-align: center;
+          width: 30%; }
+        .wrapper .detailedInfo .addFuncBlock .byDays .humidity {
+          display: inline-block; }
+          .wrapper .detailedInfo .addFuncBlock .byDays .humidity .humidityIcon {
+            width: 24px;
+            height: 24px; }
+        .wrapper .detailedInfo .addFuncBlock .byDays .dayMinTemp {
+          display: inline-block; }
+        .wrapper .detailedInfo .addFuncBlock .byDays .dayMaxTemp {
+          display: inline-block; }
+    .wrapper .detailedInfo .recentHistory {
+      width: 15%; }
+    .wrapper .detailedInfo .favorite {
+      width: 15%; }
 
 /*# sourceMappingURL=main.css.map */
