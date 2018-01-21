@@ -47,7 +47,7 @@ var weather = {
 
         $('.favoriteCity').on('click', function (e) {
             e.preventDefault();
-            weather.favorite();
+            weather.addToFavorite();
         });
 
         $('.celsius').on('click', function (e) {
@@ -64,19 +64,15 @@ var weather = {
             $('.temperatureValue').html(weather.currentCityForecast.tempF);
         });
 
-        // $('#getWeather').on('click', function (e) {
-        //     e.preventDefault();
-        //     weather.addToHistory();
-        // });
-        //
-        // $('#city-search').on('keypress', function (e) {
-        //     if (e.which === 13) {
-        //         //Disable textbox to prevent multiple submit
-        //         $(this).attr("disabled", "disabled");
-        //         weather.addToHistory();
-        //         $(this).removeAttr("disabled");
-        //     }
-        // });
+        $('.historyList').on('click', '.cityForecast', function (e) {
+            var dataName = $(this).data('name');
+            $('#city-search').val(dataName);
+        });
+
+        $('.favoriteList').on('click', '.cityForecast', function (e) {
+            var dataName = $(this).data('name');
+            $('#city-search').val(dataName);
+        });
 
 
         weather.renderFavorite();
@@ -94,8 +90,8 @@ var weather = {
         weather.requestParams.lat = weather.currentLocation.lat;
         weather.requestParams.long = weather.currentLocation.long;
 
-        console.log("Current location", weather.currentLocation.lat);
         weather.getWeather();
+        $('#city-search').val('current location');
     },
 
     getAutoLocation: function () {
@@ -112,8 +108,6 @@ var weather = {
             weather.currentLocation.lat = lat.toFixed(4);
             weather.currentLocation.long = long.toFixed(4);
             weather.currentLocation.isAllowed = true;
-
-            console.log("devicelocation", position);
 
             // @todo: unlock button "get current geolocation"
         }, function (err) {
@@ -162,6 +156,7 @@ var weather = {
                 icon: forecast.daily.data[i].icon,
                 temperatureMax: forecast.daily.data[i].temperatureMax,
                 temperatureMin: forecast.daily.data[i].temperatureMin,
+                humidity: forecast.daily.data[i].humidity,
                 date: new Date(forecast.daily.data[i].time * 1000)
             };
             weather.weeklyForecast.push(dailyObj);
@@ -237,12 +232,15 @@ var weather = {
     showWeather: function () {
         weather.renderToday();
         weather.skycons();
+        weather.renderWeeklyForecast();
 
     },
 
     renderToday: function () {
 
-        $('.currentCityName').text(weather.currentCityForecast.locationName.split('/')[1]);
+        $('.currentCityName').text($('#city-search').val().split(',')[0]);
+
+        // $('.currentCityName').text(weather.currentCityForecast.locationName.split('/')[1]);
         $('.currentRegion').text(weather.currentCityForecast.locationName.split('/')[0]);
         $('.temperatureValue').text(weather.currentCityForecast.tempF);
         $('.description').text(weather.currentCityForecast.description);
@@ -260,7 +258,7 @@ var weather = {
         skycons.play();
     },
 
-    favorite: function () {
+    addToFavorite: function () {
 
         if ($('#city-search').val() == "") {
             return;
@@ -274,7 +272,7 @@ var weather = {
 
         var currentAddFav = {};
 
-        currentAddFav.name = $('#city-search').val().split(',')[0];
+        currentAddFav.name = $('#city-search').val();
         currentAddFav.url = window.location.href;
 
         for (var i = 0; i < weather.favoriteCity.city.length; i++) {
@@ -306,7 +304,7 @@ var weather = {
 
         var recentHistory = {};
 
-        recentHistory.name = $('#city-search').val().split(',')[0];
+        recentHistory.name = $('#city-search').val();
         recentHistory.url = window.location.href;
 
         for (var i = 0; i < weather.historyCity.city.length; i++) {
@@ -336,18 +334,15 @@ var weather = {
         if ($("ul").has("li")) {
             $(".favoriteList").empty();
 
-
-            for (var i = returnFavoriteCity.city.length - 1; i >= 0; i--) {
-
-                var li = $('<li/>').addClass('list').appendTo($(".favoriteList"));
-                var urlFav = $('<a/>').attr('href', returnFavoriteCity.city[i].url).text(returnFavoriteCity.city[i].name).appendTo(li);
-            }
-        } else {
-            for (var i = returnFavoriteCity.city.length; i >= 0; i--) {
-                var li = $('<li/>').addClass('list').appendTo($(".favoriteList"));
-                var urlFav = $('<a/>').attr('href', returnFavoriteCity.city[i].url).text(returnFavoriteCity.city[i].name).appendTo(li);
-            }
         }
+        for (var i = returnFavoriteCity.city.length; i > 0; i--) {
+            var li = $('<li/>').addClass('list').appendTo($(".favoriteList"));
+            $('<a/>').addClass('cityForecast').attr('href', returnFavoriteCity.city[i - 1].url)
+                .attr('data-name', returnFavoriteCity.city[i - 1].name)
+                .text(returnFavoriteCity.city[i - 1].name)
+                .appendTo(li);
+        }
+
     },
 
     renderHistory: function () {
@@ -362,17 +357,56 @@ var weather = {
 
         if ($("ul").has("li")) {
             $(".historyList").empty();
-
-            for (var i = returnHistoryCity.city.length - 1; i >= 0; i--) {
-                var li = $('<li/>').addClass('list').appendTo($(".historyList"));
-                var urlFav = $('<a/>').attr('href', returnHistoryCity.city[i].url).text(returnHistoryCity.city[i].name).appendTo(li);
-            }
-        } else {
-            for (var i = returnHistoryCity.city.length; i >= 0; i--) {
-                var li = $('<li/>').addClass('list').appendTo($(".historyList"));
-                var urlFav = $('<a/>').attr('href', returnHistoryCity.city[i].url).text(returnHistoryCity.city[i].name).appendTo(li);
-            }
         }
+        for (var i = returnHistoryCity.city.length; i > 0; i--) {
+            var li = $('<li/>').addClass('list').appendTo($(".historyList"));
+            $('<a/>').addClass('cityForecast').attr('href', returnHistoryCity.city[i - 1].url)
+                .attr("data-name", returnHistoryCity.city[i - 1].name)
+                .text(returnHistoryCity.city[i - 1].name)
+                .appendTo(li);
+        }
+    },
+    renderWeeklyForecast: function () {
+
+        // console.log("weeklyforecast", weather.weeklyForecast);
+        //
+        // for (var i = 0; i < weather.weeklyForecast.length; i++) {
+        //     $('<div/>').addClass("byDays").insertAfter(".weeklyTitle");
+        //     $('<div/>').addClass("list listWeekly").appendTo(".byDays");
+        //     $('<div/>').addClass("nameOfTheDay")
+        //         .text(weather.weeklyForecast[i].date)
+        //         .appendTo(".listWeekly");
+        //     $('<div/>').addClass("dayWeatherIcon").insertAfter(".nameOfTheDay");
+        //     $('<canvas/>').addClass("weatherIcon")
+        //         .attr('width', 30)
+        //         .attr('height', 30)
+        //         .appendTo(".dayWeatherIcon");
+        //     $('<div/>').addClass("humidity").insertAfter(".dayWeatherIcon");
+        //     $('<img/>').addClass("humidityIcon")
+        //         .attr('src', "https://s.yimg.com/os/weather/1.0.1/precipitation/54x60/rain_ico_60@2x.png")
+        //         .attr('alt', "humidity")
+        //         .appendTo(".humidity");
+        //     $('<span/>').addClass("humidityPercent")
+        //         .text(weather.weeklyForecast[i].humidity)
+        //         .appendTo(".humidity");
+        //     $("<div/>").addClass("dayMinTemp")
+        //         .text(weather.weeklyForecast[i].temperatureMin)
+        //         .insertAfter(".humidity");
+        //     $("<div/>").addClass("dayMaxTemp")
+        //         .text(weather.weeklyForecast[i].temperatureMax)
+        //         .insertAfter(".dayMinTemp");
+        // }
+
+
+        // for (var i = 0; i < weather.weeklyForecast.length; i++) {
+        //     $('.nameOfTheDay').html(weather.weeklyForecast[i].date);
+        //     // console.log("Day", weather.weeklyForecast[i].date.getDay());
+        //     //@ TODO add icon
+        //     $('.humidityPercent').html(weather.weeklyForecast[i].humidity);
+        //     $('.dayMinTemp').html(weather.weeklyForecast[i].temperatureMin);
+        //     $('.dayMaxTemp').html(weather.weeklyForecast[i].temperatureMax);
+        //
+        // }
     }
 };
 

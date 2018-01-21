@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="content">
+    <header>
+        <div class="orderInfo">
+            <h3 class="orderTitle">your order</h3>
+            <ul class="orderDetails">
+                <li class="detailsList">
+                    <h4 class="detailsHeader">items</h4>
+                    <div class="detailsInfo">
+                        <span class="quantity">2</span>
+                        <span class="units">documents</span>
+                    </div>
+                </li>
+                <li class="detailsList">
+                    <h4 class="detailsHeader">details</h4>
+                    <div class="detailsInfo">
+                        <span class="quantity">2</span>
+                        <span class="units">languages</span>
+                    </div>
+                </li>
+                <li class="detailsList">
+                    <h4 class="detailsHeader">price</h4>
+                    <div class="detailsInfo">
+                        <span class="units">$</span>
+                        <span class="quantity">696.06</span>
+                    </div>
+                </li>
+                <li class="detailsList">
+                    <h4 class="detailsHeader">delivery</h4>
+                    <div class="detailsInfo">
+                        <span class="quantity">48</span>
+                        <span class="units">hours</span>
+                    </div>
+                </li>
+            </ul>
+            <button class="button active">Place order</button>
+            <button class="button">Print a qoute</button>
+        </div>
+        <div class="helpInfo">
+            <h3 class="helpHeader">help center</h3>
+            <p class="description">If you need assistance while placing your order, contact one of our beloved Project Manager by phone or email</p>
+            <adress>
+                <a class="helpPhone" href="tel:+18475555555">1-847-555-5555</a>
+                <a href="help@qtest.com" class="helpEmail">help@qtest.com</a>
+            </adress>
+        </div>
+    </header>
+    <main>
+        <form>
+            <section class="selectTranslateItem">
+                <h1 class="selectTranslateHeader">select what you want to translate</h1>
+                <label for="website">
+                    <input type="radio" id="website">
+                </label>
+                <label for="documents">
+                    <input type="radio" id="documents">
+                </label>
+                <label for="socialAccount">
+                    <input type="radio" id="socialAccount">
+                </label>
+            </section>
+            <section class="upload">
+                <h2 class="uploadHeader">Upload your documents
+                    <span class="uploadHeader__formats">(Doc, Docx, Text, PDF, Markdown)</span>
+                </h2>
+                <button class="uploadFileBtn">Upload a new file</button>
+                <div class="uploadFile">
+                    <table>
+                        <tr>
+                            <th>file name</th>
+                            <th>file size</th>
+                            <th>number of words</th>
+                            <th>remove</th>
+                        </tr>
+                        <tr>
+                            <td>business_operations.docx</td>
+                            <td><span>78</span><span>kb</span></td>
+                            <td>842</td>
+                            <td>
+                                <button>remove</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>business_financial.docx</td>
+                            <td><span>26</span><span>kb</span></td>
+                            <td>2,326</td>
+                            <td>
+                                <button>remove</button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+            <section class="chooseLanguage">
+                <h2 class="languageHeader">Choose your languages pairings</h2>
+                <div class="fromLanguage">
+                    <span>from</span>
+                    <select>
+                        <option>English</option>
+                        <option>Arabic</option>
+                        <option>Kurdish</option>
+                    </select>
+                </div>
+                <div class="toLanguage">
+                    <span>to</span>
+                    <select>
+                        <option>Arabic</option>
+                        <option>English</option>
+                        <option>Kurdish</option>
+                    </select>
+                    <select>
+                        <option>Kurdish</option>
+                        <option>Arabic</option>
+                        <option>English</option>
+                    </select>
+                    <button class="deleteLanguage"></button>
+                    <button class="addLanguage">+Add</button>
+                </div>
+            </section>
+            <section class="signUp">
+                <h2 class="signUpHeader">Sign Up and choose a payment method</h2>
+                <p>Already have an account with us?</p>
+                <a href="#">Sign Up</a>
+
+                <label for="fullName"> full name
+                    <input type="text" class="signUpName" id="fullName">
+                </label>
+                <label for="email"> email adress
+                    <input type="email" class="signUpEmail" id="email">
+                </label>
+                <label for="pass"> Choose a password
+                    <input type="password" class="signUpPass" id="pass">
+                </label>
+                <div class="paySystem">
+                    <div class="visaMastercard"></div>
+                    <div class="payPal"></div>
+                    <div class="amazon"></div>
+                </div>
+                <div class="cardInfo">
+                    <label for="cardNumber"> card number
+                        <input type="text" id="cardNumber">
+                    </label>
+                    <label for="cardNumber"> expiry date
+                        <input type="date" id="expiryDate">
+                    </label>
+                    <label for="code"> code
+                        <input type="text" id="code">
+                    </label>
+                </div>
+            </section>
+            <footer>
+                <!--<input type="range" min="0" max="100">-->
+                <input type="checkbox" id="agreeTerms">
+                <label for="agreeTerms">I agree to the
+                    <a href="#">Term & Conditions</a>
+                </label>
+                <button class="button active">Place order</button>
+                <button class="button">Print a qoute</button>
+            </footer>
+        </form>
+    </main>
+</div>
+
+</body>
+</html>
