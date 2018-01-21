@@ -26,6 +26,7 @@ var weather = {
     historyCity: {
         city: []
     },
+    isFahrenheit: true,
 
 
     init: function () {
@@ -43,6 +44,7 @@ var weather = {
         $(".findLocation").click(function (e) {
             e.preventDefault();
             weather.actionGetCurrentLocation();
+
         });
 
         $('.favoriteCity').on('click', function (e) {
@@ -55,6 +57,11 @@ var weather = {
             $('.celsius').removeClass('inactive');
             $('.fahrenheit').addClass('inactive');
             weather.fahrenToCelsius($('.temperatureValue').html());
+
+            weather.isFahrenheit = false;
+
+            weather.showWeather();
+
         });
 
         $('.fahrenheit').on('click', function (e) {
@@ -62,6 +69,8 @@ var weather = {
             $('.fahrenheit').removeClass('inactive');
             $('.celsius').addClass('inactive');
             $('.temperatureValue').html(weather.currentCityForecast.tempF);
+            weather.isFahrenheit = true;
+            weather.showWeather();
         });
 
         $('.historyList').on('click', '.cityForecast', function (e) {
@@ -90,8 +99,22 @@ var weather = {
         weather.requestParams.lat = weather.currentLocation.lat;
         weather.requestParams.long = weather.currentLocation.long;
 
+
+        weather.getLocationName(weather.currentLocation.lat, weather.currentLocation.long);
+
         weather.getWeather();
         $('#city-search').val('current location');
+    },
+
+    getLocationName: function (lat, long) {
+        $.ajax({
+            url: 'http://maps.googleapis.com/maps/api/geocode/json?latlng=' + lat + ',' + long + '&sensor=true',
+            dataType: "json",
+            success: function (data) {
+                $('#city-search').val(data.results[0].formatted_address);
+            }
+
+        })
     },
 
     getAutoLocation: function () {
@@ -149,6 +172,10 @@ var weather = {
         weather.currentCityForecast.description = forecast.currently.summary;
         weather.currentCityForecast.icon = forecast.currently.icon;
 
+        $(".weatherIcon.current").attr("data-icon", weather.currentCityForecast.icon);
+
+        weather.weeklyForecast = [];
+
         // Loop through daily forecasts
         for (var i = 0, l = forecast.daily.data.length; i < l - 1; i++) {
 
@@ -161,7 +188,6 @@ var weather = {
             };
             weather.weeklyForecast.push(dailyObj);
         }
-
         weather.showWeather();
         window.location.hash = "lat=" + weather.requestParams.lat + "&long=" + weather.requestParams.long;
         weather.addToHistory();
@@ -172,7 +198,6 @@ var weather = {
 
         $('.temperatureValue').html(celsius);
     },
-
 
     getLatLongFromURL: function () {
         var hash = window.location.hash.substr(1);
@@ -231,16 +256,14 @@ var weather = {
 
     showWeather: function () {
         weather.renderToday();
-        weather.skycons();
         weather.renderWeeklyForecast();
+        weather.skycons();
 
     },
 
     renderToday: function () {
 
         $('.currentCityName').text($('#city-search').val().split(',')[0]);
-
-        // $('.currentCityName').text(weather.currentCityForecast.locationName.split('/')[1]);
         $('.currentRegion').text(weather.currentCityForecast.locationName.split('/')[0]);
         $('.temperatureValue').text(weather.currentCityForecast.tempF);
         $('.description').text(weather.currentCityForecast.description);
@@ -252,8 +275,13 @@ var weather = {
         var skycons = new Skycons({
             "color": "#FFFFFF"
         });
-        var weatherIcon = $(".weatherIcon")[0];
-        skycons.add(weatherIcon, weather.currentCityForecast.icon);
+
+        for (var i = 0; i < $(".weatherIcon").length; i++) {
+            var weatherIcon = $(".weatherIcon")[i];
+            var $weatherIcon = $(weatherIcon);
+            var dataIcon = $weatherIcon.data("icon");
+            skycons.add(weatherIcon, dataIcon);
+        }
 
         skycons.play();
     },
@@ -366,47 +394,62 @@ var weather = {
                 .appendTo(li);
         }
     },
+
     renderWeeklyForecast: function () {
 
-        // console.log("weeklyforecast", weather.weeklyForecast);
-        //
-        // for (var i = 0; i < weather.weeklyForecast.length; i++) {
-        //     $('<div/>').addClass("byDays").insertAfter(".weeklyTitle");
-        //     $('<div/>').addClass("list listWeekly").appendTo(".byDays");
-        //     $('<div/>').addClass("nameOfTheDay")
-        //         .text(weather.weeklyForecast[i].date)
-        //         .appendTo(".listWeekly");
-        //     $('<div/>').addClass("dayWeatherIcon").insertAfter(".nameOfTheDay");
-        //     $('<canvas/>').addClass("weatherIcon")
-        //         .attr('width', 30)
-        //         .attr('height', 30)
-        //         .appendTo(".dayWeatherIcon");
-        //     $('<div/>').addClass("humidity").insertAfter(".dayWeatherIcon");
-        //     $('<img/>').addClass("humidityIcon")
-        //         .attr('src', "https://s.yimg.com/os/weather/1.0.1/precipitation/54x60/rain_ico_60@2x.png")
-        //         .attr('alt', "humidity")
-        //         .appendTo(".humidity");
-        //     $('<span/>').addClass("humidityPercent")
-        //         .text(weather.weeklyForecast[i].humidity)
-        //         .appendTo(".humidity");
-        //     $("<div/>").addClass("dayMinTemp")
-        //         .text(weather.weeklyForecast[i].temperatureMin)
-        //         .insertAfter(".humidity");
-        //     $("<div/>").addClass("dayMaxTemp")
-        //         .text(weather.weeklyForecast[i].temperatureMax)
-        //         .insertAfter(".dayMinTemp");
-        // }
+        var daysOfTheWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
+        var $weeklyForecastContent = $(".weeklyForecastContent");
 
-        // for (var i = 0; i < weather.weeklyForecast.length; i++) {
-        //     $('.nameOfTheDay').html(weather.weeklyForecast[i].date);
-        //     // console.log("Day", weather.weeklyForecast[i].date.getDay());
-        //     //@ TODO add icon
-        //     $('.humidityPercent').html(weather.weeklyForecast[i].humidity);
-        //     $('.dayMinTemp').html(weather.weeklyForecast[i].temperatureMin);
-        //     $('.dayMaxTemp').html(weather.weeklyForecast[i].temperatureMax);
-        //
-        // }
+        $weeklyForecastContent.empty();
+
+        for (var i = 0; i < weather.weeklyForecast.length; i++) {
+
+            var $byDays = $('<div/>').addClass('byDays');
+
+            var $listWeekly = $('<div/>').addClass("list listWeekly").appendTo($byDays);
+            $listWeekly.append(
+                $('<div/>').addClass("nameOfTheDay").text(daysOfTheWeek[weather.weeklyForecast[i].date.getDay()])
+            );
+            $listWeekly.append(
+                $('<div/>').addClass("dayWeatherIcon").append(
+                    $('<canvas/>').addClass("weatherIcon")
+                        .attr('data-icon', weather.weeklyForecast[i].icon)
+                        .attr('width', 30)
+                        .attr('height', 30)
+                )
+            );
+            $listWeekly.append(
+                $('<div/>').addClass("humidity").append(
+                    $('<img/>').addClass("humidityIcon")
+                        .attr('src', "https://s.yimg.com/os/weather/1.0.1/precipitation/54x60/rain_ico_60@2x.png")
+                        .attr('alt', "humidity")
+                ).append(
+                    $('<span/>').addClass("humidityPercent")
+                        .text(weather.weeklyForecast[i].humidity)
+                )
+            );
+
+            $listWeekly.append(
+                $("<div/>").addClass("dayMinTemp")
+                    .text(weather.getActualTemp(weather.weeklyForecast[i].temperatureMin))
+            );
+            $listWeekly.append(
+                $("<div/>").addClass("dayMaxTemp")
+                    .text(weather.getActualTemp(weather.weeklyForecast[i].temperatureMax))
+            );
+
+            // $byDays.appendTo(".weeklyForecastContent");
+            $weeklyForecastContent.append($byDays);
+
+        }
+    },
+
+    getActualTemp: function (temp) {
+        if (!weather.isFahrenheit) {
+            return ((temp - 32) * 5 / 9).toFixed(0);
+        }
+        return temp.toFixed(0);
     }
 };
 
