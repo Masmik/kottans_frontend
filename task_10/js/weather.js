@@ -45,6 +45,7 @@ var weather = {
             e.preventDefault();
             weather.actionGetCurrentLocation();
 
+
         });
 
         $('.favoriteCity').on('click', function (e) {
@@ -103,7 +104,6 @@ var weather = {
         weather.getLocationName(weather.currentLocation.lat, weather.currentLocation.long);
 
         weather.getWeather();
-        $('#city-search').val('current location');
     },
 
     getLocationName: function (lat, long) {
@@ -132,11 +132,12 @@ var weather = {
             weather.currentLocation.long = long.toFixed(4);
             weather.currentLocation.isAllowed = true;
 
-            // @todo: unlock button "get current geolocation"
         }, function (err) {
             console.warn('err', err);
             weather.currentLocation.isAllowed = false;
             // @TODO popup cant find your location
+            alert("Can`t find your location");
+            $('.findLocation').prop('disabled', true);
         }, {
             enableHighAccuracy: true,
             timeout: 10000,
@@ -166,7 +167,6 @@ var weather = {
 
     handleSuccessRequest: function (forecast) {
 
-        console.log("forecast", forecast);
         weather.currentCityForecast.locationName = forecast.timezone;
         weather.currentCityForecast.tempF = forecast.currently.temperature.toFixed(0);
         weather.currentCityForecast.description = forecast.currently.summary;
@@ -183,7 +183,7 @@ var weather = {
                 icon: forecast.daily.data[i].icon,
                 temperatureMax: forecast.daily.data[i].temperatureMax,
                 temperatureMin: forecast.daily.data[i].temperatureMin,
-                humidity: forecast.daily.data[i].humidity,
+                humidity: forecast.daily.data[i].humidity.toFixed(2),
                 date: new Date(forecast.daily.data[i].time * 1000)
             };
             weather.weeklyForecast.push(dailyObj);
@@ -191,6 +191,7 @@ var weather = {
         weather.showWeather();
         window.location.hash = "lat=" + weather.requestParams.lat + "&long=" + weather.requestParams.long;
         weather.addToHistory();
+        $('.weatherInfo').css("display", "block");
     },
 
     fahrenToCelsius: function (fahrenheit) {
@@ -215,8 +216,6 @@ var weather = {
         weather.requestParams.lat = result.lat;
         weather.requestParams.long = result.long;
 
-        console.log("weather.requestParams = ", weather.requestParams);
-
         weather.getWeather();
     },
 
@@ -231,10 +230,9 @@ var weather = {
 
         document.body.appendChild(google_api);
     },
-//
-//
+
 // // SearchBox Method
-//
+
     initGoogleAPI: function () {
         var autocomplete = new google.maps.places.SearchBox(document.querySelector("#city-search"));
 
@@ -258,7 +256,6 @@ var weather = {
         weather.renderToday();
         weather.renderWeeklyForecast();
         weather.skycons();
-
     },
 
     renderToday: function () {
@@ -341,8 +338,6 @@ var weather = {
             }
         }
 
-        console.log("Rrecently history", recentHistory);
-
         weather.historyCity.city.push(recentHistory);
 
         var serialHistoryCity = JSON.stringify(weather.historyCity); //сериализуем его
@@ -376,8 +371,6 @@ var weather = {
     renderHistory: function () {
 
         var returnHistoryCity = JSON.parse(localStorage.getItem("history"));
-
-        console.log("recent History", returnHistoryCity);
 
         if (!returnHistoryCity || !returnHistoryCity["city"] || returnHistoryCity.city.length == 0) {
             return;
@@ -426,20 +419,23 @@ var weather = {
                         .attr('alt', "humidity")
                 ).append(
                     $('<span/>').addClass("humidityPercent")
-                        .text(weather.weeklyForecast[i].humidity)
+                        .text(weather.weeklyForecast[i].humidity * 100).append(
+                        $('<span/>').addClass("percentIcon")
+                            .text("%")
+                    )
                 )
             );
 
             $listWeekly.append(
-                $("<div/>").addClass("dayMinTemp")
-                    .text(weather.getActualTemp(weather.weeklyForecast[i].temperatureMin))
-            );
-            $listWeekly.append(
-                $("<div/>").addClass("dayMaxTemp")
-                    .text(weather.getActualTemp(weather.weeklyForecast[i].temperatureMax))
+                $('<div/>').addClass("temperatureContainer").append(
+                    $("<div/>").addClass("dayMinTemp")
+                        .text(weather.getActualTemp(weather.weeklyForecast[i].temperatureMin))
+                ).append(
+                    $("<div/>").addClass("dayMaxTemp")
+                        .text(weather.getActualTemp(weather.weeklyForecast[i].temperatureMax))
+                )
             );
 
-            // $byDays.appendTo(".weeklyForecastContent");
             $weeklyForecastContent.append($byDays);
 
         }

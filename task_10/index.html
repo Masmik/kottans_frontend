@@ -41,52 +41,52 @@
         <button class="searchWeather__button" id="getWeather">Search</button>
     </div>
 
-    <section class="currentCityWeather">
-        <h2 class="currentCityName"></h2>
-        <h3 class="currentRegion"></h3>
+    <section class="weatherInfo">
 
-        <div class="currentDate">
-            <span class="date"></span>
+        <div class="currentCityWeather">
+            <h2 class="currentCityName"></h2>
+            <h3 class="currentRegion"></h3>
+
+            <div class="currentDate">
+                <span class="date"></span>
+            </div>
+            <div class="weatherCard">
+                <div class="weatherDescription">
+                    <canvas class="weatherIcon current" width="30" height="30"></canvas>
+                    <span class="description"></span>
+                </div>
+                <div class="temperature">
+                    <span class="temperatureValue"></span>
+                    <span class="degreeIcon">°</span>
+                </div>
+                <div class="unit-control">
+                    <button class="measure celsius inactive">C</button>
+                    <button class="measure fahrenheit">F</button>
+                </div>
+            </div>
         </div>
-        <div class="weatherCard">
-            <div class="weatherDescription">
-                <canvas class="weatherIcon current" width="30" height="30"></canvas>
-                <span class="description"></span>
+
+        <div class="detailedInfo">
+
+            <div class="addFuncBlock weeklyForecast">
+                <h3 class="titleFuncBlock weeklyTitle">Forecast</h3>
+                <div class="weeklyForecastContent">
+                    <!-- dynamically generated content -->
+                </div>
             </div>
-            <div class="temperature">
-                <span class="temperatureValue"></span>
-                <span class="degreeIcon">°</span>
+
+            <div class="addFuncBlock recentHistory">
+                <h3 class="titleFuncBlock recentHistoryTitle">Recently viewed</h3>
+                <ul class="historyList"></ul>
             </div>
-            <div class="unit-control">
-                <button class="measure celsius inactive">C</button>
-                <button class="measure fahrenheit">F</button>
+
+            <div class="addFuncBlock favorite">
+                <h3 class="titleFuncBlock favoriteTitle">Favorite</h3>
+                <ul class="favoriteList"></ul>
             </div>
         </div>
     </section>
-
-    <section class="detailedInfo">
-
-        <div class="addFuncBlock weeklyForecast">
-            <h3 class="titleFuncBlock weeklyTitle">Forecast</h3>
-            <div class="weeklyForecastContent">
-                <!-- dynamically generated content -->
-            </div>
-        </div>
-
-        <div class="addFuncBlock recentHistory">
-            <h3 class="titleFuncBlock recentHistoryTitle">Recently viewed</h3>
-            <ul class="historyList"></ul>
-        </div>
-
-        <div class="addFuncBlock favorite">
-            <h3 class="titleFuncBlock favoriteTitle">Favorite</h3>
-            <ul class="favoriteList"></ul>
-        </div>
-    </section>
-
-    <div id="map"></div>
-
-
 </div>
+
 </body>
 </html>
