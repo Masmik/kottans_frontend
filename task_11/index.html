@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
     <title>Title</title>
     <link rel="stylesheet" href="dist/css/reset.css">
     <link rel="stylesheet" href="dist/css/style.css">
@@ -12,63 +13,78 @@
     <form>
         <header>
             <div class="orderInfo">
-                <h3 class="orderTitle">your order</h3>
-                <ul class="orderDetails">
-                    <li class="detailsList">
-                        <h4 class="detailsHeader">items</h4>
-                        <div class="detailsInfo">
-                            <span class="quantity">2</span>
-                            <span class="units">documents</span>
-                        </div>
-                    </li>
-                    <li class="detailsList">
-                        <h4 class="detailsHeader">details</h4>
-                        <div class="detailsInfo">
-                            <span class="quantity">2</span>
-                            <span class="units">languages</span>
-                        </div>
-                    </li>
-                    <li class="detailsList">
-                        <h4 class="detailsHeader">price</h4>
-                        <div class="detailsInfo">
-                            <span class="units">$</span>
-                            <span class="quantity">696.06</span>
-                        </div>
-                    </li>
-                    <li class="detailsList">
-                        <h4 class="detailsHeader">delivery</h4>
-                        <div class="detailsInfo">
-                            <span class="quantity">48</span>
-                            <span class="units unitsSpecial">hours</span>
-                        </div>
-                    </li>
-                </ul>
-                <button class="button active">Place order</button>
-                <button class="button">Print a qoute</button>
+                <div class="orderDescription">
+                    <h3 class="orderTitle headerTitle">your order</h3>
+                    <ul class="orderDetails">
+                        <li class="detailsList">
+                            <h4 class="detailsHeader">items</h4>
+                            <div class="detailsInfo">
+                                <span class="quantity">2</span>
+                                <span class="units">documents</span>
+                            </div>
+                        </li>
+                        <li class="detailsList">
+                            <h4 class="detailsHeader">details</h4>
+                            <div class="detailsInfo">
+                                <span class="quantity">2</span>
+                                <span class="units">languages</span>
+                            </div>
+                        </li>
+                        <li class="detailsList">
+                            <h4 class="detailsHeader">price</h4>
+                            <div class="detailsInfo">
+                                <span class="units">$</span>
+                                <span class="quantity">696.06</span>
+                            </div>
+                        </li>
+                        <li class="detailsList">
+                            <h4 class="detailsHeader">delivery</h4>
+                            <div class="detailsInfo">
+                                <span class="quantity">48</span>
+                                <span class="units unitsSpecial">hours</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="buttonsContainer">
+                    <button class="button">Place order</button>
+                    <button class="button">Print a qoute</button>
+                </div>
             </div>
             <div class="helpInfo">
-                <h3 class="helpHeader">help center</h3>
-                <p class="description">If you need assistance while placing your order, contact one of our beloved Project Manager by phone or email</p>
-                <adress>
-                    <a class="helpPhone" href="tel:+18475555555">1-847-555-5555</a>
-                    <a href="help@qtest.com" class="helpEmail">help@qtest.com</a>
-                </adress>
+                <div class="helpContent">
+                    <h3 class="helpHeader headerTitle">help center</h3>
+                    <p class="helpDescription">If you need assistance while placing your order, contact one of our beloved Project Manager by phone or email</p>
+                    <adress>
+                        <a class="helpPhone" href="tel:+18475555555">+971(0)555 555</a>
+                        <a href="help@qtest.com" class="helpEmail">help@qtest.com</a>
+                    </adress>
+                </div>
             </div>
         </header>
         <main>
 
             <section class="selectTranslateItem">
                 <h1 class="selectTranslateHeader">select what you want to translate</h1>
-                <label for="website">
-                    <input type="radio" id="website">
-                </label>
-                <label for="documents">
-                    <input type="radio" id="documents">
-                </label>
-                <label for="socialAccount">
-                    <input type="radio" id="socialAccount">
-                </label>
+                <div class="translateItems">
+                    <label class="translateItem websiteItem" for="website">
+                        <input type="radio" id="website">
+                        <div class="itemImage websiteItemImage"></div>
+                        <p class="itemDescription">website</p>
+                    </label>
+                    <label class="translateItem documentsItem" for="documents">
+                        <input type="radio" id="documents">
+                        <div class="itemImage documentsItemImage"></div>
+                        <p class="itemDescription">documents</p>
+                    </label>
+                    <label class="translateItem socialAccountItem" for="socialAccount">
+                        <input type="radio" id="socialAccount">
+                        <div class="itemImage socialAccountItemImage"></div>
+                        <p class="itemDescription">Social Account</p>
+                    </label>
+                </div>
             </section>
+
             <section class="upload">
                 <h2 class="uploadHeader">Upload your documents
                     <span class="uploadHeader__formats">(Doc, Docx, Text, PDF, Markdown)</span>
