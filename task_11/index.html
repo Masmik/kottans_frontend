@@ -3,57 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="dist/css/reset.css">
+    <link rel="stylesheet" href="dist/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700" rel="stylesheet">
 </head>
 <body>
 <div class="content">
-    <header>
-        <div class="orderInfo">
-            <h3 class="orderTitle">your order</h3>
-            <ul class="orderDetails">
-                <li class="detailsList">
-                    <h4 class="detailsHeader">items</h4>
-                    <div class="detailsInfo">
-                        <span class="quantity">2</span>
-                        <span class="units">documents</span>
-                    </div>
-                </li>
-                <li class="detailsList">
-                    <h4 class="detailsHeader">details</h4>
-                    <div class="detailsInfo">
-                        <span class="quantity">2</span>
-                        <span class="units">languages</span>
-                    </div>
-                </li>
-                <li class="detailsList">
-                    <h4 class="detailsHeader">price</h4>
-                    <div class="detailsInfo">
-                        <span class="units">$</span>
-                        <span class="quantity">696.06</span>
-                    </div>
-                </li>
-                <li class="detailsList">
-                    <h4 class="detailsHeader">delivery</h4>
-                    <div class="detailsInfo">
-                        <span class="quantity">48</span>
-                        <span class="units">hours</span>
-                    </div>
-                </li>
-            </ul>
-            <button class="button active">Place order</button>
-            <button class="button">Print a qoute</button>
-        </div>
-        <div class="helpInfo">
-            <h3 class="helpHeader">help center</h3>
-            <p class="description">If you need assistance while placing your order, contact one of our beloved Project Manager by phone or email</p>
-            <adress>
-                <a class="helpPhone" href="tel:+18475555555">1-847-555-5555</a>
-                <a href="help@qtest.com" class="helpEmail">help@qtest.com</a>
-            </adress>
-        </div>
-    </header>
-    <main>
-        <form>
+    <form>
+        <header>
+            <div class="orderInfo">
+                <h3 class="orderTitle">your order</h3>
+                <ul class="orderDetails">
+                    <li class="detailsList">
+                        <h4 class="detailsHeader">items</h4>
+                        <div class="detailsInfo">
+                            <span class="quantity">2</span>
+                            <span class="units">documents</span>
+                        </div>
+                    </li>
+                    <li class="detailsList">
+                        <h4 class="detailsHeader">details</h4>
+                        <div class="detailsInfo">
+                            <span class="quantity">2</span>
+                            <span class="units">languages</span>
+                        </div>
+                    </li>
+                    <li class="detailsList">
+                        <h4 class="detailsHeader">price</h4>
+                        <div class="detailsInfo">
+                            <span class="units">$</span>
+                            <span class="quantity">696.06</span>
+                        </div>
+                    </li>
+                    <li class="detailsList">
+                        <h4 class="detailsHeader">delivery</h4>
+                        <div class="detailsInfo">
+                            <span class="quantity">48</span>
+                            <span class="units unitsSpecial">hours</span>
+                        </div>
+                    </li>
+                </ul>
+                <button class="button active">Place order</button>
+                <button class="button">Print a qoute</button>
+            </div>
+            <div class="helpInfo">
+                <h3 class="helpHeader">help center</h3>
+                <p class="description">If you need assistance while placing your order, contact one of our beloved Project Manager by phone or email</p>
+                <adress>
+                    <a class="helpPhone" href="tel:+18475555555">1-847-555-5555</a>
+                    <a href="help@qtest.com" class="helpEmail">help@qtest.com</a>
+                </adress>
+            </div>
+        </header>
+        <main>
+
             <section class="selectTranslateItem">
                 <h1 class="selectTranslateHeader">select what you want to translate</h1>
                 <label for="website">
@@ -72,6 +75,8 @@
                 </h2>
                 <button class="uploadFileBtn">Upload a new file</button>
                 <div class="uploadFile">
+
+                    <!--do div with css style table:cell or row-->
                     <table>
                         <tr>
                             <th>file name</th>
@@ -164,8 +169,8 @@
                 <button class="button active">Place order</button>
                 <button class="button">Print a qoute</button>
             </footer>
-        </form>
-    </main>
+        </main>
+    </form>
 </div>
 
 </body>

@@ -1,0 +1,62 @@
+.content {
+  width: 75%;
+  margin: 0 auto;
+  font-family: 'Nunito Sans', sans-serif;
+  color: #6e758f; }
+  .content header {
+    display: flex;
+    flex-flow: row nowrap;
+    border: 2px solid #cdcde5; }
+    .content header .orderInfo {
+      width: 75%;
+      padding-top: 3.2%;
+      padding-left: 3.4%;
+      border-right: 2px solid #cdcde5; }
+      .content header .orderInfo .orderTitle {
+        position: relative;
+        font-size: 0.8em;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: .06em; }
+        .content header .orderInfo .orderTitle::before {
+          content: "";
+          display: block;
+          position: absolute;
+          background: url(https://png.icons8.com/material/26/6c748d/file.png);
+          background-size: cover;
+          height: 25px;
+          width: 20px;
+          top: -8px;
+          left: -35px; }
+      .content header .orderInfo .orderDetails {
+        list-style-type: none;
+        padding: 0;
+        overflow: hidden;
+        margin-top: 4.4%;
+        margin-left: 0.3%; }
+        .content header .orderInfo .orderDetails .detailsList {
+          display: inline-block;
+          margin-left: 7%; }
+          .content header .orderInfo .orderDetails .detailsList .detailsHeader {
+            font-size: 0.79em;
+            text-transform: uppercase;
+            font-weight: bold; }
+          .content header .orderInfo .orderDetails .detailsList .detailsInfo {
+            color: #a6b0ba;
+            padding-top: 13px;
+            font-size: 0.8em; }
+            .content header .orderInfo .orderDetails .detailsList .detailsInfo .unitsSpecial {
+              position: relative; }
+              .content header .orderInfo .orderDetails .detailsList .detailsInfo .unitsSpecial:after {
+                content: '*';
+                font-size: 0.7em;
+                display: block;
+                position: absolute;
+                top: 3px;
+                right: -4px; }
+          .content header .orderInfo .orderDetails .detailsList:first-child {
+            margin-left: 0; }
+    .content header .helpInfo {
+      width: 25%; }
+
+/*# sourceMappingURL=style.css.map */
