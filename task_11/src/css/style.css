@@ -4,21 +4,44 @@
   font-family: 'Nunito Sans', sans-serif;
   color: #6e758f; }
   .content .headerTitle {
-    position: relative;
     font-size: 0.8em;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: .06em; }
-    .content .headerTitle::before {
-      content: "";
-      display: block;
+  .content .button {
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 3%;
+    color: #aaaac6;
+    background-color: #f7f7f9;
+    border: 1px solid #d9d8de;
+    display: block;
+    letter-spacing: 0.14em;
+    line-height: 47px;
+    outline: none; }
+  .content .sectionHeader {
+    position: relative;
+    font-size: 1.5em;
+    margin-left: 11.3%; }
+    .content .sectionHeader:before {
+      counter-increment: section;
+      font-size: 0.8em;
+      content: counter(section);
       position: absolute;
-      background-size: cover; }
+      border-radius: 50%;
+      border: .06em solid #6e768f;
+      height: 2.1em;
+      width: 2.1em;
+      text-align: center;
+      line-height: 2.2em;
+      left: -3.61em;
+      top: -.45em; }
   .content header {
     display: flex;
     width: 100%;
     border: 1px solid #cdcde5; }
     .content header .orderInfo {
+      position: relative;
       flex: 1;
       padding-left: 6.1%;
       padding-top: 1.2%;
@@ -27,12 +50,13 @@
       .content header .orderInfo .orderDescription {
         display: inline-block;
         width: 70%; }
-        .content header .orderInfo .orderDescription .orderTitle::before {
-          background: url(https://png.icons8.com/material/26/6c748d/file.png);
-          height: 25px;
-          width: 20px;
-          top: -8px;
-          left: -35px; }
+        .content header .orderInfo .orderDescription .orderTitle {
+          position: relative; }
+        .content header .orderInfo .orderDescription .fa-file {
+          font-size: 20px;
+          position: absolute;
+          top: 29px;
+          left: 39px; }
         .content header .orderInfo .orderDescription .orderDetails {
           list-style-type: none;
           padding: 0;
@@ -67,18 +91,10 @@
         width: 25%;
         margin-left: 4px; }
         .content header .orderInfo .buttonsContainer .button {
-          text-transform: uppercase;
-          border-radius: 3%;
-          color: #aaaac6;
-          line-height: 47px;
           padding-top: 1px;
-          background-color: #f7f7f9;
-          border: 1px solid #d9d8de;
           margin-bottom: 5%;
           width: 170px;
-          margin-top: 11px;
-          display: block;
-          letter-spacing: 0.14em; }
+          margin-top: 11px; }
           .content header .orderInfo .buttonsContainer .button:hover {
             color: #fff;
             background-color: #60cac6;
@@ -87,13 +103,13 @@
       width: 31%; }
       .content header .helpInfo .helpContent {
         margin-left: 20.5%;
-        margin-top: 8.2%; }
-        .content header .helpInfo .helpContent .helpHeader::before {
-          background: url(https://png.icons8.com/windows/26/767d94/lifebuoy.png);
-          width: 25px;
-          height: 25px;
-          top: -9px;
-          left: -43px; }
+        margin-top: 8.2%;
+        position: relative; }
+        .content header .helpInfo .helpContent .fa-life-ring {
+          font-size: 20px;
+          position: absolute;
+          top: -5px;
+          left: -40px; }
         .content header .helpInfo .helpContent .helpDescription {
           margin-top: 5.2%;
           font-size: .8em;
@@ -123,19 +139,31 @@
       .content .selectTranslateItem .translateItems input[type="radio"] {
         display: none; }
       .content .selectTranslateItem .translateItems .translateItem {
+        position: relative;
         box-sizing: border-box;
         display: inline-block;
+        border: 6px solid transparent;
         width: 24.8%;
-        border: 1px solid #cdcde5;
         height: 202px;
         border-radius: 3%;
-        margin-left: 2%; }
+        margin-left: 2%;
+        cursor: pointer; }
+        .content .selectTranslateItem .translateItems .translateItem:before {
+          content: "";
+          display: block;
+          position: absolute;
+          border: 1px solid #cdcde5;
+          top: -6px;
+          left: -6px;
+          right: -6px;
+          bottom: -6px;
+          border-radius: 3%; }
         .content .selectTranslateItem .translateItems .translateItem .itemImage {
           display: block;
-          width: 94px;
-          height: 106px;
-          margin-top: 11%;
-          margin-left: 33%; }
+          width: 95px;
+          height: 105px;
+          margin-top: 9.7%;
+          margin-left: 32.6%; }
           .content .selectTranslateItem .translateItems .translateItem .itemImage.websiteItemImage {
             background: url(../img/website.png) no-repeat;
             background-size: contain; }
@@ -154,16 +182,34 @@
           position: relative;
           border: 6px solid #76a7e1; }
           .content .selectTranslateItem .translateItems .translateItem:hover:after {
-            content: "\2713";
-            display: block;
+            font-family: FontAwesome;
+            font-weight: 900;
+            content: "\f00c";
             position: absolute;
-            top: -17px;
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            background-color: #76a7e1;
-            right: -14px;
+            top: -1.1em;
+            right: -0.9em;
             color: #fff;
-            line-height: 32px; }
+            font-size: 100%;
+            z-index: 2;
+            line-height: 2em;
+            height: 2em;
+            width: 2em;
+            text-align: center;
+            border-radius: 50%;
+            background: #76a7e1; }
+  .content .upload {
+    margin-top: 9.5%; }
+    .content .upload .uploadHeader .uploadHeader__formats {
+      text-transform: capitalize;
+      font-size: 0.6em; }
+    .content .upload .uploadFileBtn {
+      display: none; }
+    .content .upload .uploadFileBtnLabel {
+      display: inline-block;
+      text-transform: none;
+      margin-top: 5%;
+      margin-left: 11%; }
+    .content .upload .uploadFile {
+      margin-top: 3%; }
 
 /*# sourceMappingURL=style.css.map */
