@@ -22,6 +22,16 @@
     line-height: 47px;
     outline: none;
   }
+
+  .button__remove {
+    border: none;
+    background: 0 0;
+    color: #6f7692;
+    font-size: 1.3em;
+    opacity: .6;
+    cursor: pointer;
+    transition: all .2s;
+  }
   .sectionHeader {
     position: relative;
     font-size: 1.5em;
@@ -263,23 +273,142 @@
       .uploadHeader__formats {
         text-transform: capitalize;
         font-size: 0.6em;
+        font-weight: 300;
       }
     }
     .uploadFileBtn {
       display: none;
     }
-    .uploadFileBtnLabel{
+    .uploadFileBtnLabel {
       display: inline-block;
-      text-transform: none;
-      margin-top: 5%;
-      margin-left: 11%;
+      margin-top: 4.8%;
+      margin-left: 11.3%;
+      padding-top: 3px;
+      padding-left: 3%;
+      padding-right: 3%;
+      .uploadFileBtnText {
+        font-size: 1em;
+        letter-spacing: 0;
+        font-weight: 400;
+        text-transform: initial;
+      }
+      .fa-cloud-upload {
+        font-size: 19px;
+        margin-left: -2px;
+        padding-right: 7px;
+      }
+
     }
 
-    .uploadFile{
-      margin-top: 3%;
+    .uploadFiles {
+      margin: 3.4% 11.4%;
+      border: 1px solid #cdcde5;
+      text-align: left;
+      width: 79%;
+
+      tr {
+        &:last-child td {
+          padding-bottom: 3%;
+        }
+      }
+
+      .uploadFilesHeader {
+        text-transform: uppercase;
+        padding-top: 3.5%;
+        font-size: .7em;
+        letter-spacing: 0.11em;
+        width: 20.5%;
+        &:first-child {
+          padding-left: 5%;
+          width: 41.7%;
+        }
+        &:last-child {
+          padding-left: 6%;
+        }
+
+      }
+      td {
+        .fa-file-text {
+          font-size: 1.15em;
+          padding-right: 4.8%;
+        }
+        &:first-child {
+          padding-left: 5%;
+          padding-top: 2.6%;
+        }
+        &:last-child {
+          padding-left: 7%;
+        }
+
+      }
+
     }
+  }
+
+  .chooseLanguage {
+    margin-top: 9.9%;
+    .languageHeader {
+      margin-left: 11.9%;
+    }
+
+    .chooseLanguageBlock {
+      margin-top: 2%;
+      margin-left: 2%;
+
+      text-transform: uppercase;
+      font-size: 0.7em;
+      letter-spacing: 0.1em;
+      .translatePointer {
+        vertical-align: text-top;
+        padding-right: 1.4%;
+        display: inline-block;
+        width: 3.6%;
+        text-align: center;
+      }
+      .languageSelect {
+        position: relative;
+        -webkit-appearance: none;
+        pointer-events: all;
+        display: inline-block;
+        padding: 1.6% 5% 1.6% 5%;
+        letter-spacing: 0.06em;
+        border-radius: 5px;
+        border: 1px solid #dad9df;
+        font-weight: 400;
+        font-size: 14px;
+        background: #f7f7f9;
+        cursor: pointer;
+        -webkit-transition: all .2s;
+        transition: all .2s;
+        color: #aaaac6;
+        &:after{
+          content: "";
+          display: block;
+          position: absolute;
+          width: 50px;
+          height: 40px;
+          top: 0;
+          left: 5px;
+          background: red;
+        }
+      }
+
+      &.fromLanguage {
+        margin-top: 4.7%;
+        margin-left: 12%;
+      }
+      &.toLanguage {
+        margin-left: 12%;
+      }
+    }
+
+    .button__removeLanguage{
+      font-size: 2em;
+    }
+
 
   }
+
 }
 
 //input[type=range] {

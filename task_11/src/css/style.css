@@ -19,6 +19,14 @@
     letter-spacing: 0.14em;
     line-height: 47px;
     outline: none; }
+  .content .button__remove {
+    border: none;
+    background: 0 0;
+    color: #6f7692;
+    font-size: 1.3em;
+    opacity: .6;
+    cursor: pointer;
+    transition: all .2s; }
   .content .sectionHeader {
     position: relative;
     font-size: 1.5em;
@@ -201,15 +209,99 @@
     margin-top: 9.5%; }
     .content .upload .uploadHeader .uploadHeader__formats {
       text-transform: capitalize;
-      font-size: 0.6em; }
+      font-size: 0.6em;
+      font-weight: 300; }
     .content .upload .uploadFileBtn {
       display: none; }
     .content .upload .uploadFileBtnLabel {
       display: inline-block;
-      text-transform: none;
-      margin-top: 5%;
-      margin-left: 11%; }
-    .content .upload .uploadFile {
-      margin-top: 3%; }
+      margin-top: 4.8%;
+      margin-left: 11.3%;
+      padding-top: 3px;
+      padding-left: 3%;
+      padding-right: 3%; }
+      .content .upload .uploadFileBtnLabel .uploadFileBtnText {
+        font-size: 1em;
+        letter-spacing: 0;
+        font-weight: 400;
+        text-transform: initial; }
+      .content .upload .uploadFileBtnLabel .fa-cloud-upload {
+        font-size: 19px;
+        margin-left: -2px;
+        padding-right: 7px; }
+    .content .upload .uploadFiles {
+      margin: 3.4% 11.4%;
+      border: 1px solid #cdcde5;
+      text-align: left;
+      width: 79%; }
+      .content .upload .uploadFiles tr:last-child td {
+        padding-bottom: 3%; }
+      .content .upload .uploadFiles .uploadFilesHeader {
+        text-transform: uppercase;
+        padding-top: 3.5%;
+        font-size: .7em;
+        letter-spacing: 0.11em;
+        width: 20.5%; }
+        .content .upload .uploadFiles .uploadFilesHeader:first-child {
+          padding-left: 5%;
+          width: 41.7%; }
+        .content .upload .uploadFiles .uploadFilesHeader:last-child {
+          padding-left: 6%; }
+      .content .upload .uploadFiles td .fa-file-text {
+        font-size: 1.15em;
+        padding-right: 4.8%; }
+      .content .upload .uploadFiles td:first-child {
+        padding-left: 5%;
+        padding-top: 2.6%; }
+      .content .upload .uploadFiles td:last-child {
+        padding-left: 7%; }
+  .content .chooseLanguage {
+    margin-top: 9.9%; }
+    .content .chooseLanguage .languageHeader {
+      margin-left: 11.9%; }
+    .content .chooseLanguage .chooseLanguageBlock {
+      margin-top: 2%;
+      margin-left: 2%;
+      text-transform: uppercase;
+      font-size: 0.7em;
+      letter-spacing: 0.1em; }
+      .content .chooseLanguage .chooseLanguageBlock .translatePointer {
+        vertical-align: text-top;
+        padding-right: 1.4%;
+        display: inline-block;
+        width: 3.6%;
+        text-align: center; }
+      .content .chooseLanguage .chooseLanguageBlock .languageSelect {
+        position: relative;
+        -webkit-appearance: none;
+        pointer-events: all;
+        display: inline-block;
+        padding: 1.6% 5% 1.6% 5%;
+        letter-spacing: 0.06em;
+        border-radius: 5px;
+        border: 1px solid #dad9df;
+        font-weight: 400;
+        font-size: 14px;
+        background: #f7f7f9;
+        cursor: pointer;
+        -webkit-transition: all .2s;
+        transition: all .2s;
+        color: #aaaac6; }
+        .content .chooseLanguage .chooseLanguageBlock .languageSelect:after {
+          content: "";
+          display: block;
+          position: absolute;
+          width: 50px;
+          height: 40px;
+          top: 0;
+          left: 5px;
+          background: red; }
+      .content .chooseLanguage .chooseLanguageBlock.fromLanguage {
+        margin-top: 4.7%;
+        margin-left: 12%; }
+      .content .chooseLanguage .chooseLanguageBlock.toLanguage {
+        margin-left: 12%; }
+    .content .chooseLanguage .button__removeLanguage {
+      font-size: 2em; }
 
 /*# sourceMappingURL=style.css.map */

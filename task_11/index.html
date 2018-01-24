@@ -90,63 +90,73 @@
 
             <section class="upload">
                 <h2 class="sectionHeader uploadHeader">Upload your documents
-                    <span class="uploadHeader__formats">(Doc,Docx,Text,PDF,Markdown)</span>
+                    <span class="uploadHeader__formats">(Doc, Docx, Text, PDF, Markdown)</span>
                 </h2>
                 <input type="file" name="file" id="file" class="uploadFileBtn">
-                <label for="file" class="uploadFileBtnLabel button">Upload a new file</label>
-                <div class="uploadFile">
-
-                    <!--do div with css style table:cell or row-->
-                    <table>
-                        <tr>
-                            <th>file name</th>
-                            <th>file size</th>
-                            <th>number of words</th>
-                            <th>remove</th>
-                        </tr>
-                        <tr>
-                            <td>business_operations.docx</td>
-                            <td><span>78</span><span>kb</span></td>
-                            <td>842</td>
-                            <td>
-                                <button>remove</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>business_financial.docx</td>
-                            <td><span>26</span><span>kb</span></td>
-                            <td>2,326</td>
-                            <td>
-                                <button>remove</button>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
+                <label for="file" class="uploadFileBtnLabel button">
+                    <i class="fa fa-cloud-upload" aria-hidden="true"></i>
+                    <span class="uploadFileBtnText">Upload a new file</span>
+                </label>
+                <table class="uploadFiles">
+                    <thead>
+                    <tr>
+                        <th class="uploadFilesHeader">file name</th>
+                        <th class="uploadFilesHeader">file size</th>
+                        <th class="uploadFilesHeader">number of words</th>
+                        <th class="uploadFilesHeader">remove</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><i class="fa fa-file-text" aria-hidden="true"></i>business_operations.docx</td>
+                        <td><span>78</span><span>kb</span></td>
+                        <td>842</td>
+                        <td>
+                            <button class="button__remove">
+                                <i class="fa fa-trash" aria-hidden="true"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><i class="fa fa-file-text" aria-hidden="true"></i>business_financial.docx</td>
+                        <td><span>26</span><span>kb</span></td>
+                        <td>2,326</td>
+                        <td>
+                            <button class="button__remove">
+                                <i class="fa fa-trash" aria-hidden="true"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
             </section>
+
             <section class="chooseLanguage">
                 <h2 class="sectionHeader languageHeader">Choose your languages pairings</h2>
-                <div class="fromLanguage">
-                    <span>from</span>
-                    <select>
+                <div class="chooseLanguageBlock fromLanguage">
+                    <div class="translatePointer">from</div>
+                    <select class="languageSelect">
                         <option>English</option>
                         <option>Arabic</option>
                         <option>Kurdish</option>
                     </select>
                 </div>
-                <div class="toLanguage">
-                    <span>to</span>
-                    <select>
+                <div class="chooseLanguageBlock toLanguage">
+                    <div class="translatePointer translatePointer__toLanguage">to</div>
+                    <select class="languageSelect">
                         <option>Arabic</option>
                         <option>English</option>
                         <option>Kurdish</option>
                     </select>
-                    <select>
+                    <select class="chooseLanguageBlock languageSelect">
                         <option>Kurdish</option>
                         <option>Arabic</option>
                         <option>English</option>
                     </select>
-                    <button type="button" class="deleteLanguage"></button>
-                    <button type="button" class="addLanguage">+Add</button>
+                    <button type="button" class="button__remove button__removeLanguage">
+                        <i class="fa fa-trash" aria-hidden="true"></i>
+                    </button>
+                    <button type="button" class="languageSelect addLanguage">+Add</button>
                 </div>
             </section>
             <section class="signUp">
