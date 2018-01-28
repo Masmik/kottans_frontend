@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,cAAe;EACb,WAAW,EAAE,IAAI;EACjB,cAAc,EAAE,IAAI;EACpB,kBAAI;IACF,OAAO,EAAE,IAAI;IACb,eAAe,EAAE,aAAa;IAC9B,WAAW,EAAE,MAAM;IAEnB,0BAAQ;MACN,OAAO,EAAE,mBAAmB;MAC5B,WAAW,EAAE,IAAI;IAGnB,8CAA4B;MAC1B,MAAM,EAAE,KAAK",
+"sources": ["dribbleHeaderModule.scss"],
+"names": [],
+"file": "dribbleHeaderModule.css"
+}

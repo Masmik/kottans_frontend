@@ -1,0 +1,18 @@
+.dribbleHeader {
+  padding-top: 64px;
+  padding-bottom: 63px;
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .button {
+      padding: 18px 16px 14px 46px;
+      line-height: 18px;
+    }
+
+    .dribbleHeader_button__logo {
+      height: 100px;
+    }
+  }
+}

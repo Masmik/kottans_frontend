@@ -1,46 +1,47 @@
 .wrapperContainer {
+  box-sizing: border-box;
   width: 100%;
   height: 100%;
-  background-size: cover;
   background-color: #edeef3;
-  box-sizing: border-box; }
+  background-size: cover; }
   .wrapperContainer .wrapperContainer_content {
     width: 79.1%;
     margin: 0 auto;
-    font-family: 'Nunito Sans', sans-serif;
-    color: #6e758f; }
+    color: #6e758f;
+    font-family: 'Nunito Sans', sans-serif; }
     .wrapperContainer .wrapperContainer_content .button {
       position: relative;
       display: inline-block;
+      min-width: 100px;
       cursor: pointer;
-      text-transform: uppercase;
-      border-radius: 5px;
-      letter-spacing: .14em;
-      outline: none;
       transition: all .2s;
+      text-align: center;
       text-decoration: none;
+      letter-spacing: .14em;
+      text-transform: uppercase;
       color: inherit;
       border: 1px solid #d9d8de;
-      font-weight: 600;
+      border-radius: 5px;
+      outline: none;
       font-size: .7em;
-      text-align: center;
-      min-width: 100px; }
+      font-weight: 600; }
       .wrapperContainer .wrapperContainer_content .button:hover {
-        color: #fff;
-        background-color: #60cac6;
-        border-color: #55aba8; }
+        color: #ffffff;
+        border-color: #55aba8;
+        background-color: #60cac6; }
       .wrapperContainer .wrapperContainer_content .button .fa {
-        display: inline-block;
-        font: normal normal normal 18px FontAwesome;
         position: absolute;
-        left: 33px; }
+        top: 5px;
+        left: 33px;
+        display: inline-block;
+        font: normal normal normal 18px FontAwesome; }
     .wrapperContainer .wrapperContainer_content .dribbleHeader {
       padding-top: 64px;
       padding-bottom: 63px; }
       .wrapperContainer .wrapperContainer_content .dribbleHeader nav {
         display: flex;
-        justify-content: space-between;
-        align-items: center; }
+        align-items: center;
+        justify-content: space-between; }
         .wrapperContainer .wrapperContainer_content .dribbleHeader nav .button {
           padding: 18px 16px 14px 46px;
           line-height: 18px; }
@@ -49,48 +50,48 @@
     .wrapperContainer .wrapperContainer_content main {
       border: 1px solid #cdcde5;
       border-collapse: collapse;
-      background-color: #fff; }
+      background-color: #ffffff; }
       .wrapperContainer .wrapperContainer_content main .mainHeaderTitle {
-        font-size: 0.8em;
-        font-weight: bold;
+        letter-spacing: .06em;
         text-transform: uppercase;
-        letter-spacing: .06em; }
+        font-size: .8em;
+        font-weight: bold; }
       .wrapperContainer .wrapperContainer_content main .button__remove {
+        opacity: .8;
         border: none;
-        outline: none;
-        opacity: 0.8; }
+        outline: none; }
         .wrapperContainer .wrapperContainer_content main .button__remove:hover {
           opacity: 1; }
-      .wrapperContainer .wrapperContainer_content main input[type="radio"] {
+      .wrapperContainer .wrapperContainer_content main input[type='radio'] {
         display: none; }
       .wrapperContainer .wrapperContainer_content main .button__add {
         margin-left: 12px;
         padding: 19px 34px 18px 55px;
-        outline: none;
-        opacity: 0.8; }
+        opacity: .8;
+        outline: none; }
         .wrapperContainer .wrapperContainer_content main .button__add:hover {
           opacity: 1; }
         .wrapperContainer .wrapperContainer_content main .button__add .fa-plus {
           font-size: 14px; }
       .wrapperContainer .wrapperContainer_content main .fa-trash {
-        font-size: 18px;
-        opacity: 0.5; }
+        opacity: .5;
+        font-size: 18px; }
       .wrapperContainer .wrapperContainer_content main .sectionHeader {
         position: relative;
         font-size: 1.5em; }
         .wrapperContainer .wrapperContainer_content main .sectionHeader:before {
-          counter-increment: section;
-          font-size: .8em;
-          content: counter(section);
           position: absolute;
-          border-radius: 50%;
-          border: .06em solid #6e768f;
-          height: 41px;
-          width: 41px;
-          text-align: center;
-          line-height: 2.1em;
+          top: -8px;
           left: -69px;
-          top: -8px; }
+          width: 41px;
+          height: 41px;
+          content: counter(section);
+          counter-increment: section;
+          text-align: center;
+          border: .06em solid #6e768f;
+          border-radius: 50%;
+          font-size: .8em;
+          line-height: 2.1em; }
       .wrapperContainer .wrapperContainer_content main .headerSection {
         display: flex;
         width: 100%;
@@ -100,59 +101,59 @@
           display: flex;
           width: 69%;
           padding-top: 14px;
-          border-right: 1px solid #cdcde5;
-          padding-bottom: 10px; }
+          padding-bottom: 10px;
+          border-right: 1px solid #cdcde5; }
           .wrapperContainer .wrapperContainer_content main .headerSection .orderInfoBlock .orderDescription {
             display: inline-block;
-            flex-grow: 100;
             margin-top: 20px;
             margin-left: 72px;
+            flex-grow: 100;
             flex-wrap: wrap; }
             .wrapperContainer .wrapperContainer_content main .headerSection .orderInfoBlock .orderDescription .orderTitle {
               position: relative; }
             .wrapperContainer .wrapperContainer_content main .headerSection .orderInfoBlock .orderDescription .fa-file {
-              font-size: 20px;
               position: absolute;
               top: 29px;
-              left: 39px; }
+              left: 39px;
+              font-size: 20px; }
             .wrapperContainer .wrapperContainer_content main .headerSection .orderInfoBlock .orderDescription .orderDetails {
-              list-style-type: none;
-              padding: 0;
               overflow: hidden;
               margin-top: 7.4%;
               margin-left: .35%;
-              font-size: 0.9em;
-              letter-spacing: 0.05em; }
+              padding: 0;
+              list-style-type: none;
+              letter-spacing: .05em;
+              font-size: .9em; }
               .wrapperContainer .wrapperContainer_content main .headerSection .orderInfoBlock .orderDescription .orderDetails .detailsList {
                 display: inline-block;
                 margin-left: 11.2%; }
                 .wrapperContainer .wrapperContainer_content main .headerSection .orderInfoBlock .orderDescription .orderDetails .detailsList .detailsHeader {
-                  font-size: .8em;
-                  text-transform: uppercase;
-                  font-weight: 700;
+                  padding-bottom: 13px;
                   letter-spacing: .04em;
-                  padding-bottom: 13px; }
+                  text-transform: uppercase;
+                  font-size: .8em;
+                  font-weight: 700; }
                 .wrapperContainer .wrapperContainer_content main .headerSection .orderInfoBlock .orderDescription .orderDetails .detailsList .detailsInfo {
                   color: #aaaac6;
-                  font-size: 0.8em; }
+                  font-size: .8em; }
                   .wrapperContainer .wrapperContainer_content main .headerSection .orderInfoBlock .orderDescription .orderDetails .detailsList .detailsInfo .unitsSpecial {
                     position: relative; }
                     .wrapperContainer .wrapperContainer_content main .headerSection .orderInfoBlock .orderDescription .orderDetails .detailsList .detailsInfo .unitsSpecial:after {
-                      content: '*';
-                      font-size: 0.7em;
-                      display: block;
                       position: absolute;
                       top: 3px;
-                      right: -4px; }
+                      right: -4px;
+                      display: block;
+                      content: '*';
+                      font-size: .7em; }
                 .wrapperContainer .wrapperContainer_content main .headerSection .orderInfoBlock .orderDescription .orderDetails .detailsList:first-child {
                   margin-left: 0; }
           .wrapperContainer .wrapperContainer_content main .headerSection .orderInfoBlock .buttonsContainer {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: flex-end;
             width: 25%;
+            margin-top: 11px;
             margin-right: 34px;
-            margin-top: 11px; }
+            flex-wrap: wrap;
+            justify-content: flex-end; }
             .wrapperContainer .wrapperContainer_content main .headerSection .orderInfoBlock .buttonsContainer .button {
               min-width: 170px;
               margin-bottom: 12px;
@@ -162,61 +163,61 @@
           .wrapperContainer .wrapperContainer_content main .headerSection .helpInfoBlock .helpHeader {
             letter-spacing: .01em; }
           .wrapperContainer .wrapperContainer_content main .headerSection .helpInfoBlock .helpContent {
-            margin-left: 74px;
+            position: relative;
             margin-top: 29px;
-            position: relative; }
+            margin-left: 74px; }
             .wrapperContainer .wrapperContainer_content main .headerSection .helpInfoBlock .helpContent .fa-life-ring {
-              font-size: 20px;
               position: absolute;
               top: -5px;
-              left: -40px; }
+              left: -40px;
+              font-size: 20px; }
             .wrapperContainer .wrapperContainer_content main .headerSection .helpInfoBlock .helpContent .helpDescription {
-              margin-top: 12px;
-              font-size: .8em;
               max-width: 235px;
-              line-height: 1.41em;
-              padding-bottom: 14px; }
+              margin-top: 12px;
+              padding-bottom: 14px;
+              font-size: .8em;
+              line-height: 1.41em; }
           .wrapperContainer .wrapperContainer_content main .headerSection .helpInfoBlock adress {
             margin-left: -1px; }
             .wrapperContainer .wrapperContainer_content main .headerSection .helpInfoBlock adress a {
-              font-weight: bold;
               text-decoration: none;
               color: #6e758f;
-              font-size: 0.8em; }
+              font-size: .8em;
+              font-weight: bold; }
             .wrapperContainer .wrapperContainer_content main .headerSection .helpInfoBlock adress .helpPhone {
               margin-right: 4%; }
       .wrapperContainer .wrapperContainer_content main .translateSection {
         text-align: center; }
         .wrapperContainer .wrapperContainer_content main .translateSection .translateHeader {
           display: inline-block;
-          font-size: 1.2em;
-          text-transform: uppercase;
           margin-top: 105px;
+          padding-bottom: 12px;
           letter-spacing: .171em;
+          text-transform: uppercase;
           border-bottom: 1px solid #cdcde5;
-          padding-bottom: 12px; }
+          font-size: 1.2em; }
         .wrapperContainer .wrapperContainer_content main .translateSection .translateItems {
           display: block;
           margin-top: 72px; }
           .wrapperContainer .wrapperContainer_content main .translateSection .translateItems .translateItem {
             position: relative;
-            box-sizing: border-box;
             display: inline-block;
-            border: 6px solid transparent;
+            box-sizing: border-box;
             width: 24.8%;
             height: 202px;
-            border-radius: 3%;
             margin-left: 2%;
-            cursor: pointer; }
+            cursor: pointer;
+            border: 6px solid transparent;
+            border-radius: 3%; }
             .wrapperContainer .wrapperContainer_content main .translateSection .translateItems .translateItem:before {
-              content: "";
-              display: block;
               position: absolute;
-              border: 1px solid #cdcde5;
               top: -6px;
-              left: -6px;
               right: -6px;
               bottom: -6px;
+              left: -6px;
+              display: block;
+              content: '';
+              border: 1px solid #cdcde5;
               border-radius: 5px; }
             .wrapperContainer .wrapperContainer_content main .translateSection .translateItems .translateItem .imageItem {
               display: block;
@@ -234,36 +235,36 @@
                 background: url(../img/social_account.png) no-repeat;
                 background-size: contain; }
             .wrapperContainer .wrapperContainer_content main .translateSection .translateItems .translateItem .itemDescription {
-              text-transform: capitalize;
               margin-top: 18px;
+              margin-left: -1px;
               letter-spacing: .04em;
-              margin-left: -1px; }
+              text-transform: capitalize; }
             .wrapperContainer .wrapperContainer_content main .translateSection .translateItems .translateItem:hover {
               position: relative;
               border: 6px solid #76a7e1; }
               .wrapperContainer .wrapperContainer_content main .translateSection .translateItems .translateItem:hover:after {
-                font-family: FontAwesome;
-                font-weight: 900;
-                content: "\f00c";
                 position: absolute;
-                top: -1.1em;
-                right: -0.9em;
-                color: #fff;
-                font-size: 100%;
                 z-index: 2;
-                line-height: 2em;
-                height: 2em;
+                top: -1.1em;
+                right: -.9em;
                 width: 2em;
+                height: 2em;
+                content: '\f00c';
                 text-align: center;
+                color: #ffffff;
                 border-radius: 50%;
-                background: #76a7e1; }
+                background: #76a7e1;
+                font-family: FontAwesome;
+                font-size: 100%;
+                font-weight: 900;
+                line-height: 2em; }
       .wrapperContainer .wrapperContainer_content main .uploadSection {
         margin-top: 109px; }
         .wrapperContainer .wrapperContainer_content main .uploadSection .uploadHeader {
           margin-left: 129px; }
           .wrapperContainer .wrapperContainer_content main .uploadSection .uploadHeader .uploadHeader__formats {
             text-transform: capitalize;
-            font-size: 0.6em;
+            font-size: .6em;
             font-weight: 300; }
         .wrapperContainer .wrapperContainer_content main .uploadSection .uploadFileBtn {
           display: none; }
@@ -275,34 +276,34 @@
           padding: 19px 37px 15px 67px;
           font-size: 1em; }
           .wrapperContainer .wrapperContainer_content main .uploadSection .uploadFileBtnLabel .uploadFileBtnText {
-            font-size: 1em;
             letter-spacing: 0;
-            font-weight: 400;
-            text-transform: initial; }
+            text-transform: initial;
+            font-size: 1em;
+            font-weight: 400; }
           .wrapperContainer .wrapperContainer_content main .uploadSection .uploadFileBtnLabel .fa-cloud-upload {
-            font-size: 18px;
             position: absolute;
+            top: 17px;
             left: 32px;
-            top: 17px; }
+            font-size: 18px; }
         .wrapperContainer .wrapperContainer_content main .uploadSection .uploadFiles {
-          margin: 39px 130px;
-          border: 1px solid #cdcde5;
-          text-align: left;
           width: 79.21%;
+          margin: 39px 130px;
+          text-align: left;
+          border: 1px solid #cdcde5;
           border-radius: 5px; }
           .wrapperContainer .wrapperContainer_content main .uploadSection .uploadFiles .uploadFilesHeader {
+            letter-spacing: .11em;
             text-transform: uppercase;
-            font-size: .7em;
-            letter-spacing: 0.11em; }
+            font-size: .7em; }
             .wrapperContainer .wrapperContainer_content main .uploadSection .uploadFiles .uploadFilesHeader th {
               padding-top: 31px;
               padding-left: 44px; }
           .wrapperContainer .wrapperContainer_content main .uploadSection .uploadFiles tr td {
-            padding-left: 44px;
-            padding-top: 22px; }
+            padding-top: 22px;
+            padding-left: 44px; }
             .wrapperContainer .wrapperContainer_content main .uploadSection .uploadFiles tr td .fa-file-text {
-              font-size: 1.15em;
-              padding-right: 20px; }
+              padding-right: 20px;
+              font-size: 1.15em; }
           .wrapperContainer .wrapperContainer_content main .uploadSection .uploadFiles tr:last-child td {
             padding-bottom: 30px; }
           .wrapperContainer .wrapperContainer_content main .uploadSection .uploadFiles .button__remove {
@@ -314,22 +315,22 @@
           margin-bottom: 54px; }
         .wrapperContainer .wrapperContainer_content main .languageSection .legend {
           position: absolute;
+          top: 20px;
+          letter-spacing: .05em;
           text-transform: uppercase;
           font-size: 12px;
-          font-weight: 600;
-          letter-spacing: .05em;
-          top: 20px; }
+          font-weight: 600; }
           .wrapperContainer .wrapperContainer_content main .languageSection .legend.legendFor {
             left: -56px; }
           .wrapperContainer .wrapperContainer_content main .languageSection .legend.legendTo {
             left: -38px; }
         .wrapperContainer .wrapperContainer_content main .languageSection .languageSelectLabel:after {
           position: absolute;
-          content: "";
-          display: block;
           top: 0;
           bottom: 0;
           left: 150px;
+          display: block;
+          content: '';
           border: 1px solid #d9d8de; }
         .wrapperContainer .wrapperContainer_content main .languageSection .languageSelectLabel .fa-caret-down {
           position: absolute;
@@ -337,44 +338,44 @@
           top: 18px;
           left: 169px; }
         .wrapperContainer .wrapperContainer_content main .languageSection .languageSelectLabel .languageSelect {
-          outline: none;
           position: relative;
-          -webkit-appearance: none;
           display: inline-block;
           padding: 15px 86px 17px 52px;
-          border-radius: 5px;
-          border: 1px solid #d9d8de;
-          font-weight: 400;
-          font-size: 16px;
-          background: #f7f7fa;
-          color: inherit;
           cursor: pointer;
-          transition: all .2s; }
+          transition: all .2s;
+          color: inherit;
+          border: 1px solid #d9d8de;
+          border-radius: 5px;
+          outline: none;
+          background: #f7f7fa;
+          font-size: 16px;
+          font-weight: 400;
+          -webkit-appearance: none; }
         .wrapperContainer .wrapperContainer_content main .languageSection .selectBlock {
           position: relative;
-          margin-left: 56px;
-          margin-bottom: 40px; }
+          margin-bottom: 40px;
+          margin-left: 56px; }
         .wrapperContainer .wrapperContainer_content main .languageSection .selectBlock_group {
           display: inline-block; }
           .wrapperContainer .wrapperContainer_content main .languageSection .selectBlock_group.selectBlock_group__add {
             margin-left: 20px; }
       .wrapperContainer .wrapperContainer_content main .toneSection {
         display: block;
-        margin-left: 129px;
+        width: 40%;
         margin-top: 61px;
-        width: 40%; }
+        margin-left: 129px; }
         .wrapperContainer .wrapperContainer_content main .toneSection .toneTypeContainer {
           margin-top: 46px; }
           .wrapperContainer .wrapperContainer_content main .toneSection .toneTypeContainer .toneTypeBlock {
             margin-bottom: 22px; }
             .wrapperContainer .wrapperContainer_content main .toneSection .toneTypeContainer .toneTypeBlock .toneTypeBtnLabel {
-              text-transform: capitalize;
               padding: 27px 47px 25px 78px;
-              font-size: 16px;
-              letter-spacing: -0.1px; }
+              letter-spacing: -.1px;
+              text-transform: capitalize;
+              font-size: 16px; }
               .wrapperContainer .wrapperContainer_content main .toneSection .toneTypeContainer .toneTypeBlock .toneTypeBtnLabel .fa {
+                top: 25px;
                 left: 38px;
-                font-size: 20px;
-                top: 25px; }
+                font-size: 20px; }
 
 /*# sourceMappingURL=style.css.map */
