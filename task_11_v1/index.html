@@ -16,9 +16,11 @@
             <nav>
                 <a href="#" type="button" class="button dribbleHeader_button dribbleHeader_button__goBack">
                     <i class="fa fa-long-arrow-left" aria-hidden="true"></i>go back</a>
-                <a href="https://dribbble.com/" class="dribbleHeader_button dribbleHeader_button__logoBlock"><img
-                        class="dribbleHeader_button__logo"
-                        src="dist/img/logo.png" alt="dribble logo"></a>
+                <a href="https://dribbble.com/" class="dribbleHeader_button dribbleHeader_button__logoBlock">
+                    <img
+                            class="dribbleHeader_button__logo"
+                            src="dist/img/logo.png" alt="dribble logo">
+                </a>
                 <a href="#" type="button" class="button dribbleHeader_button dribbleHeader_button__signIn">
                     <i class="fa fa-user" aria-hidden="true"></i>sign in</a>
             </nav>
@@ -215,7 +217,98 @@
                 </div>
             </section>
 
+            <section class="section urgentSection">
+                <h2 class="sectionHeader urgentHeader">Tell us how urgent this job is</h2>
+                <input type="range" min="0" max="100" step="50">
+                <div class="captionContainer">
+                    <span class="caption">i got time</span>
+                    <span class="caption active">average</span>
+                    <span class="caption">yesterday</span>
+                </div>
+                <aside>
+                    <h3 class="mainHeaderTitle urgentTitle">
+                        <i class="fa fa-info-circle" aria-hidden="true"></i>
+                        Timeline info
+                    </h3>
+                    <p class="aside_content">With an
+                        <mark>Average</mark>
+                        timeline set up, our expert translator can take a resonable amount of time perfecting your translation
+                    </p>
+                </aside>
+            </section>
+
+            <section class="section signUpSection">
+                <h2 class="sectionHeader signUpHeader">Sign up and choose a payment method</h2>
+                <p class="signIn">Already have an account with us?
+                    <a href="#" class="signIn_link">Sign in.</a>
+                </p>
+                <div class="inputGroup signUpGroup">
+                    <div class="inputItem signUpInput">
+                        <label class="payBlockLabel" for="full-name">full name</label>
+                        <input class="payBlockInput" type="text" name="full-name" id="full-name" placeholder="Mathieu Mayer" required
+                               pattern="^[a-zA-Z\s\.\-]{1,20}$">
+                    </div>
+                </div>
+                <div class="inputGroup signUpGroup">
+                    <div class="inputItem signUpInput">
+                        <label class="payBlockLabel" for="email">email adress</label>
+                        <input class="payBlockInput" type="text" name="email" id="email" placeholder="mathieu.mm@me.com" required
+                                pattern="/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/">
+                    </div>
+                    <div class="inputItem signUpInput">
+                        <label class="payBlockLabel" for="pass">Choose a password</label>
+                        <input class="payBlockInput" type="text" name="pass" id="pass"  required
+                               pattern="(/^(?=.*\d)[0-9a-zA-Z]{3,}$/)">
+                    </div>
+                </div>
+
+                <div class="payMethodBlock">
+                    <div class="payMethodItem">
+                        <input type="radio" id="visaMastercard" value="visa / mastercard" required>
+                        <label class="payBlockLabel" for="visaMastercard">
+                            <img class="payLogo" src="dist/img/card.png" alt="visa / mastercard">
+                        </label>
+                    </div>
+                    <div class="payMethodItem">
+                        <input type="radio" id="paypal" value="paypal" required>
+                        <label class="payBlockLabel" for="paypal">
+                            <img class="payLogo paypalLogo" src="dist/img/pay_pal.png" alt="paypal">
+                        </label>
+                    </div>
+                    <div class="payMethodItem">
+                        <input type="radio" id="amazon" value="pamazon" required>
+                        <label class="payBlockLabel" for="amazon">
+                            <img class="payLogo amazonLogo" src="dist/img/amazon.png" alt="amazon">
+                        </label>
+                    </div>
+                </div>
+                <div class="inputGroup cardInfoBlock">
+                    <div class="inputItem cardNumber">
+                        <label class="payBlockLabel" for="cardNumber">Card number</label>
+                        <input class="payBlockInput cardNumberInput" type="text" id="cardNumber" pattern="/[0-9_ ]{13,16}/" required>
+                    </div>
+                    <div class="inputItem exDate">
+                        <label class="payBlockLabel" for="exDate">Expiry date</label>
+                        <input class="payBlockInput exDateInput" type="text" id="exDate" pattern="/^(0[1-9]|1[0-2])\/?([0-9]{4}|[0-9]{2})$/" placeholder="DD / MM / YY" required>
+                    </div>
+                    <div class="inputItem csv">
+                        <label class="payBlockLabel" for="csv">code</label>
+                        <input class="payBlockInput codeInput" type="text" id="csv" pattern="/^[0-9]{3}$/" required>
+                    </div>
+                </div>
+                <div class="termsConditionsBlock">
+                    <input type="checkbox" id="termsAndConditions" required="">
+                    <label class="termsConditionsLabel" for="termsAndConditions">I agree to the
+                        <a href="#">Terms &amp; Conditions</a>
+                    </label>
+                    <button class="button">Place order</button>
+                    <button class="button">Print a qoute</button>
+                </div>
+            </section>
         </main>
+        <footer>
+
+        </footer>
     </div>
 </div>
 
