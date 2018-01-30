@@ -297,7 +297,7 @@
                         </div>
                         <div class="inputItem csv">
                             <label class="payBlockLabel" for="csv">code</label>
-                            <input class="payBlockInput codeInput" type="text" id="csv" pattern="/^[0-9]{3}$/" required>
+                            <input class="payBlockInput codeInput" type="text" id="csv" pattern="\d*" minlength="3" maxlength="3" required>
                         </div>
                     </div>
                     <div class="termsConditionsBlock">
