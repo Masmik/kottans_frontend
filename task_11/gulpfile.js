@@ -34,6 +34,16 @@ gulp.task('concat', function () {
         .pipe(gulp.dest('dist/js'));
 });
 
+// gulp.task('concatCss', function () {
+//     return gulp.src([
+//         'src/css/dribbleHeaderModule.scss'
+//         // 'src/js/loader.js',
+//     ])
+//         .pipe(concat('style.css'))
+//         .pipe(gulp.dest('src/css'));
+// });
+
+
 gulp.task('watch', function () {
     gulp.watch("src/css/**/*.scss", ['sass']);
     gulp.watch("src/img/**/*", ['img']);
