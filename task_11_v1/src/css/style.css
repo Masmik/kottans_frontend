@@ -294,7 +294,8 @@ table {
             font-size: .7em; }
             .wrapperContainer .wrapperContainer_content main .uploadSection .uploadFiles .uploadFilesHeader th {
               padding-top: 31px;
-              padding-left: 44px; }
+              padding-left: 44px;
+              font-weight: 800; }
           .wrapperContainer .wrapperContainer_content main .uploadSection .uploadFiles tr td {
             padding-top: 22px;
             padding-left: 44px; }
