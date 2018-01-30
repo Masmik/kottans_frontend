@@ -3,12 +3,15 @@
   padding-bottom: 63px; }
   .dribbleHeader nav {
     display: flex;
-    justify-content: space-between;
-    align-items: center; }
+    align-items: center;
+    justify-content: space-between; }
     .dribbleHeader nav .button {
       padding: 18px 16px 14px 46px;
       line-height: 18px; }
     .dribbleHeader nav .dribbleHeader_button__logo {
-      height: 100px; }
+      height: 100px;
+      opacity: .8; }
+      .dribbleHeader nav .dribbleHeader_button__logo:hover {
+        opacity: 1; }
 
 /*# sourceMappingURL=dribbleHeaderModule.css.map */
