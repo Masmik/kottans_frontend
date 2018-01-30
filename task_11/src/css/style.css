@@ -357,8 +357,10 @@ table {
           display: inline-block; }
           .wrapperContainer .wrapperContainer_content main .languageSection .selectBlock_group.selectBlock_group__add {
             margin-left: 20px; }
+      .wrapperContainer .wrapperContainer_content main .sectionBlock {
+        display: flex;
+        justify-content: flex-start; }
       .wrapperContainer .wrapperContainer_content main .toneSection {
-        display: inline-block;
         width: 36%;
         margin-top: 61px;
         margin-left: 129px; }
@@ -412,9 +414,9 @@ table {
                 left: 33px;
                 font-size: 20px; }
       .wrapperContainer .wrapperContainer_content main .urgentSection {
-        display: inline-block;
         width: 50%;
         margin-top: 62px;
+        margin-left: 4px;
         vertical-align: top; }
         .wrapperContainer .wrapperContainer_content main .urgentSection .urgentHeader {
           padding-left: 72px; }

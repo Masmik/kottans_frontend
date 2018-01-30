@@ -73,6 +73,11 @@
             @import 'headerSection.scss';
             @import 'uploadSection.scss';
             @import 'languageSection.scss';
+
+            .sectionBlock{
+                display: flex;
+                justify-content: flex-start;
+            }
             @import 'toneSection.scss';
             @import 'urgentSection.scss';
             @import 'signUpSection.scss';
