@@ -288,7 +288,7 @@
                         <div class="inputItem cardNumber">
                             <label class="payBlockLabel" for="cardNumber">Card number</label>
                             <input class="payBlockInput cardNumberInput" type="text" id="cardNumber"
-                                   pattern="/[0-9_ ]{13,16}/" required>
+                                   pattern="\d*" maxlength="16" minlength="16" required>
                         </div>
                         <div class="inputItem exDate">
                             <label class="payBlockLabel" for="exDate">Expiry date</label>
