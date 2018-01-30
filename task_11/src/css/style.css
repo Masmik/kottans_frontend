@@ -731,7 +731,8 @@ table {
         margin-left: 12px;
         padding: 19px 34px 18px 55px;
         opacity: .8;
-        outline: none; }
+        outline: none;
+        background-color: #f7f7f9; }
         .wrapperContainer .wrapperContainer_content main .button__add:hover {
           opacity: 1; }
         .wrapperContainer .wrapperContainer_content main .button__add .fa-plus {
