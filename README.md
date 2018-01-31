@@ -142,4 +142,8 @@ The first and the second articles includes a lot of tips how not to go mad and n
    
    - Demo https://masmik.github.io/weather_app.github.io/
    - Source https://github.com/Masmik/kottans_frontend/tree/master/task_10
- 
+   
+      ## **Task 11**
+      
+   - Demo https://masmik.github.io/kottans_frontend/task_11/
+   - Source https://github.com/Masmik/kottans_frontend/tree/master/task_11
