@@ -120,6 +120,7 @@ table {
         justify-content: space-between; }
         .wrapperContainer .wrapperContainer_content .dribbleHeader nav .button {
           padding: 17px 34px 15px 66px;
+          background-color: inherit;
           line-height: 18px; }
         .wrapperContainer .wrapperContainer_content .dribbleHeader nav .dribbleHeader_button__logo {
           height: 100px;
