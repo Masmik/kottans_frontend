@@ -1,0 +1,81 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+header {
+  width: 100%;
+  background-color: grey;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center; }
+  header .logo {
+    display: block; }
+
+main {
+  margin-top: 40px;
+  padding: 0 30px; }
+  main .button {
+    display: block;
+    max-width: 200px;
+    background-color: hotpink; }
+    main .button.button__add {
+      margin: 0 auto;
+      padding: 20px 20px; }
+  main .pizzaSection {
+    margin-top: 30px;
+    background-color: palegoldenrod;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 20px;
+    align-items: center; }
+    main .pizzaSection .pizzaItem {
+      background-color: #444;
+      color: #fff;
+      border-radius: 5px;
+      padding: 20px;
+      display: grid;
+      grid-gap: 15px;
+      grid-template-columns: 2fr 1fr; }
+      main .pizzaSection .pizzaItem .pizzaItemImg {
+        width: 200px; }
+
+/*# sourceMappingURL=style.css.map */
