@@ -1,3 +1,4 @@
+@import "variables.scss";
 .signUpSection {
     margin-top: 76px;
     margin-bottom: 74px;
@@ -38,7 +39,7 @@
                 margin-left: 12px;
 
                 letter-spacing: .5px;
-                text-transform: uppercase;
+                text-transform: $upper_text;
 
                 font-size: 12px;
                 font-weight: 800;
@@ -104,7 +105,7 @@
     .payMethodBlock {
         display: flex;
 
-        margin-top: 63px;
+        margin-top: 82px;
 
         justify-content: flex-start;
 
@@ -112,55 +113,11 @@
             margin-right: 34px;
 
             .payBlockLabel {
-                position: relative;
-
                 display: block;
 
                 box-sizing: border-box;
                 width: 220px;
                 padding: 28px 55px 28px 56px;
-
-                border: 6px solid transparent;
-                &:before {
-                    position: absolute;
-                    top: -6px;
-                    right: -6px;
-                    bottom: -6px;
-                    left: -6px;
-
-                    display: block;
-
-                    content: '';
-
-                    border: 1px solid #cdcde5;
-                    border-radius: 5px;
-                }
-                &:hover {
-                    border: 6px solid #76a7e1;
-                    border-radius: 5px;
-
-                    &:after {
-                        position: absolute;
-                        z-index: 2;
-                        top: -1.1em;
-                        right: -.9em;
-
-                        width: 2em;
-                        height: 2em;
-
-                        content: '\f00c';
-                        text-align: center;
-
-                        color: #ffffff;
-                        border-radius: 50%;
-                        background: #76a7e1;
-
-                        font-family: FontAwesome;
-                        font-size: 100%;
-                        font-weight: 900;
-                        line-height: 2em;
-                    }
-                }
                 .payLogo {
                     height: 25px;
                     padding-top: 4px;

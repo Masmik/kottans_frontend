@@ -119,10 +119,11 @@ table {
         align-items: center;
         justify-content: space-between; }
         .wrapperContainer .wrapperContainer_content .dribbleHeader nav .button {
-          padding: 18px 16px 14px 46px;
+          padding: 17px 34px 15px 66px;
           line-height: 18px; }
         .wrapperContainer .wrapperContainer_content .dribbleHeader nav .dribbleHeader_button__logo {
           height: 100px;
+          margin-left: -6px;
           opacity: .8; }
           .wrapperContainer .wrapperContainer_content .dribbleHeader nav .dribbleHeader_button__logo:hover {
             opacity: 1; }
@@ -159,6 +160,96 @@ table {
       border-collapse: collapse;
       border-radius: 5px;
       background-color: #fff; }
+      .wrapperContainer .wrapperContainer_content main .mainHeaderTitle {
+        letter-spacing: .06em;
+        text-transform: uppercase;
+        font-size: .8em;
+        font-weight: bold; }
+      .wrapperContainer .wrapperContainer_content main .visually-hidden {
+        position: absolute;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        width: 1px;
+        margin: -1px;
+        padding: 0;
+        border: 0; }
+      .wrapperContainer .wrapperContainer_content main input[type=radio] + label {
+        position: relative;
+        border: 6px solid transparent;
+        border-radius: 3%;
+        background-color: #f7f7f9;
+        cursor: pointer; }
+        .wrapperContainer .wrapperContainer_content main input[type=radio] + label:before {
+          position: absolute;
+          top: -6px;
+          right: -6px;
+          bottom: -6px;
+          left: -6px;
+          display: block;
+          content: '';
+          border: 1px solid #cdcde5;
+          border-radius: 5px; }
+      .wrapperContainer .wrapperContainer_content main input[type=radio]:checked + label {
+        position: relative;
+        border: 6px solid #76a7e1; }
+        .wrapperContainer .wrapperContainer_content main input[type=radio]:checked + label:after {
+          position: absolute;
+          z-index: 2;
+          top: -1.1em;
+          right: -.9em;
+          width: 2em;
+          height: 2em;
+          content: '\f00c';
+          text-align: center;
+          color: #ffffff;
+          border-radius: 50%;
+          background: #76a7e1;
+          font-family: FontAwesome;
+          font-size: 100%;
+          font-weight: 900;
+          line-height: 2em; }
+      .wrapperContainer .wrapperContainer_content main .button__remove {
+        opacity: .8;
+        border: none;
+        outline: none; }
+        .wrapperContainer .wrapperContainer_content main .button__remove:hover {
+          opacity: 1; }
+      .wrapperContainer .wrapperContainer_content main .section {
+        counter-increment: section; }
+      .wrapperContainer .wrapperContainer_content main .button__add {
+        margin-left: 12px;
+        padding: 19px 34px 18px 55px;
+        opacity: .8;
+        outline: none;
+        background-color: #f7f7f9; }
+        .wrapperContainer .wrapperContainer_content main .button__add:hover {
+          opacity: 1; }
+        .wrapperContainer .wrapperContainer_content main .button__add .fa-plus {
+          top: 19px;
+          left: 31px;
+          font-size: 14px; }
+      .wrapperContainer .wrapperContainer_content main .fa-trash {
+        opacity: .5;
+        font-size: 18px; }
+      .wrapperContainer .wrapperContainer_content main .sectionHeader {
+        position: relative;
+        font-size: 1.5em; }
+        .wrapperContainer .wrapperContainer_content main .sectionHeader:before {
+          position: absolute;
+          top: -8px;
+          left: -69px;
+          width: 41px;
+          height: 41px;
+          content: counter(section);
+          text-align: center;
+          border: .06em solid #6e768f;
+          border-radius: 50%;
+          font-size: .8em;
+          line-height: 2.1em; }
+      .wrapperContainer .wrapperContainer_content main .sectionBlock {
+        display: flex;
+        justify-content: flex-start; }
       .wrapperContainer .wrapperContainer_content main .headerSection {
         display: flex;
         width: 100%;
@@ -226,35 +317,34 @@ table {
               margin-bottom: 12px;
               line-height: 47px; }
         .wrapperContainer .wrapperContainer_content main .headerSection .helpInfoBlock {
-          width: 31%; }
+          position: relative;
+          box-sizing: border-box;
+          width: 31%;
+          margin-top: 29px;
+          padding-left: 74px; }
           .wrapperContainer .wrapperContainer_content main .headerSection .helpInfoBlock .helpHeader {
-            letter-spacing: .01em; }
-          .wrapperContainer .wrapperContainer_content main .headerSection .helpInfoBlock .helpContent {
             position: relative;
-            margin-top: 29px;
-            margin-left: 74px; }
-            .wrapperContainer .wrapperContainer_content main .headerSection .helpInfoBlock .helpContent .fa-life-ring {
-              position: absolute;
-              top: -5px;
-              left: -40px;
-              font-size: 20px; }
-            .wrapperContainer .wrapperContainer_content main .headerSection .helpInfoBlock .helpContent .helpDescription {
-              max-width: 235px;
-              margin-top: 12px;
-              padding-bottom: 14px;
-              font-size: .8em;
-              line-height: 1.41em; }
-          .wrapperContainer .wrapperContainer_content main .headerSection .helpInfoBlock adress {
-            margin-left: -1px; }
-            .wrapperContainer .wrapperContainer_content main .headerSection .helpInfoBlock adress a {
-              text-decoration: none;
-              color: #6e758f;
-              font-size: .8em;
-              font-weight: bold; }
-              .wrapperContainer .wrapperContainer_content main .headerSection .helpInfoBlock adress a:hover {
-                color: #5b6072; }
-            .wrapperContainer .wrapperContainer_content main .headerSection .helpInfoBlock adress .helpPhone {
-              margin-right: 4%; }
+            letter-spacing: .01em; }
+          .wrapperContainer .wrapperContainer_content main .headerSection .helpInfoBlock .fa-life-ring {
+            position: absolute;
+            top: -5px;
+            left: -40px;
+            font-size: 20px; }
+          .wrapperContainer .wrapperContainer_content main .headerSection .helpInfoBlock adress .helpDescription {
+            max-width: 235px;
+            margin-top: 12px;
+            padding-bottom: 14px;
+            font-size: .8em;
+            line-height: 1.41em; }
+          .wrapperContainer .wrapperContainer_content main .headerSection .helpInfoBlock adress a {
+            text-decoration: none;
+            color: #6e758f;
+            font-size: .8em;
+            font-weight: bold; }
+            .wrapperContainer .wrapperContainer_content main .headerSection .helpInfoBlock adress a:hover {
+              color: #5b6072; }
+          .wrapperContainer .wrapperContainer_content main .headerSection .helpInfoBlock adress .helpPhone {
+            margin-right: 4%; }
       .wrapperContainer .wrapperContainer_content main .uploadSection {
         margin-top: 109px; }
         .wrapperContainer .wrapperContainer_content main .uploadSection .uploadHeader {
@@ -357,57 +447,21 @@ table {
           display: inline-block; }
           .wrapperContainer .wrapperContainer_content main .languageSection .selectBlock_group.selectBlock_group__add {
             margin-left: 20px; }
-      .wrapperContainer .wrapperContainer_content main .sectionBlock {
-        display: flex;
-        justify-content: flex-start; }
       .wrapperContainer .wrapperContainer_content main .toneSection {
         width: 36%;
         margin-top: 61px;
         margin-left: 129px; }
         .wrapperContainer .wrapperContainer_content main .toneSection .toneTypeContainer {
-          margin-top: 47px;
-          margin-left: -21px; }
+          margin-top: 47px; }
           .wrapperContainer .wrapperContainer_content main .toneSection .toneTypeContainer .toneTypeBlock {
             margin-bottom: 22px; }
             .wrapperContainer .wrapperContainer_content main .toneSection .toneTypeContainer .toneTypeBlock .toneTypeBtnLabel {
-              position: relative;
               display: inline-block;
               min-width: 140px;
               padding: 22px 11px 20px 73px;
-              cursor: pointer;
               letter-spacing: -.1px;
               text-transform: capitalize;
-              border: 6px solid transparent;
               font-size: 16px; }
-              .wrapperContainer .wrapperContainer_content main .toneSection .toneTypeContainer .toneTypeBlock .toneTypeBtnLabel:before {
-                position: absolute;
-                top: -6px;
-                right: -6px;
-                bottom: -6px;
-                left: -6px;
-                display: block;
-                content: '';
-                border: 1px solid #cdcde5;
-                border-radius: 5px; }
-              .wrapperContainer .wrapperContainer_content main .toneSection .toneTypeContainer .toneTypeBlock .toneTypeBtnLabel:hover {
-                position: relative;
-                border: 6px solid #76a7e1; }
-                .wrapperContainer .wrapperContainer_content main .toneSection .toneTypeContainer .toneTypeBlock .toneTypeBtnLabel:hover:after {
-                  position: absolute;
-                  z-index: 2;
-                  top: -1.1em;
-                  right: -.9em;
-                  width: 2em;
-                  height: 2em;
-                  content: '\f00c';
-                  text-align: center;
-                  color: #ffffff;
-                  border-radius: 50%;
-                  background: #76a7e1;
-                  font-family: FontAwesome;
-                  font-size: 100%;
-                  font-weight: 900;
-                  line-height: 2em; }
               .wrapperContainer .wrapperContainer_content main .toneSection .toneTypeContainer .toneTypeBlock .toneTypeBtnLabel .fa {
                 position: absolute;
                 top: 20px;
@@ -571,46 +625,15 @@ table {
                 width: 104px; }
         .wrapperContainer .wrapperContainer_content main .signUpSection .payMethodBlock {
           display: flex;
-          margin-top: 63px;
+          margin-top: 82px;
           justify-content: flex-start; }
           .wrapperContainer .wrapperContainer_content main .signUpSection .payMethodBlock .payMethodItem {
             margin-right: 34px; }
             .wrapperContainer .wrapperContainer_content main .signUpSection .payMethodBlock .payMethodItem .payBlockLabel {
-              position: relative;
               display: block;
               box-sizing: border-box;
               width: 220px;
-              padding: 28px 55px 28px 56px;
-              border: 6px solid transparent; }
-              .wrapperContainer .wrapperContainer_content main .signUpSection .payMethodBlock .payMethodItem .payBlockLabel:before {
-                position: absolute;
-                top: -6px;
-                right: -6px;
-                bottom: -6px;
-                left: -6px;
-                display: block;
-                content: '';
-                border: 1px solid #cdcde5;
-                border-radius: 5px; }
-              .wrapperContainer .wrapperContainer_content main .signUpSection .payMethodBlock .payMethodItem .payBlockLabel:hover {
-                border: 6px solid #76a7e1;
-                border-radius: 5px; }
-                .wrapperContainer .wrapperContainer_content main .signUpSection .payMethodBlock .payMethodItem .payBlockLabel:hover:after {
-                  position: absolute;
-                  z-index: 2;
-                  top: -1.1em;
-                  right: -.9em;
-                  width: 2em;
-                  height: 2em;
-                  content: '\f00c';
-                  text-align: center;
-                  color: #ffffff;
-                  border-radius: 50%;
-                  background: #76a7e1;
-                  font-family: FontAwesome;
-                  font-size: 100%;
-                  font-weight: 900;
-                  line-height: 2em; }
+              padding: 28px 55px 28px 56px; }
               .wrapperContainer .wrapperContainer_content main .signUpSection .payMethodBlock .payMethodItem .payBlockLabel .payLogo {
                 height: 25px;
                 padding-top: 4px; }
@@ -650,112 +673,38 @@ table {
           border-bottom: 1px solid #cdcde5;
           font-size: 1.2em; }
         .wrapperContainer .wrapperContainer_content main .translateSection .translateItems {
-          display: block;
-          margin-top: 72px; }
-          .wrapperContainer .wrapperContainer_content main .translateSection .translateItems .translateItem {
-            position: relative;
-            display: inline-block;
-            box-sizing: border-box;
-            width: 282px;
-            height: 202px;
-            margin-left: 2%;
-            cursor: pointer;
-            border: 6px solid transparent;
-            border-radius: 3%; }
-            .wrapperContainer .wrapperContainer_content main .translateSection .translateItems .translateItem:before {
-              position: absolute;
-              top: -6px;
-              right: -6px;
-              bottom: -6px;
-              left: -6px;
-              display: block;
-              content: '';
-              border: 1px solid #cdcde5;
-              border-radius: 5px; }
-            .wrapperContainer .wrapperContainer_content main .translateSection .translateItems .translateItem .imageItem {
-              display: block;
-              width: 95px;
-              height: 105px;
-              margin-top: 7px;
-              margin-left: 33%; }
-              .wrapperContainer .wrapperContainer_content main .translateSection .translateItems .translateItem .imageItem.websiteImageItem {
-                background: url(../img/website.png) no-repeat;
-                background-size: contain; }
-              .wrapperContainer .wrapperContainer_content main .translateSection .translateItems .translateItem .imageItem.documentsImageItem {
-                background: url(../img/documents.png) no-repeat;
-                background-size: contain; }
-              .wrapperContainer .wrapperContainer_content main .translateSection .translateItems .translateItem .imageItem.socialAccountImageItem {
-                background: url(../img/social_account.png) no-repeat;
-                background-size: contain; }
-            .wrapperContainer .wrapperContainer_content main .translateSection .translateItems .translateItem .itemDescription {
-              margin-top: 18px;
-              margin-left: -1px;
-              letter-spacing: .04em;
-              text-transform: capitalize; }
-            .wrapperContainer .wrapperContainer_content main .translateSection .translateItems .translateItem:hover {
-              position: relative;
-              border: 6px solid #76a7e1; }
-              .wrapperContainer .wrapperContainer_content main .translateSection .translateItems .translateItem:hover:after {
-                position: absolute;
-                z-index: 2;
-                top: -1.1em;
-                right: -.9em;
-                width: 2em;
-                height: 2em;
-                content: '\f00c';
-                text-align: center;
-                color: #ffffff;
-                border-radius: 50%;
-                background: #76a7e1;
-                font-family: FontAwesome;
-                font-size: 100%;
-                font-weight: 900;
-                line-height: 2em; }
-      .wrapperContainer .wrapperContainer_content main .mainHeaderTitle {
-        letter-spacing: .06em;
-        text-transform: uppercase;
-        font-size: .8em;
-        font-weight: bold; }
-      .wrapperContainer .wrapperContainer_content main .button__remove {
-        opacity: .8;
-        border: none;
-        outline: none; }
-        .wrapperContainer .wrapperContainer_content main .button__remove:hover {
-          opacity: 1; }
-      .wrapperContainer .wrapperContainer_content main input[type='radio'] {
-        z-index: -1;
-        opacity: 0; }
-      .wrapperContainer .wrapperContainer_content main .section {
-        counter-increment: section; }
-      .wrapperContainer .wrapperContainer_content main .button__add {
-        margin-left: 12px;
-        padding: 19px 34px 18px 55px;
-        opacity: .8;
-        outline: none;
-        background-color: #f7f7f9; }
-        .wrapperContainer .wrapperContainer_content main .button__add:hover {
-          opacity: 1; }
-        .wrapperContainer .wrapperContainer_content main .button__add .fa-plus {
-          top: 19px;
-          left: 31px;
-          font-size: 14px; }
-      .wrapperContainer .wrapperContainer_content main .fa-trash {
-        opacity: .5;
-        font-size: 18px; }
-      .wrapperContainer .wrapperContainer_content main .sectionHeader {
-        position: relative;
-        font-size: 1.5em; }
-        .wrapperContainer .wrapperContainer_content main .sectionHeader:before {
-          position: absolute;
-          top: -8px;
-          left: -69px;
-          width: 41px;
-          height: 41px;
-          content: counter(section);
-          text-align: center;
-          border: .06em solid #6e768f;
-          border-radius: 50%;
-          font-size: .8em;
-          line-height: 2.1em; }
+          display: flex;
+          margin-top: 72px;
+          margin-left: 125px;
+          justify-content: flex-start; }
+          .wrapperContainer .wrapperContainer_content main .translateSection .translateItems .translateItemContainer {
+            margin-right: 27px; }
+            .wrapperContainer .wrapperContainer_content main .translateSection .translateItems .translateItemContainer .translateItem {
+              display: inline-block;
+              box-sizing: border-box;
+              width: 282px;
+              height: 202px;
+              margin-left: 2%; }
+              .wrapperContainer .wrapperContainer_content main .translateSection .translateItems .translateItemContainer .translateItem .imageItem {
+                display: block;
+                width: 95px;
+                height: 105px;
+                margin-top: 26px;
+                margin-left: 88px; }
+                .wrapperContainer .wrapperContainer_content main .translateSection .translateItems .translateItemContainer .translateItem .imageItem.websiteImageItem {
+                  background: url(../img/website.png) no-repeat;
+                  background-size: contain; }
+                .wrapperContainer .wrapperContainer_content main .translateSection .translateItems .translateItemContainer .translateItem .imageItem.documentsImageItem {
+                  background: url(../img/documents.png) no-repeat;
+                  background-size: contain; }
+                .wrapperContainer .wrapperContainer_content main .translateSection .translateItems .translateItemContainer .translateItem .imageItem.socialAccountImageItem {
+                  background: url(../img/social_account.png) no-repeat;
+                  background-size: contain; }
+              .wrapperContainer .wrapperContainer_content main .translateSection .translateItems .translateItemContainer .translateItem .itemDescription {
+                display: block;
+                margin-top: 18px;
+                margin-left: -5px;
+                letter-spacing: .04em;
+                text-transform: capitalize; }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,6 +1,6 @@
-.urgentSection {
-    //display: inline-block;
+@import 'variables.scss';
 
+.urgentSection {
     width: 50%;
     margin-top: 62px;
     margin-left: 4px;
@@ -90,7 +90,7 @@
         margin-left: 13px;
 
         letter-spacing: .8px;
-        text-transform: uppercase;
+        text-transform: $upper_text;
 
         font-size: 12px;
         font-weight: 600;
@@ -136,7 +136,7 @@
             line-height: 20px;
 
             mark {
-                text-transform: uppercase;
+                text-transform: $upper_text;
 
                 color: #edbe76;
                 background: 0 0;

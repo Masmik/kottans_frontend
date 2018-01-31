@@ -1,3 +1,4 @@
+@import "variables.scss";
 .uploadSection {
     margin-top: 109px;
     .uploadHeader {
@@ -49,7 +50,7 @@
 
         .uploadFilesHeader {
             letter-spacing: .11em;
-            text-transform: uppercase;
+            text-transform: $upper_text;
 
             font-size: .7em;
 

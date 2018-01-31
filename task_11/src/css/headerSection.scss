@@ -1,3 +1,5 @@
+@import "variables.scss";
+
 .headerSection {
     display: flex;
 
@@ -58,7 +60,7 @@
                         padding-bottom: 13px;
 
                         letter-spacing: .04em;
-                        text-transform: uppercase;
+                        text-transform: $upper_text;
 
                         font-size: .8em;
                         font-weight: 700;
@@ -108,23 +110,27 @@
         }
     }
     .helpInfoBlock {
+        position: relative;
+
+        box-sizing: border-box;
         width: 31%;
+        margin-top: 29px;
+        padding-left: 74px;
         .helpHeader {
-            letter-spacing: .01em;
-        }
-        .helpContent {
             position: relative;
 
-            margin-top: 29px;
-            margin-left: 74px;
+            letter-spacing: .01em;
+        }
 
-            .fa-life-ring {
-                position: absolute;
-                top: -5px;
-                left: -40px;
+        .fa-life-ring {
+            position: absolute;
+            top: -5px;
+            left: -40px;
 
-                font-size: 20px;
-            }
+            font-size: 20px;
+        }
+
+        adress {
             .helpDescription {
                 max-width: 235px;
                 margin-top: 12px;
@@ -133,9 +139,6 @@
                 font-size: .8em;
                 line-height: 1.41em;
             }
-        }
-        adress {
-            margin-left: -1px;
             a {
                 text-decoration: none;
 

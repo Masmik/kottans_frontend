@@ -37,7 +37,7 @@
             text-align: center;
             text-decoration: none;
             letter-spacing: .14em;
-            text-transform: uppercase;
+            text-transform: $upper_text;
 
             color: inherit;
             border: 1px solid #d9d8de;
@@ -70,94 +70,18 @@
             border-radius: 5px;
             background-color: $white-color;
 
+            @import "mainBlock.scss";
+
             @import 'headerSection.scss';
             @import 'uploadSection.scss';
             @import 'languageSection.scss';
 
-            .sectionBlock{
-                display: flex;
-                justify-content: flex-start;
-            }
+
             @import 'toneSection.scss';
             @import 'urgentSection.scss';
             @import 'signUpSection.scss';
             @import 'translateSection.scss';
 
-            .mainHeaderTitle {
-                letter-spacing: .06em;
-                text-transform: uppercase;
-
-                font-size: .8em;
-                font-weight: bold;
-            }
-
-            .button__remove {
-                opacity: .8;
-                border: none;
-                outline: none;
-
-                &:hover {
-                    opacity: 1;
-                }
-            }
-
-            input[type='radio'] {
-                z-index: -1;
-
-                opacity: 0;
-            }
-
-            .section {
-                counter-increment: section;
-            }
-
-            .button__add {
-                margin-left: 12px;
-                padding: 19px 34px 18px 55px;
-
-                opacity: .8;
-                outline: none;
-                background-color: #f7f7f9;
-                &:hover {
-                    opacity: 1;
-                }
-                .fa-plus {
-                    top: 19px;
-                    left: 31px;
-
-                    font-size: 14px;
-                }
-            }
-
-            .fa-trash {
-                opacity: .5;
-
-                font-size: 18px;
-            }
-
-            .sectionHeader {
-                position: relative;
-
-                font-size: 1.5em;
-
-                &:before {
-                    position: absolute;
-                    top: -8px;
-                    left: -69px;
-
-                    width: 41px;
-                    height: 41px;
-
-                    content: counter(section);
-                    text-align: center;
-
-                    border: .06em solid #6e768f;
-                    border-radius: 50%;
-
-                    font-size: .8em;
-                    line-height: 2.1em;
-                }
-            }
         }
     }
 }

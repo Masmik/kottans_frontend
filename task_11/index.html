@@ -13,205 +13,210 @@
     <div class="wrapperContainer_content">
         <header class="dribbleHeader">
             <nav>
-                <a href="#" type="button" class="button dribbleHeader_button dribbleHeader_button__goBack">
-                    <i class="fa fa-long-arrow-left" aria-hidden="true"></i>go back</a>
+                <button type="button" class="button dribbleHeader_button dribbleHeader_button__goBack">
+                    <i class="fa fa-long-arrow-left" aria-hidden="true"></i>go back
+                </button>
                 <a href="https://dribbble.com/" class="dribbleHeader_button dribbleHeader_button__logoBlock">
-                    <img
-                            class="dribbleHeader_button__logo"
-                            src="dist/img/logo.png" alt="dribble logo">
+                    <img class="dribbleHeader_button__logo" src="dist/img/logo.png" alt="dribble logo">
                 </a>
-                <a href="#" type="button" class="button dribbleHeader_button dribbleHeader_button__signIn">
-                    <i class="fa fa-user" aria-hidden="true"></i>sign in</a>
+                <button type="button" class="button dribbleHeader_button dribbleHeader_button__signIn">
+                    <i class="fa fa-user" aria-hidden="true"></i>sign in
+                </button>
             </nav>
         </header>
         <main>
             <form>
-                <div>
-                    <section class="headerSection">
-                        <div class="orderInfoBlock">
-                            <div class="orderDescription">
-                                <h3 class="orderTitle mainHeaderTitle">your order</h3>
-                                <i class="fa fa-file" aria-hidden="true"></i>
-                                <ul class="orderDetails">
-                                    <li class="detailsList">
-                                        <h4 class="detailsHeader">items</h4>
-                                        <div class="detailsInfo">
-                                            <span class="quantity">2</span>
-                                            <span class="units">documents</span>
-                                        </div>
-                                    </li>
-                                    <li class="detailsList">
-                                        <h4 class="detailsHeader">details</h4>
-                                        <div class="detailsInfo">
-                                            <span class="quantity">2</span>
-                                            <span class="units">languages</span>
-                                        </div>
-                                    </li>
-                                    <li class="detailsList">
-                                        <h4 class="detailsHeader">price</h4>
-                                        <div class="detailsInfo">
-                                            <span class="units">$</span>
-                                            <span class="quantity">696.06</span>
-                                        </div>
-                                    </li>
-                                    <li class="detailsList">
-                                        <h4 class="detailsHeader">delivery</h4>
-                                        <div class="detailsInfo">
-                                            <span class="quantity">48</span>
-                                            <span class="units unitsSpecial">hours</span>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="buttonsContainer">
-                                <button class="button">Place order</button>
-                                <button class="button">Print a qoute</button>
-                            </div>
+                <section class="headerSection">
+                    <div class="orderInfoBlock">
+                        <div class="orderDescription">
+                            <h3 class="orderTitle mainHeaderTitle">your order</h3>
+                            <i class="fa fa-file" aria-hidden="true"></i>
+                            <ul class="orderDetails">
+                                <li class="detailsList">
+                                    <h4 class="detailsHeader">items</h4>
+                                    <div class="detailsInfo">
+                                        <span class="quantity">2</span>
+                                        <span class="units">documents</span>
+                                    </div>
+                                </li>
+                                <li class="detailsList">
+                                    <h4 class="detailsHeader">details</h4>
+                                    <div class="detailsInfo">
+                                        <span class="quantity">2</span>
+                                        <span class="units">languages</span>
+                                    </div>
+                                </li>
+                                <li class="detailsList">
+                                    <h4 class="detailsHeader">price</h4>
+                                    <div class="detailsInfo">
+                                        <span class="units">$</span>
+                                        <span class="quantity">696.06</span>
+                                    </div>
+                                </li>
+                                <li class="detailsList">
+                                    <h4 class="detailsHeader">delivery</h4>
+                                    <div class="detailsInfo">
+                                        <span class="quantity">48</span>
+                                        <span class="units unitsSpecial">hours</span>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
-                        <div class="helpInfoBlock">
-                            <div class="helpContent">
-                                <h3 class="helpHeader mainHeaderTitle">help center</h3>
-                                <i class="fa fa-life-ring" aria-hidden="true"></i>
-                                <p class="helpDescription">If you need assistance while placing your order, contact one of our beloved Project Manager by phone or email</p>
-                                <adress>
-                                    <a class="helpPhone" href="tel:+18475555555">+971(0)555 555</a>
-                                    <a href="help@qtest.com" class="helpEmail">help@qtest.com</a>
-                                </adress>
-                            </div>
+                        <div class="buttonsContainer">
+                            <button class="button">Place order</button>
+                            <button class="button">Print a qoute</button>
                         </div>
-                    </section>
+                    </div>
+                    <div class="helpInfoBlock">
+                        <h3 class="helpHeader mainHeaderTitle">
+                            <i class="fa fa-life-ring" aria-hidden="true"></i>
+                            help center
+                        </h3>
+                        <adress>
+                            <p class="helpDescription">If you need assistance while placing your order, contact one of our beloved Project Manager by phone or email</p>
+                            <a class="helpPhone" href="tel:+18475555555">+971(0)555 555</a>
+                            <a href="help@qtest.com" class="helpEmail">help@qtest.com</a>
+                        </adress>
+                    </div>
+                </section>
 
 
-                    <section class="translateSection">
-                        <h1 class="translateHeader">select what you want to translate</h1>
-                        <div class="translateItems">
+                <section class="translateSection">
+                    <h1 class="translateHeader">select what you want to translate</h1>
+                    <div class="translateItems">
+                        <div class="translateItemContainer">
+                            <input name="translateItemInput" class="visually-hidden" type="radio" id="website">
                             <label class="translateItem websiteItem" for="website">
-                                <input type="radio" id="website">
-                                <div class="imageItem websiteImageItem"></div>
-                                <p class="itemDescription">website</p>
-                            </label>
-                            <label class="translateItem documentsItem" for="documents">
-                                <input type="radio" id="documents" checked>
-                                <div class="imageItem documentsImageItem"></div>
-                                <p class="itemDescription">documents</p>
-                            </label>
-                            <label class="translateItem socialAccountItem" for="socialAccount">
-                                <input type="radio" id="socialAccount">
-                                <div class="imageItem socialAccountImageItem"></div>
-                                <p class="itemDescription">Social Account</p>
+                                <span class="imageItem websiteImageItem"></span>
+                                <span class="itemDescription">website</span>
                             </label>
                         </div>
-                    </section>
+                        <div class="translateItemContainer">
+                            <input name="translateItemInput" class="visually-hidden" type="radio" id="documents">
+                            <label class="translateItem documentsItem" for="documents">
+                                <span class="imageItem documentsImageItem"></span>
+                                <span class="itemDescription">documents</span>
+                            </label>
+                        </div>
+                        <div class="translateItemContainer">
+                            <input name="translateItemInput" class="visually-hidden" type="radio" id="socialAccount">
+                            <label class="translateItem socialAccountItem" for="socialAccount">
+                                <span class="imageItem socialAccountImageItem"></span>
+                                <span class="itemDescription">Social Account</span>
+                            </label>
+                        </div>
+                    </div>
+                </section>
 
-                    <section class="section uploadSection">
-                        <h2 class="sectionHeader uploadHeader">Upload your documents
-                            <span class="uploadHeader__formats">(Doc, Docx, Text, PDF, Markdown)</span>
-                        </h2>
-                        <input type="file" name="file" id="file" class="uploadFileBtn">
-                        <label for="file" class="uploadFileBtnLabel button">
-                            <i class="fa fa-cloud-upload" aria-hidden="true"></i>
-                            <span class="uploadFileBtnText">Upload a new file</span>
+                <section class="section uploadSection">
+                    <h2 class="sectionHeader uploadHeader">Upload your documents
+                        <span class="uploadHeader__formats">(Doc, Docx, Text, PDF, Markdown)</span>
+                    </h2>
+                    <input type="file" name="file" id="file" class="uploadFileBtn">
+                    <label for="file" class="uploadFileBtnLabel button">
+                        <i class="fa fa-cloud-upload" aria-hidden="true"></i>
+                        <span class="uploadFileBtnText">Upload a new file</span>
+                    </label>
+                    <table class="uploadFiles">
+                        <thead class="uploadFilesHeader">
+                        <tr>
+                            <th>file name</th>
+                            <th>file size</th>
+                            <th>number of words</th>
+                            <th>remove</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td><i class="fa fa-file-text" aria-hidden="true"></i>business_operations.docx</td>
+                            <td><span>78</span><span>kb</span></td>
+                            <td>842</td>
+                            <td>
+                                <button class="button__remove">
+                                    <i class="fa fa-trash" aria-hidden="true"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><i class="fa fa-file-text" aria-hidden="true"></i>business_financial.docx</td>
+                            <td><span>26</span><span>kb</span></td>
+                            <td>2,326</td>
+                            <td>
+                                <button class="button__remove">
+                                    <i class="fa fa-trash" aria-hidden="true"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <section class="section languageSection">
+                    <h2 class="sectionHeader languageHeader">Choose your languages pairings</h2>
+                    <div class="selectBlock">
+                        <span class="legend legendFor">From</span>
+                        <label class="languageSelectLabel">
+                            <i class="fa fa-caret-down" aria-hidden="true"></i>
+                            <select class="languageSelect languageSelect__from">
+                                <option value="English" selected="">English</option>
+                                <option value="Arabic">Arabic</option>
+                                <option value="Kurdish">Kurdish</option>
+                            </select>
                         </label>
-                        <table class="uploadFiles">
-                            <thead class="uploadFilesHeader">
-                            <tr>
-                                <th>file name</th>
-                                <th>file size</th>
-                                <th>number of words</th>
-                                <th>remove</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td><i class="fa fa-file-text" aria-hidden="true"></i>business_operations.docx</td>
-                                <td><span>78</span><span>kb</span></td>
-                                <td>842</td>
-                                <td>
-                                    <button class="button__remove">
-                                        <i class="fa fa-trash" aria-hidden="true"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><i class="fa fa-file-text" aria-hidden="true"></i>business_financial.docx</td>
-                                <td><span>26</span><span>kb</span></td>
-                                <td>2,326</td>
-                                <td>
-                                    <button class="button__remove">
-                                        <i class="fa fa-trash" aria-hidden="true"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </section>
-
-                    <section class="section languageSection">
-                        <h2 class="sectionHeader languageHeader">Choose your languages pairings</h2>
-                        <div class="selectBlock">
-                            <legend class="legend legendFor">From</legend>
+                    </div>
+                    <div class="selectBlockGroup">
+                        <div class="selectBlock selectBlock_group">
+                            <span class="legend legendTo">To</span>
                             <label class="languageSelectLabel">
                                 <i class="fa fa-caret-down" aria-hidden="true"></i>
-                                <select class="languageSelect languageSelect__from">
-                                    <option value="English" selected="">English</option>
-                                    <option value="Arabic">Arabic</option>
+                                <select class="languageSelect languageSelect__to">
+                                    <option value="English">English</option>
+                                    <option value="Arabic" selected="">Arabic</option>
                                     <option value="Kurdish">Kurdish</option>
                                 </select>
                             </label>
                         </div>
-                        <div class="selectBlockGroup">
-                            <div class="selectBlock selectBlock_group">
-                                <legend class="legend legendTo">To</legend>
-                                <label class="languageSelectLabel">
-                                    <i class="fa fa-caret-down" aria-hidden="true"></i>
-                                    <select class="languageSelect languageSelect__to">
-                                        <option value="English">English</option>
-                                        <option value="Arabic" selected="">Arabic</option>
-                                        <option value="Kurdish">Kurdish</option>
-                                    </select>
-                                </label>
-                            </div>
-                            <div class="selectBlock selectBlock_group selectBlock_group__add">
-                                <label class="languageSelectLabel">
-                                    <i class="fa fa-caret-down" aria-hidden="true"></i>
-                                    <select class="languageSelect languageSelect__to">
-                                        <option value="English">English</option>
-                                        <option value="Arabic">Arabic</option>
-                                        <option value="Kurdish" selected="">Kurdish</option>
-                                    </select>
-                                </label>
-                                <button type="button" class="button__remove">
-                                    <i class="fa fa-trash" aria-hidden="true"></i>
-                                </button>
-                            </div>
-                            <button type="button" class="button button__add">
-                                <i class="fa fa-plus" aria-hidden="true"></i>
-                                Add
+                        <div class="selectBlock selectBlock_group selectBlock_group__add">
+                            <label class="languageSelectLabel">
+                                <i class="fa fa-caret-down" aria-hidden="true"></i>
+                                <select class="languageSelect languageSelect__to">
+                                    <option value="English">English</option>
+                                    <option value="Arabic">Arabic</option>
+                                    <option value="Kurdish" selected="">Kurdish</option>
+                                </select>
+                            </label>
+                            <button type="button" class="button__remove">
+                                <i class="fa fa-trash" aria-hidden="true"></i>
                             </button>
                         </div>
-                    </section>
+                        <button type="button" class="button button__add">
+                            <i class="fa fa-plus" aria-hidden="true"></i>
+                            Add
+                        </button>
+                    </div>
+                </section>
 
-                    <div class="sectionBlock">
+                <div class="sectionBlock">
 
                     <section class="section toneSection">
                         <h2 class="sectionHeader toneHeader">Select your desired tone</h2>
                         <div class="toneTypeContainer">
                             <div class="toneTypeBlock">
-                                <input type="radio" class="friendlyTone" id="friendly" required>
+                                <input name="toneItemInput" type="radio" class="visually-hidden friendlyTone" id="friendly" required>
                                 <label for="friendly" class="toneTypeBtnLabel">
                                     <i class="fa fa-comments" aria-hidden="true"></i>
                                     Friendly / Casual
                                 </label>
                             </div>
                             <div class="toneTypeBlock">
-                                <input type="radio" id="corporate" required>
+                                <input name="toneItemInput" type="radio" class="visually-hidden" id="corporate" required>
                                 <label for="corporate" class="toneTypeBtnLabel">
                                     <i class="fa fa-suitcase" aria-hidden="true"></i>
                                     Corporate / Pro
                                 </label>
                             </div>
                             <div class="toneTypeBlock">
-                                <input type="radio" id="media" required>
+                                <input name="toneItemInput" type="radio" class="visually-hidden" id="media" required>
                                 <label for="media" class="toneTypeBtnLabel">
                                     <i class="fa fa-bullhorn" aria-hidden="true"></i>
                                     Media / Format
@@ -270,19 +275,20 @@
 
                     <div class="payMethodBlock">
                         <div class="payMethodItem">
-                            <input type="radio" id="visaMastercard" value="visa / mastercard" required>
+                            <input name="payItemInput" type="radio" class="visually-hidden" id="visaMastercard"
+                                   value="visa / mastercard" required>
                             <label class="payBlockLabel" for="visaMastercard">
                                 <img class="payLogo" src="dist/img/card.png" alt="visa / mastercard">
                             </label>
                         </div>
                         <div class="payMethodItem">
-                            <input type="radio" id="paypal" value="paypal" required>
+                            <input name="payItemInput" type="radio" class="visually-hidden" id="paypal" value="paypal" required>
                             <label class="payBlockLabel" for="paypal">
                                 <img class="payLogo paypalLogo" src="dist/img/pay_pal.png" alt="paypal">
                             </label>
                         </div>
                         <div class="payMethodItem">
-                            <input type="radio" id="amazon" value="pamazon" required>
+                            <input name="payItemInput" type="radio" class="visually-hidden" id="amazon" value="pamazon" required>
                             <label class="payBlockLabel" for="amazon">
                                 <img class="payLogo amazonLogo" src="dist/img/amazon.png" alt="amazon">
                             </label>
@@ -297,7 +303,8 @@
                         <div class="inputItem exDate">
                             <label class="payBlockLabel" for="exDate">Expiry date</label>
                             <input class="payBlockInput exDateInput" type="text" id="exDate"
-                                   pattern="^(0[1-9]|1[0-2])\/?([0-9]{4}|[0-9]{2})$" placeholder="DD / MM " required>
+                                   pattern="^(0[1-9]|1[0-2])\/?([0-9]{4}|[0-9]{2})$" placeholder="DD / MM "
+                                   required>
                         </div>
                         <div class="inputItem csv">
                             <label class="payBlockLabel" for="csv">code</label>
