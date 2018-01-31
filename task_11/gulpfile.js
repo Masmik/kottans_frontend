@@ -26,7 +26,6 @@ gulp.task('img', function () {
 
 gulp.task('concat', function () {
     return gulp.src([
-        // 'https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js',
         'src/js/loader.js',
     ])
         .pipe(concat('main.js'))
@@ -34,14 +33,6 @@ gulp.task('concat', function () {
         .pipe(gulp.dest('dist/js'));
 });
 
-// gulp.task('concatCss', function () {
-//     return gulp.src([
-//         'src/css/dribbleHeaderModule.scss'
-//         // 'src/js/loader.js',
-//     ])
-//         .pipe(concat('style.css'))
-//         .pipe(gulp.dest('src/css'));
-// });
 
 
 gulp.task('watch', function () {
