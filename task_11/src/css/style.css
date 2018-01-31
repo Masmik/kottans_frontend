@@ -122,6 +122,8 @@ table {
           padding: 17px 34px 15px 66px;
           background-color: inherit;
           line-height: 18px; }
+          .wrapperContainer .wrapperContainer_content .dribbleHeader nav .button:hover {
+            background-color: #60cac6; }
         .wrapperContainer .wrapperContainer_content .dribbleHeader nav .dribbleHeader_button__logo {
           height: 100px;
           margin-left: -6px;
@@ -349,7 +351,7 @@ table {
       .wrapperContainer .wrapperContainer_content main .uploadSection {
         margin-top: 109px; }
         .wrapperContainer .wrapperContainer_content main .uploadSection .uploadHeader {
-          margin-left: 129px; }
+          margin-left: 11.3%; }
           .wrapperContainer .wrapperContainer_content main .uploadSection .uploadHeader .uploadHeader__formats {
             text-transform: capitalize;
             font-size: .6em;
@@ -360,7 +362,7 @@ table {
           position: relative;
           display: inline-block;
           margin-top: 54px;
-          margin-left: 130px;
+          margin-left: 11.5%;
           padding: 19px 37px 15px 67px;
           font-size: 1em; }
           .wrapperContainer .wrapperContainer_content main .uploadSection .uploadFileBtnLabel .uploadFileBtnText {
@@ -375,7 +377,7 @@ table {
             font-size: 18px; }
         .wrapperContainer .wrapperContainer_content main .uploadSection .uploadFiles {
           width: 79.21%;
-          margin: 39px 130px;
+          margin: 39px 11.3%;
           text-align: left;
           border: 1px solid #cdcde5;
           border-radius: 5px; }
@@ -399,7 +401,7 @@ table {
             margin-left: 12px; }
       .wrapperContainer .wrapperContainer_content main .languageSection {
         margin-top: 110px;
-        margin-left: 136px; }
+        margin-left: 12%; }
         .wrapperContainer .wrapperContainer_content main .languageSection .languageHeader {
           margin-bottom: 54px; }
         .wrapperContainer .wrapperContainer_content main .languageSection .legend {
@@ -451,7 +453,7 @@ table {
       .wrapperContainer .wrapperContainer_content main .toneSection {
         width: 36%;
         margin-top: 61px;
-        margin-left: 129px; }
+        margin-left: 11.3%; }
         .wrapperContainer .wrapperContainer_content main .toneSection .toneTypeContainer {
           margin-top: 47px; }
           .wrapperContainer .wrapperContainer_content main .toneSection .toneTypeContainer .toneTypeBlock {
@@ -563,7 +565,7 @@ table {
       .wrapperContainer .wrapperContainer_content main .signUpSection {
         margin-top: 76px;
         margin-bottom: 74px;
-        margin-left: 129px;
+        margin-left: 11.3%;
         letter-spacing: -.1px; }
         .wrapperContainer .wrapperContainer_content main .signUpSection .signIn {
           margin-top: 56px; }
@@ -649,7 +651,7 @@ table {
         .wrapperContainer .wrapperContainer_content main .signUpSection .termsConditionsBlock {
           display: block;
           margin-top: 141px;
-          margin-left: 278px;
+          margin-left: 27.5%;
           text-align: left; }
           .wrapperContainer .wrapperContainer_content main .signUpSection .termsConditionsBlock .termsConditionsLabel {
             margin-right: 18px;
@@ -659,10 +661,13 @@ table {
             .wrapperContainer .wrapperContainer_content main .signUpSection .termsConditionsBlock .termsConditionsLabel a:hover {
               color: #5b6072; }
           .wrapperContainer .wrapperContainer_content main .signUpSection .termsConditionsBlock .button {
+            background-color: #f7f7f9;
             min-width: 170px;
             margin-top: -18px;
             margin-left: 24px;
             line-height: 47px; }
+            .wrapperContainer .wrapperContainer_content main .signUpSection .termsConditionsBlock .button:hover {
+              background-color: #60cac6; }
       .wrapperContainer .wrapperContainer_content main .translateSection {
         text-align: center; }
         .wrapperContainer .wrapperContainer_content main .translateSection .translateHeader {
@@ -676,7 +681,7 @@ table {
         .wrapperContainer .wrapperContainer_content main .translateSection .translateItems {
           display: flex;
           margin-top: 72px;
-          margin-left: 125px;
+          margin-left: 11%;
           justify-content: flex-start; }
           .wrapperContainer .wrapperContainer_content main .translateSection .translateItems .translateItemContainer {
             margin-right: 27px; }
