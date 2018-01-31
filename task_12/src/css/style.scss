@@ -1,49 +1,59 @@
 @import "reset.scss";
-header{
+
+header {
   width: 100%;
   background-color: grey;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
 
-  .logo{
+  .logo {
     display: block;
+    width: 150px;
   }
 }
-main{
+
+main {
   margin-top: 40px;
   padding: 0 30px;
-  .button{
+  .button {
     display: block;
     max-width: 200px;
     background-color: hotpink;
-    &.button__add{
+    &.button__add {
       margin: 0 auto;
       padding: 20px 20px;
     }
   }
-  .pizzaSection{
+  .pizzaSection {
     margin-top: 30px;
     background-color: palegoldenrod;
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(100px, auto);
     grid-gap: 20px;
     align-items: center;
 
-    .pizzaItem{
+    .pizzaItem {
       background-color: #444;
       color: #fff;
       border-radius: 5px;
       padding: 20px;
       display: grid;
       grid-gap: 15px;
-      grid-template-columns: 2fr 1fr;
+      grid-template-columns: 1fr 1fr;
+      justify-items: center;
+      align-items: center;
+      .pizzaItemImg {
+        grid-column: span 2;
+        width: 150px;
+      }
+      .pizzaItemTimer{
 
-      .pizzaItemImg{
-        width: 200px;
       }
     }
   }
 }
+
 
 
