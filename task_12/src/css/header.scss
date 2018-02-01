@@ -1,0 +1,79 @@
+header {
+  display: grid;
+
+  width: 100%;
+
+  background-image: url(../img/header-bg.jpg);
+
+  font-size: 15px;
+
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+
+  .timeBlock {
+    margin-left: 60px;
+
+    cursor: pointer;
+    &:hover {
+      color: #c29c5b;
+    }
+  }
+
+  .logo {
+    display: block;
+
+    cursor: pointer;
+
+    justify-self: center;
+    .logoImage {
+      width: 200px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      opacity: 1;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+  .logInBlock {
+    margin-right: 60px;
+
+    cursor: pointer;
+
+    justify-self: end;
+
+    &:hover {
+      color: #c29c5b;
+    }
+  }
+
+  .fa {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 300px) and (max-width: 767px) {
+
+  header {
+    .timeBlock {
+      display: none;
+    }
+    .logo {
+      display: block;
+      cursor: pointer;
+      justify-self: center;
+      align-items: center;
+    }
+    .logInBlock {
+      margin-top: 2%;
+      cursor: pointer;
+      justify-self: center;
+      align-self: center;
+      grid-row: 2;
+      padding-bottom: 15px;
+      margin-right: 0;
+    }
+  }
+}
+

@@ -1,0 +1,30 @@
+header {
+  display: grid;
+  width: 100%;
+  background-image: url(../img/header-bg.jpg);
+  font-size: 15px;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr; }
+  header .timeBlock {
+    margin-left: 60px;
+    cursor: pointer; }
+    header .timeBlock:hover {
+      color: #c29c5b; }
+  header .logo {
+    display: block;
+    cursor: pointer;
+    justify-self: center; }
+    header .logo .logoImage {
+      width: 200px;
+      padding-top: 10px;
+      padding-bottom: 10px; }
+  header .logInBlock {
+    margin-right: 60px;
+    cursor: pointer;
+    justify-self: end; }
+    header .logInBlock:hover {
+      color: #c29c5b; }
+  header .fa {
+    font-size: 18px; }
+
+/*# sourceMappingURL=header.css.map */

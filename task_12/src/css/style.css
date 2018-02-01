@@ -41,46 +41,171 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-header {
-  width: 100%;
-  background-color: grey;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  align-items: center; }
-  header .logo {
-    display: block;
-    width: 150px; }
-
-main {
-  margin-top: 40px;
-  padding: 0 30px; }
-  main .button {
-    display: block;
-    max-width: 200px;
-    background-color: hotpink; }
-    main .button.button__add {
-      margin: 0 auto;
-      padding: 20px 20px; }
-  main .pizzaSection {
-    margin-top: 30px;
-    background-color: palegoldenrod;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: minmax(100px, auto);
-    grid-gap: 20px;
-    align-items: center; }
-    main .pizzaSection .pizzaItem {
-      background-color: #444;
-      color: #fff;
-      border-radius: 5px;
-      padding: 20px;
+.wrapper {
+  height: 100%;
+  font-family: 'Ubuntu', sans-serif;
+  color: #fef1e0; }
+  .wrapper .content {
+    box-sizing: border-box;
+    min-height: 100%;
+    padding-bottom: 90px; }
+    .wrapper .content .fa {
+      padding-right: 8px; }
+    .wrapper .content header {
       display: grid;
-      grid-gap: 15px;
-      grid-template-columns: 1fr 1fr;
-      justify-items: center;
-      align-items: center; }
-      main .pizzaSection .pizzaItem .pizzaItemImg {
-        grid-column: span 2;
-        width: 150px; }
+      width: 100%;
+      background-image: url(../img/header-bg.jpg);
+      font-size: 15px;
+      align-items: center;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+      .wrapper .content header .timeBlock {
+        margin-left: 60px;
+        cursor: pointer; }
+        .wrapper .content header .timeBlock:hover {
+          color: #c29c5b; }
+      .wrapper .content header .logo {
+        display: block;
+        cursor: pointer;
+        justify-self: center; }
+        .wrapper .content header .logo .logoImage {
+          width: 200px;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          opacity: 1; }
+          .wrapper .content header .logo .logoImage:hover {
+            opacity: 0.8; }
+      .wrapper .content header .logInBlock {
+        margin-right: 60px;
+        cursor: pointer;
+        justify-self: end; }
+        .wrapper .content header .logInBlock:hover {
+          color: #c29c5b; }
+      .wrapper .content header .fa {
+        font-size: 18px; }
+    @media screen and (min-width: 300px) and (max-width: 767px) {
+      .wrapper .content header .timeBlock {
+        display: none; }
+      .wrapper .content header .logo {
+        display: block;
+        cursor: pointer;
+        justify-self: center;
+        align-items: center; }
+      .wrapper .content header .logInBlock {
+        margin-top: 2%;
+        cursor: pointer;
+        justify-self: center;
+        align-self: center;
+        grid-row: 2;
+        padding-bottom: 15px;
+        margin-right: 0; } }
+    .wrapper .content main {
+      padding: 40px 30px 0;
+      font-family: 'Ubuntu', sans-serif; }
+      .wrapper .content main .button {
+        position: relative;
+        display: block;
+        overflow: visible;
+        /* IE9 & 10 */
+        max-width: 200px;
+        cursor: pointer;
+        -webkit-transition: 500ms linear;
+        -moz-transition: 500ms linear;
+        -o-transition: 500ms linear;
+        transition: 500ms linear;
+        color: #fef1e0;
+        border: 1px solid #fef1e0;
+        border-radius: 5px;
+        outline: none;
+        background-color: #c29c5b;
+        box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.25), inset 0 0 6px #a23227, inset 0 80px 80px -40px #ac3223, 1px 1px 3px rgba(0, 0, 0, 0.75);
+        /* shadow */
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.75);
+        font-size: 14px; }
+        .wrapper .content main .button:hover {
+          background: #a61715;
+          box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.25), inset 0 0 6px #da3b2c, inset 0 80px 80px -40px #dd4330, 1px 1px 3px rgba(0, 0, 0, 0.75);
+          /* shadow */
+          text-shadow: 0 1px 2px rgba(0, 0, 0, 0.75), 0 0 40px #ffffff; }
+        .wrapper .content main .button.button__add {
+          margin: 0 auto;
+          padding: 20px 30px; }
+      .wrapper .content main .pizzaSection {
+        display: grid;
+        margin-top: 40px;
+        align-items: center;
+        grid-auto-rows: minmax(100px, auto);
+        grid-gap: 3%;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 350px));
+        justify-content: center; }
+        .wrapper .content main .pizzaSection .pizzaItem {
+          display: grid;
+          margin-bottom: 12%;
+          cursor: pointer;
+          color: #fef1e0;
+          border-radius: 5px;
+          background-color: rgba(0, 0, 0, 0.87);
+          font-size: 15px;
+          align-items: center;
+          grid-gap: 15px;
+          grid-template-columns: 1fr 1fr;
+          justify-items: center; }
+          .wrapper .content main .pizzaSection .pizzaItem .pizzaItemImg {
+            width: 100%;
+            margin-bottom: 15px;
+            border-radius: 5px 5px 0 0;
+            grid-column: span 2; }
+          .wrapper .content main .pizzaSection .pizzaItem span {
+            padding-bottom: 15px; }
+          .wrapper .content main .pizzaSection .pizzaItem:hover {
+            color: #c29c5b; }
+  .wrapper footer {
+    display: grid;
+    height: 80px;
+    color: #fef1e0;
+    background-image: url(../img/header-bg.jpg);
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 15px;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr; }
+    .wrapper footer:hover {
+      color: #c29c5b; }
+    .wrapper footer .phoneNumber {
+      cursor: pointer;
+      text-decoration: none;
+      color: #fef1e0;
+      justify-items: center; }
+      .wrapper footer .phoneNumber:hover {
+        color: #c29c5b; }
+    .wrapper footer adress {
+      margin: 0 auto; }
+      .wrapper footer adress .organization {
+        font-weight: 600; }
+      .wrapper footer adress:first-child {
+        margin-left: 60px; }
+    .wrapper footer .copyright {
+      margin-right: 60px;
+      justify-self: end; }
+      .wrapper footer .copyright .copyrightSign {
+        font-weight: 300; }
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    .wrapper footer {
+      display: grid;
+      height: 80px;
+      color: #fef1e0;
+      background-image: url(../img/header-bg.jpg);
+      font-family: Ubuntu, sans-serif;
+      font-size: 15px;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      grid-template-columns: 1fr;
+      justify-items: center; }
+      .wrapper footer adress {
+        margin: 0; }
+        .wrapper footer adress:first-child {
+          margin-left: 0; }
+      .wrapper footer .copyright {
+        margin-right: 0px;
+        justify-self: center; } }
 
 /*# sourceMappingURL=style.css.map */
