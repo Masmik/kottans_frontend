@@ -11,9 +11,6 @@ main {
         max-width: 200px;
 
         cursor: pointer;
-        -webkit-transition: 500ms linear;
-           -moz-transition: 500ms linear;
-             -o-transition: 500ms linear;
                 transition: 500ms linear;
 
         color: #fef1e0;
@@ -85,6 +82,7 @@ main {
             }
             &:hover {
                 color: #c29c5b;
+                transition: 500ms linear;
             }
         }
     }

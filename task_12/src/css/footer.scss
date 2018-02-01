@@ -23,6 +23,7 @@ footer {
     justify-items: center;
     &:hover {
       color: #c29c5b;
+      transition: 500ms linear;
     }
   }
   adress {

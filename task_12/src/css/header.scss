@@ -16,6 +16,7 @@ header {
     cursor: pointer;
     &:hover {
       color: #c29c5b;
+      transition: 500ms linear;
     }
   }
 
@@ -33,6 +34,7 @@ header {
 
       &:hover {
         opacity: 0.8;
+        transition: 500ms linear;
       }
     }
   }
@@ -45,6 +47,7 @@ header {
 
     &:hover {
       color: #c29c5b;
+      transition: 500ms linear;
     }
   }
 

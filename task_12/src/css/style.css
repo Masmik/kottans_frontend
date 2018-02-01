@@ -62,7 +62,8 @@ table {
         margin-left: 60px;
         cursor: pointer; }
         .wrapper .content header .timeBlock:hover {
-          color: #c29c5b; }
+          color: #c29c5b;
+          transition: 500ms linear; }
       .wrapper .content header .logo {
         display: block;
         cursor: pointer;
@@ -73,13 +74,15 @@ table {
           padding-bottom: 10px;
           opacity: 1; }
           .wrapper .content header .logo .logoImage:hover {
-            opacity: 0.8; }
+            opacity: 0.8;
+            transition: 500ms linear; }
       .wrapper .content header .logInBlock {
         margin-right: 60px;
         cursor: pointer;
         justify-self: end; }
         .wrapper .content header .logInBlock:hover {
-          color: #c29c5b; }
+          color: #c29c5b;
+          transition: 500ms linear; }
       .wrapper .content header .fa {
         font-size: 18px; }
     @media screen and (min-width: 300px) and (max-width: 767px) {
@@ -108,9 +111,6 @@ table {
         /* IE9 & 10 */
         max-width: 200px;
         cursor: pointer;
-        -webkit-transition: 500ms linear;
-        -moz-transition: 500ms linear;
-        -o-transition: 500ms linear;
         transition: 500ms linear;
         color: #fef1e0;
         border: 1px solid #fef1e0;
@@ -157,7 +157,8 @@ table {
           .wrapper .content main .pizzaSection .pizzaItem span {
             padding-bottom: 15px; }
           .wrapper .content main .pizzaSection .pizzaItem:hover {
-            color: #c29c5b; }
+            color: #c29c5b;
+            transition: 500ms linear; }
   .wrapper footer {
     display: grid;
     height: 80px;
@@ -175,7 +176,8 @@ table {
       color: #fef1e0;
       justify-items: center; }
       .wrapper footer .phoneNumber:hover {
-        color: #c29c5b; }
+        color: #c29c5b;
+        transition: 500ms linear; }
     .wrapper footer adress {
       margin: 0 auto; }
       .wrapper footer adress .organization {
