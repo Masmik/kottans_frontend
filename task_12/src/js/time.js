@@ -3,8 +3,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     var clock = document.getElementsByClassName("time")[0];
 
-    console.log(clock);
-    
     function realTimeclock() {
         var time = new Date();
         var hours = time.getHours().toString();
