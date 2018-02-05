@@ -29,11 +29,13 @@ header {
 
     cursor: pointer;
 
-    justify-self: end;
-    background-color: transparent;
     color: $text-color;
     border: none;
+    background-color: transparent;
+
     font-size: inherit;
+
+    justify-self: end;
 
     &:hover {
         transition: 500ms linear;

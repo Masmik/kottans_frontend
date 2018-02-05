@@ -1,10 +1,9 @@
 @import '../variables.scss';
 
 footer {
-    height: 80px;
     display: grid;
-    align-items: center;
-    grid-template-columns: 1fr 1fr 1fr;
+
+    height: 80px;
 
     color: $text-color;
     background-image: url(../img/header-bg.jpg);
@@ -12,6 +11,8 @@ footer {
     font-family: $main-font;
     font-size: 15px;
 
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .phoneNumber {
@@ -40,6 +41,6 @@ small {
 .orgNameAndLocation {
     margin-left: 60px;
 }
-.phoneNumber{
+.phoneNumber {
     justify-self: center;
 }
