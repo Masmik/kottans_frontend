@@ -30,6 +30,10 @@ header {
     cursor: pointer;
 
     justify-self: end;
+    background-color: transparent;
+    color: $text-color;
+    border: none;
+    font-size: inherit;
 
     &:hover {
         transition: 500ms linear;
@@ -46,7 +50,7 @@ header {
     justify-self: center;
 }
 
-.logoImage {
+.logo__image {
     width: 200px;
     padding-top: 10px;
     padding-bottom: 10px;
