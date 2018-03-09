@@ -39,10 +39,10 @@ const getModule = () => {
             test: /\.(sass|scss)$/,
             loader: ExtractTextPlugin.extract(['css-loader', 'sass-loader'])
         },
-        // {
-        //     test: /\.(png|gif|jpe?g|svg)$/,
-        //     loader: 'file-loader?name=/images/[name].[ext]'
-        // },
+        {
+            test: /\.(png|gif|jpe?g|svg)$/,
+            loader: 'file-loader?name=/src/images/[name].[ext]'
+        },
         // {
         //     test: /\.(eot|ttf|woff2|woff?)(\?.*$|$)/,
         //     loader: 'file-loader?name=/fonts/[name].[ext]'
@@ -103,6 +103,10 @@ const getPlugins = () => {
             filename: 'index.html',
             hash: true,
             template: SRC_DIR +'/index.html'
+        }),
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery"
         })
     ]
 

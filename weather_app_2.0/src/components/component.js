@@ -38,10 +38,13 @@ class Component {
             this.el.append(children);
         }
 
+        this.afterRender();
         return this.el;
     }
 
     render() {}
+
+    afterRender() {}
 }
 
 export default Component;

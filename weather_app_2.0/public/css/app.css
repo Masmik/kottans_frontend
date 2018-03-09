@@ -1,0 +1,132 @@
+.enterWeather {
+  display: inline-block;
+  width: 400px;
+  height: 32px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+  padding: 3px 10px;
+  font-weight: 300;
+  border-radius: 4px; }
+
+.searchWeather__button {
+  display: inline-block;
+  background-color: #3775dd;
+  box-shadow: 0 2px #21487f;
+  border-color: transparent;
+  color: #fff;
+  font-size: 1em;
+  line-height: 32px;
+  margin-left: 5px;
+  margin-right: 0;
+  min-width: 92px;
+  padding-left: 14px;
+  padding-right: 14px;
+  text-align: center;
+  font-weight: 300;
+  outline: none;
+  box-sizing: content-box;
+  border-radius: 4px;
+  cursor: pointer;
+  vertical-align: top; }
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+body {
+  background-size: cover;
+  background-image: url(/src/images/stormy_clouds.jpg); }
+
+a {
+  color: #fff;
+  text-decoration: none; }
+
+button {
+  opacity: 0.8; }
+
+button:hover {
+  opacity: 1; }
+
+.list {
+  border-bottom: 2px dotted rgba(255, 255, 255, 0.12);
+  overflow: hidden;
+  white-space: nowrap;
+  height: 2.1em; }
+
+.cityForecast {
+  line-height: 2.1em; }
+
+.wrapper {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300; }
+  .wrapper .appsName {
+    transition: box-shadow .5s;
+    display: block;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.54);
+    text-align: center; }
+    .wrapper .appsName .title {
+      font-size: 2.2em;
+      color: #fff;
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.54);
+      line-height: 2em; }
+  .wrapper .searchContainer {
+    text-align: center;
+    margin-top: 4%; }
+    .wrapper .searchContainer .additionalBtn {
+      display: inline-block;
+      margin-right: 5px; }
+      .wrapper .searchContainer .additionalBtn .addFuncBtn {
+        background-color: rgba(0, 0, 0, 0.54);
+        border-width: 0;
+        box-sizing: border-box;
+        cursor: pointer;
+        display: inline-block;
+        border-radius: 4px;
+        padding-top: 7px;
+        padding-bottom: 7px;
+        vertical-align: middle;
+        outline: none; }
+        .wrapper .searchContainer .additionalBtn .addFuncBtn.findLocation:disabled {
+          opacity: 0.3; }
+    .wrapper .searchContainer .searchInputWrapper {
+      display: inline-block; }
+
+/*# sourceMappingURL=app.css.map*/
