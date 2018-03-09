@@ -56,5 +56,11 @@ button:hover {
           opacity: 0.3; }
     .wrapper .searchContainer .searchInputWrapper {
       display: inline-block; }
+  .wrapper .weatherInfo {
+    display: block; }
+  .wrapper .detailedInfo {
+    display: block;
+    text-align: center;
+    margin-top: 4%; }
 
 /*# sourceMappingURL=main.css.map */

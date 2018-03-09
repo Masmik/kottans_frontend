@@ -7,6 +7,8 @@ class Component {
         this.el = null;
     }
 
+    // merge current state with new state
+    // but didn`t works with some cases
     updateState(nextState) {
         this.state = Object.assign({}, this.state, nextState);
         this._render();

@@ -72,8 +72,20 @@ button:hover {
         }
       }
     }
-    .searchInputWrapper{
+    .searchInputWrapper {
       display: inline-block;
     }
   }
+
+  .weatherInfo {
+    display: block;
+  }
+
+  .detailedInfo {
+    //display: none;
+    display: block;
+    text-align: center;
+    margin-top: 4%;
+  }
+
 }
