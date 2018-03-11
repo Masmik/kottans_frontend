@@ -31,7 +31,8 @@ class MainPage extends Component {
             'afterRender',
             'getWeatherForecast',
             'handlerClickFavorite',
-            'handlerTemperatureChange'
+            'handlerTemperatureChange',
+            'handlerUrlChange'
         );
 
         window.GoogleApiLoaded = this.GoogleApiLoaded;
@@ -68,6 +69,9 @@ class MainPage extends Component {
         this.weatherHistoryListComp = new WeatherPlaceListComp();
         this.weatherFavoriteListComp = new WeatherPlaceListComp();
 
+        window.onhashchange = this.handlerUrlChange;
+
+        this.handlerUrlChange();
     }
 
 
@@ -109,7 +113,6 @@ class MainPage extends Component {
 
     handlerClickFavorite(e) {
         e.preventDefault();
-        console.log('clickFavorite');
         setUniqueLocalStorage(lsFavoriteKey, {
             name: this.state.address,
             url: window.location.href
@@ -135,6 +138,7 @@ class MainPage extends Component {
         getWeather(this.state.location.lat, this.state.location.long).then(resp => {
             this.state.forecast = resp;
             this.handlerTemperatureChange(this.state.temperatureType);
+            window.location.hash = `lat=${this.state.location.lat}&long=${this.state.location.long}`;
             setLocalStorage(lsHistoryKey, {
                 name: this.state.address,
                 url: window.location.href
@@ -168,6 +172,33 @@ class MainPage extends Component {
         });
     }
 
+    handlerUrlChange() {
+        // console.log(window.location);
+        let hash = window.location.hash.substr(1);
+        let result = hash.split('&').reduce(function (result, item) {
+            let parts = item.split('=');
+            result[parts[0]] = parts[1];
+            return result;
+        }, {});
+
+        if (typeof result.lat == "undefined" || typeof result.long == "undefined") {
+            return;
+        }
+
+        if (this.state.location.lat == result.lat && this.state.location.long == result.long) {
+            return;
+        }
+
+        this.state.location.lat = result.lat;
+        this.state.location.long = result.long;
+
+
+        getLocationName(this.state.location.lat, this.state.location.long).then(address => {
+            this.state.address = address;
+            this.getWeatherForecast();
+            this.update(this.state);
+        });
+    }
 
     afterRender() {
         this.handleSuggestion();
@@ -175,6 +206,7 @@ class MainPage extends Component {
     }
 
     render() {
+
         const {forecast, address} = this.state;
 
         let title = document.createElement('div');

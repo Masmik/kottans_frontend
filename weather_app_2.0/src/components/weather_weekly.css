@@ -7,7 +7,7 @@
   margin: 10px;
   vertical-align: top;
   text-align: left;
-  height: 288px;
+  height: 278px;
   overflow: hidden; }
   .addFuncBlock .titleFuncBlock {
     color: #fff;
@@ -34,7 +34,7 @@
     .addFuncBlock .byDays .dayWeatherIcon {
       display: inline-block;
       text-align: center;
-      width: 30%; }
+      width: 25%; }
     .addFuncBlock .byDays .humidity {
       display: inline-block;
       width: 22%; }
