@@ -8,7 +8,7 @@ import {
     WeatherPlaceListComp
 } from "../components";
 import {isAllowedGEOLocation} from "../utils/auto_location";
-import {AutoGEOLocation, bindAll, getLocalStorage, setLocalStorage, setUniqueLocalStorage, temperatureConverter} from '../utils';
+import {AutoGEOLocation, bindAll, getLocalStorage, setLocalStorage, setUniqueLocalStorage, temperatureConverter, skycons} from '../utils';
 import {SuggestionApi, getWeather, getLocationName} from '../api'
 import './reset.scss';
 import './main.scss';
@@ -171,6 +171,7 @@ class MainPage extends Component {
 
     afterRender() {
         this.handleSuggestion();
+        skycons(this.el);
     }
 
     render() {

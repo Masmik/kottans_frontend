@@ -19,7 +19,7 @@ class WeatherToday extends Component {
 
     handleTemperatureClick(e) {
 
-        if (e.target.classList.contains(temperatureTypeFahrenheit)){
+        if (e.target.classList.contains(temperatureTypeFahrenheit)) {
             this.props.handlerTemperatureChange(temperatureTypeFahrenheit);
         }
 
@@ -48,8 +48,8 @@ class WeatherToday extends Component {
             </div>
             <div class="weatherCard">
                 <div class="weatherDescription">
-                    <canvas class="weatherIcon current" width="30" height="30"></canvas>
-                    <span class="description"></span>
+                    <canvas class="weatherIcon current" data-icon="${forecast.currently.icon}" width="30" height="30"></canvas>
+                    <span class="description">${forecast.currently.summary}</span>
                 </div>
                 <div class="temperature">
                     <span class="temperatureValue">${temperature.toFixed(0)}</span>

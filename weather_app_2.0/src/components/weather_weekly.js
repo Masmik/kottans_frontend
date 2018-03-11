@@ -22,7 +22,7 @@ class WeatherWeekly extends Component {
             <div class="list listWeekly">
                 <div class="nameOfTheDay">${daysOfTheWeek[new Date(dailyForecast.time * 1000).getDay()]}</div>
                 <div class="dayWeatherIcon">
-                    <canvas class="weatherIcon" data-icon=${dailyForecast.icon} width="30" height="30"></canvas>
+                    <canvas class="weatherIcon" data-icon="${dailyForecast.icon}" width="30" height="30"></canvas>
                 </div>
                 <div class="humidity">
                     <img class="humidityIcon" src="https://s.yimg.com/os/weather/1.0.1/precipitation/54x60/rain_ico_60@2x.png" alt="humidity">
