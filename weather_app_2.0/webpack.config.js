@@ -41,7 +41,7 @@ const getModule = () => {
         },
         {
             test: /\.(png|gif|jpe?g|svg)$/,
-            loader: 'file-loader?name=/src/images/[name].[ext]'
+            loader: 'file-loader?name=./../images/[name].[ext]'
         },
         // {
         //     test: /\.(eot|ttf|woff2|woff?)(\?.*$|$)/,
@@ -93,7 +93,7 @@ const getResolve = () => {
 
 const getPlugins = () => {
     return [
-        // new webpack.optimize.UglifyJsPlugin(),
+        new webpack.optimize.UglifyJsPlugin(),
         new webpack.NoEmitOnErrorsPlugin(),
         new ExtractTextPlugin({
             filename: 'css/app.css',
@@ -102,7 +102,7 @@ const getPlugins = () => {
         new HtmlWebpackPlugin({
             filename: 'index.html',
             hash: true,
-            template: SRC_DIR +'/index.html'
+            template: SRC_DIR + '/index.html'
         }),
         new webpack.ProvidePlugin({
             $: "jquery",
@@ -118,7 +118,7 @@ module.exports = {
     output: getOutput(),
     module: getModule(),
     watchOptions: watchOptions(),
-    devtool : 'source-map',
+    devtool: 'source-map',
     resolve: getResolve(),
     plugins: getPlugins()
 };

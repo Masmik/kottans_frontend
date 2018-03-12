@@ -199,7 +199,7 @@ table {
   border-spacing: 0; }
 body {
   background-size: cover;
-  background-image: url(/src/images/stormy_clouds.jpg); }
+  background-image: url(./../images/stormy_clouds.jpg); }
 
 a {
   color: #fff;
