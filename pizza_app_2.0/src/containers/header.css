@@ -1,0 +1,9 @@
+header {
+  display: grid;
+  width: 100%;
+  background-image: url("./../images/header-bg.jpg");
+  font-size: 15px;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+
+/*# sourceMappingURL=header.css.map */
