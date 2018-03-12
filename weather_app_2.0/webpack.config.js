@@ -41,7 +41,12 @@ const getModule = () => {
         },
         {
             test: /\.(png|gif|jpe?g|svg)$/,
-            loader: 'file-loader?name=./../images/[name].[ext]'
+            loader: 'file-loader',
+            options: {
+                name: "[name].[ext]",
+                outputPath: "images/",
+                publicPath: "../"
+            }
         },
         // {
         //     test: /\.(eot|ttf|woff2|woff?)(\?.*$|$)/,
@@ -80,14 +85,7 @@ const watchOptions = () => {
 
 const getResolve = () => {
     return {
-        extensions: [".js", ".json", ".css"],
-        alias: {
-            app: SRC_DIR + '/app',
-            fonts: SRC_DIR + '/fonts',
-            img: SRC_DIR + '/images',
-            libs: SRC_DIR + '/libs',
-            svg: SRC_DIR + '/svg'
-        }
+        extensions: [".js", ".json", ".css"]
     }
 };
 
@@ -103,10 +101,6 @@ const getPlugins = () => {
             filename: 'index.html',
             hash: true,
             template: SRC_DIR + '/index.html'
-        }),
-        new webpack.ProvidePlugin({
-            $: "jquery",
-            jQuery: "jquery"
         })
     ]
 

@@ -19,7 +19,7 @@ class WeatherPlaceList extends Component {
         const {list, title} = this.props;
 
         let items = '';
-        for (let i = list.length - 1; i > 0; i--) {
+        for (let i = list.length - 1; i >= 0; i--) {
             let {url, name} = list[i];
 
             items += `<li class="list">
