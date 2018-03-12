@@ -917,6 +917,7 @@ function setLocalStorage(key, obj) {
     }
 
     var storageObj = getLocalStorage(key);
+
     storageObj.push(obj);
 
     var serialLocalStorage = JSON.stringify(storageObj);

@@ -24,6 +24,7 @@ export function setLocalStorage(key, obj) {
     }
 
     let storageObj = getLocalStorage(key);
+
     storageObj.push(obj);
 
     let serialLocalStorage = JSON.stringify(storageObj);
