@@ -66,6 +66,8 @@ button:hover {
         padding-bottom: 7px;
         vertical-align: middle;
         outline: none;
+        max-height: 39px;
+        margin-right: 5px;
 
         &.findLocation:disabled {
           opacity: 0.3;
