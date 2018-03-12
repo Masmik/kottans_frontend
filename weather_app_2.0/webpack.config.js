@@ -93,7 +93,7 @@ const getResolve = () => {
 
 const getPlugins = () => {
     return [
-        new webpack.optimize.UglifyJsPlugin(),
+        // new webpack.optimize.UglifyJsPlugin(),
         new webpack.NoEmitOnErrorsPlugin(),
         new ExtractTextPlugin({
             filename: 'css/app.css',
