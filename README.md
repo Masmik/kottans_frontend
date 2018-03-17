@@ -147,3 +147,13 @@ The first and the second articles includes a lot of tips how not to go mad and n
       
    - Demo https://masmik.github.io/kottans_frontend/task_11/
    - Source https://github.com/Masmik/kottans_frontend/tree/master/task_11
+   
+      ## **Task 12**
+      
+   - Demo https://masmik.github.io/kottans_frontend/task_12/
+   - Source https://github.com/Masmik/kottans_frontend/tree/master/task_12
+      
+       ## **Weather_app_2.0 (component pattern)**
+       
+   - Demo: https://masmik.github.io/assignments_masmik/weather_app_2.0/public/
+   - Source: https://github.com/Masmik/assignments_masmik/tree/master/weather_app_2.0
