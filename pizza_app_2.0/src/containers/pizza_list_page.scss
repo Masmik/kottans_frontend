@@ -1,20 +1,30 @@
 @import "./variables";
+@import "./main";
 
-.wrapper {
-  height: 100%;
 
+.pizzaSection {
+  display: grid;
+  margin-top: 40px;
+  align-items: center;
+  grid-auto-rows: minmax(100px, auto);
+  grid-gap: 3%;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 350px));
+  justify-content: center;
+  margin-bottom: 70px;
+}
+
+figcaption{
+  display: grid;
+  padding-bottom: 15px;
+}
+
+footer {
+  display: grid;
   color: $text-color;
-
+  background-image: url('./../images/header-bg.jpg');
   font-family: $main-font;
+  font-size: 15px;
 }
-.content {
-  box-sizing: border-box;
-  min-height: 100%;
-  padding-bottom: 90px;
 
-  .fa {
-    padding-right: 8px;
-  }
-}
 
 

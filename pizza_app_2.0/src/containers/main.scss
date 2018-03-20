@@ -1,0 +1,26 @@
+@import "./variables";
+
+.wrapper {
+  height: 100%;
+
+  color: $text-color;
+
+  font-family: $main-font;
+
+}
+
+.content {
+  box-sizing: border-box;
+
+  .fa {
+    padding-right: 8px;
+  }
+}
+
+main {
+  padding: 40px 30px;
+
+  font-family: $main-font;
+}
+
+

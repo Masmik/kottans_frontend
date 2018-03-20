@@ -1,0 +1,57 @@
+@import "variables";
+
+footer {
+  height: 80px;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.phoneNumber {
+  cursor: pointer;
+  text-decoration: none;
+
+  color: $text-color;
+
+  justify-items: center;
+  &:hover {
+    transition: 500ms linear;
+
+    color: $hover-text-color;
+  }
+}
+
+.copyright {
+  margin-right: 60px;
+  justify-self: end;
+}
+
+.organization {
+  font-weight: 600;
+}
+
+.orgNameAndLocation {
+  margin-left: 60px;
+}
+
+.phoneNumber {
+  justify-self: center;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  footer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    grid-template-columns: 1fr;
+  }
+  .orgNameAndLocation {
+    margin-left: 0;
+    justify-self: center;
+  }
+  .copyright {
+    margin-right: 0;
+    justify-self: center;
+  }
+}
+
+

@@ -4,10 +4,33 @@
   font-family: "Ubuntu", sans-serif; }
 
 .content {
-  box-sizing: border-box;
-  min-height: 100%;
-  padding-bottom: 90px; }
+  box-sizing: border-box; }
   .content .fa {
     padding-right: 8px; }
+
+main {
+  padding: 40px 30px;
+  font-family: "Ubuntu", sans-serif; }
+
+.pizzaSection {
+  display: grid;
+  margin-top: 40px;
+  align-items: center;
+  grid-auto-rows: minmax(100px, auto);
+  grid-gap: 3%;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 350px));
+  justify-content: center;
+  margin-bottom: 70px; }
+
+figcaption {
+  display: grid;
+  padding-bottom: 15px; }
+
+footer {
+  display: grid;
+  color: #fef1e0;
+  background-image: url("./../images/header-bg.jpg");
+  font-family: "Ubuntu", sans-serif;
+  font-size: 15px; }
 
 /*# sourceMappingURL=pizza_list_page.css.map */

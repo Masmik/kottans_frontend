@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -79,7 +79,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _component = __webpack_require__(/*! ./component */ 4);
+var _component = __webpack_require__(/*! ./component */ 5);
 
 Object.defineProperty(exports, 'Component', {
   enumerable: true,
@@ -88,7 +88,7 @@ Object.defineProperty(exports, 'Component', {
   }
 });
 
-var _clock = __webpack_require__(/*! ./clock */ 5);
+var _clock = __webpack_require__(/*! ./clock */ 6);
 
 Object.defineProperty(exports, 'Clock', {
   enumerable: true,
@@ -97,7 +97,7 @@ Object.defineProperty(exports, 'Clock', {
   }
 });
 
-var _logo = __webpack_require__(/*! ./logo */ 10);
+var _logo = __webpack_require__(/*! ./logo */ 11);
 
 Object.defineProperty(exports, 'Logo', {
   enumerable: true,
@@ -106,7 +106,7 @@ Object.defineProperty(exports, 'Logo', {
   }
 });
 
-var _login = __webpack_require__(/*! ./login */ 12);
+var _login = __webpack_require__(/*! ./login */ 13);
 
 Object.defineProperty(exports, 'LogIn', {
   enumerable: true,
@@ -115,7 +115,7 @@ Object.defineProperty(exports, 'LogIn', {
   }
 });
 
-var _button_new_pizza = __webpack_require__(/*! ./button_new_pizza */ 14);
+var _button_new_pizza = __webpack_require__(/*! ./button_new_pizza */ 15);
 
 Object.defineProperty(exports, 'Btn', {
   enumerable: true,
@@ -124,7 +124,7 @@ Object.defineProperty(exports, 'Btn', {
   }
 });
 
-var _pizza_item = __webpack_require__(/*! ./pizza_item */ 15);
+var _pizza_item = __webpack_require__(/*! ./pizza_item */ 17);
 
 Object.defineProperty(exports, 'PizzaItem', {
   enumerable: true,
@@ -133,7 +133,7 @@ Object.defineProperty(exports, 'PizzaItem', {
   }
 });
 
-var _footer = __webpack_require__(/*! ./footer */ 16);
+var _footer = __webpack_require__(/*! ./footer */ 19);
 
 Object.defineProperty(exports, 'Footer', {
   enumerable: true,
@@ -142,27 +142,19 @@ Object.defineProperty(exports, 'Footer', {
   }
 });
 
+var _login_form = __webpack_require__(/*! ./login_form */ 21);
+
+Object.defineProperty(exports, 'LoginForm', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_login_form).default;
+  }
+});
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
 /* 1 */
-/*!********************!*\
-  !*** ./src/app.js ***!
-  \********************/
-/*! dynamic exports provided */
-/*! all exports used */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _containers = __webpack_require__(/*! ./containers */ 2);
-
-var w = new _containers.PizzaListPage({ el: document.getElementById("root") });
-w.update();
-
-/***/ }),
-/* 2 */
 /*!*********************************!*\
   !*** ./src/containers/index.js ***!
   \*********************************/
@@ -177,7 +169,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _pizza_list_page = __webpack_require__(/*! ./pizza_list_page */ 3);
+var _pizza_list_page = __webpack_require__(/*! ./pizza_list_page */ 4);
 
 Object.defineProperty(exports, 'PizzaListPage', {
   enumerable: true,
@@ -186,10 +178,60 @@ Object.defineProperty(exports, 'PizzaListPage', {
   }
 });
 
+var _header = __webpack_require__(/*! ./header */ 23);
+
+Object.defineProperty(exports, 'Header', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_header).default;
+  }
+});
+
+var _login_page = __webpack_require__(/*! ./login_page */ 25);
+
+Object.defineProperty(exports, 'LoginPage', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_login_page).default;
+  }
+});
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
+/* 2 */
+/*!***********************************!*\
+  !*** ./src/containers/reset.scss ***!
+  \***********************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
 /* 3 */
+/*!********************!*\
+  !*** ./src/app.js ***!
+  \********************/
+/*! dynamic exports provided */
+/*! all exports used */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _containers = __webpack_require__(/*! ./containers */ 1);
+
+// import {LoginPage } from './containers';
+
+// let w = new LoginPage({ el: document.getElementById("root") });
+var w = new _containers.PizzaListPage({ el: document.getElementById("root") });
+
+w.update();
+
+/***/ }),
+/* 4 */
 /*!*******************************************!*\
   !*** ./src/containers/pizza_list_page.js ***!
   \*******************************************/
@@ -208,9 +250,11 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _components = __webpack_require__(/*! ../components */ 0);
 
-__webpack_require__(/*! ./reset.scss */ 17);
+var _ = __webpack_require__(/*! ./ */ 1);
 
-__webpack_require__(/*! ./pizza_list_page.scss */ 18);
+__webpack_require__(/*! ./reset.scss */ 2);
+
+__webpack_require__(/*! ./pizza_list_page.scss */ 22);
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -229,10 +273,52 @@ var PizzaListPage = function (_Component) {
         _this.el = props.el || document.createElement('div');
         _this.el.classList.add('wrapper');
 
-        // init components
-        _this.clock = new _components.Clock();
-        _this.logo = new _components.Logo();
-        _this.login = new _components.LogIn();
+        // origin state
+        _this.state = {
+            pizzaItemInfo: [{
+                imgSrc: '../../src/images/pizza_im.jpg',
+                timerTime: '12:43:32',
+                queueNumber: 1,
+                cookedTime: 5,
+                price: 5
+            }, {
+                imgSrc: '../../src/images/pizza_im.jpg',
+                timerTime: '12:43:32',
+                queueNumber: 2,
+                cookedTime: 8,
+                price: 7
+            }, {
+                imgSrc: '../../src/images/pizza_im.jpg',
+                timerTime: '12:43:32',
+                queueNumber: 3,
+                cookedTime: 4,
+                price: 9
+            }, {
+                imgSrc: '../../src/images/pizza_ph.jpg',
+                timerTime: '12:43:32',
+                queueNumber: 4,
+                cookedTime: 3,
+                price: 11
+            }, {
+                imgSrc: '../../src/images/pizza_ph.jpg',
+                timerTime: '12:43:32',
+                queueNumber: 5,
+                cookedTime: 3,
+                price: 12
+            }, {
+                imgSrc: '../../src/images/pizza_ph.jpg',
+                timerTime: '12:43:32',
+                queueNumber: 6,
+                cookedTime: 3,
+                price: 14
+            }]
+        };
+
+        // // init components
+        _this.header = new _.Header();
+        _this.btn = new _components.Btn();
+        _this.pizzaItem = new _components.PizzaItem();
+        _this.footer = new _components.Footer();
         return _this;
     }
 
@@ -241,13 +327,15 @@ var PizzaListPage = function (_Component) {
         value: function render() {
             var content = document.createElement('div');
             content.classList.add('content');
+            content.appendChild(this.header.update());
 
-            var header = document.createElement('header');
-            content.appendChild(header);
+            var main = document.createElement('main');
+            main.appendChild(this.btn.update());
 
-            header.appendChild(this.clock.update());
-            header.appendChild(this.logo.update());
-            header.appendChild(this.login.update());
+            main.appendChild(this.pizzaItem.update({ items: this.state.pizzaItemInfo }));
+            content.appendChild(main);
+
+            content.appendChild(this.footer.update());
 
             return [content];
         }
@@ -259,7 +347,7 @@ var PizzaListPage = function (_Component) {
 exports.default = PizzaListPage;
 
 /***/ }),
-/* 4 */
+/* 5 */
 /*!*************************************!*\
   !*** ./src/components/component.js ***!
   \*************************************/
@@ -349,7 +437,7 @@ var Component = function () {
 exports.default = Component;
 
 /***/ }),
-/* 5 */
+/* 6 */
 /*!*********************************!*\
   !*** ./src/components/clock.js ***!
   \*********************************/
@@ -368,9 +456,9 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _ = __webpack_require__(/*! ./ */ 0);
 
-var _utils = __webpack_require__(/*! ../utils */ 6);
+var _utils = __webpack_require__(/*! ../utils */ 7);
 
-__webpack_require__(/*! ./clock.scss */ 9);
+__webpack_require__(/*! ./clock.scss */ 10);
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -386,17 +474,29 @@ var Clock = function (_Component) {
 
         var _this = _possibleConstructorReturn(this, (Clock.__proto__ || Object.getPrototypeOf(Clock)).call(this, props));
 
+        (0, _utils.bindAll)(_this, 'updateTime');
         _this.el = document.createElement('div');
         _this.el.classList.add('timeBlock');
+
+        setInterval(_this.updateTime, 1000);
         return _this;
     }
 
     _createClass(Clock, [{
+        key: 'updateTime',
+        value: function updateTime() {
+            var timeEl = this.el.querySelector('.time');
+            if (!timeEl) {
+                return;
+            }
+            timeEl.textContent = (0, _utils.realTimeClock)();
+        }
+    }, {
         key: 'render',
         value: function render() {
-            var onLineTime = (0, _utils.realTimeClock)();
+            var curTime = (0, _utils.realTimeClock)();
 
-            return '<i class="fa fa-clock-o" aria-hidden="true"></i>\n                <time class="time">' + onLineTime + '</time>';
+            return '<i class="fa fa-clock-o" aria-hidden="true"></i>\n                <time class="time">' + curTime + '</time>';
         }
     }]);
 
@@ -406,7 +506,7 @@ var Clock = function (_Component) {
 exports.default = Clock;
 
 /***/ }),
-/* 6 */
+/* 7 */
 /*!****************************!*\
   !*** ./src/utils/index.js ***!
   \****************************/
@@ -421,7 +521,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _utils = __webpack_require__(/*! ./utils */ 7);
+var _utils = __webpack_require__(/*! ./utils */ 8);
 
 Object.defineProperty(exports, 'bindAll', {
   enumerable: true,
@@ -430,7 +530,7 @@ Object.defineProperty(exports, 'bindAll', {
   }
 });
 
-var _real_time = __webpack_require__(/*! ./real_time */ 8);
+var _real_time = __webpack_require__(/*! ./real_time */ 9);
 
 Object.defineProperty(exports, 'realTimeClock', {
   enumerable: true,
@@ -446,7 +546,7 @@ Object.defineProperty(exports, 'clock', {
 });
 
 /***/ }),
-/* 7 */
+/* 8 */
 /*!****************************!*\
   !*** ./src/utils/utils.js ***!
   \****************************/
@@ -478,7 +578,7 @@ var bindAll = exports.bindAll = function bindAll(context) {
 };
 
 /***/ }),
-/* 8 */
+/* 9 */
 /*!********************************!*\
   !*** ./src/utils/real_time.js ***!
   \********************************/
@@ -510,13 +610,11 @@ function realTimeClock() {
         sec = '0' + sec;
     }
 
-    var clockString = hours + ' : ' + min + ' : ' + sec;
-
-    return clockString;
+    return hours + ':' + min + ':' + sec;
 }
 
 /***/ }),
-/* 9 */
+/* 10 */
 /*!***********************************!*\
   !*** ./src/components/clock.scss ***!
   \***********************************/
@@ -527,7 +625,7 @@ function realTimeClock() {
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 10 */
+/* 11 */
 /*!********************************!*\
   !*** ./src/components/logo.js ***!
   \********************************/
@@ -546,7 +644,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _ = __webpack_require__(/*! ./ */ 0);
 
-__webpack_require__(/*! ./logo.scss */ 11);
+__webpack_require__(/*! ./logo.scss */ 12);
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -581,7 +679,7 @@ var Logo = function (_Component) {
 exports.default = Logo;
 
 /***/ }),
-/* 11 */
+/* 12 */
 /*!**********************************!*\
   !*** ./src/components/logo.scss ***!
   \**********************************/
@@ -592,7 +690,7 @@ exports.default = Logo;
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 12 */
+/* 13 */
 /*!*********************************!*\
   !*** ./src/components/login.js ***!
   \*********************************/
@@ -611,7 +709,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _ = __webpack_require__(/*! ./ */ 0);
 
-__webpack_require__(/*! ./login.scss */ 13);
+__webpack_require__(/*! ./login.scss */ 14);
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -646,7 +744,7 @@ var LogIn = function (_Component) {
 exports.default = LogIn;
 
 /***/ }),
-/* 13 */
+/* 14 */
 /*!***********************************!*\
   !*** ./src/components/login.scss ***!
   \***********************************/
@@ -657,7 +755,7 @@ exports.default = LogIn;
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 14 */
+/* 15 */
 /*!********************************************!*\
   !*** ./src/components/button_new_pizza.js ***!
   \********************************************/
@@ -676,6 +774,8 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _ = __webpack_require__(/*! ./ */ 0);
 
+__webpack_require__(/*! ./button_new_pizza.scss */ 16);
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -690,13 +790,18 @@ var Btn = function (_Component) {
 
         var _this = _possibleConstructorReturn(this, (Btn.__proto__ || Object.getPrototypeOf(Btn)).call(this, props));
 
-        _this.el = document.createElement('div');
+        _this.el = document.createElement('button');
+        _this.el.classList.add('button');
+        _this.el.classList.add('button_add');
+
         return _this;
     }
 
     _createClass(Btn, [{
         key: 'render',
-        value: function render() {}
+        value: function render() {
+            return '<i class="fa fa-plus" aria-hidden="true"></i>\n                <span class="button_text">Add new pizza</span>';
+        }
     }]);
 
     return Btn;
@@ -705,9 +810,156 @@ var Btn = function (_Component) {
 exports.default = Btn;
 
 /***/ }),
-/* 15 */
+/* 16 */
+/*!**********************************************!*\
+  !*** ./src/components/button_new_pizza.scss ***!
+  \**********************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 17 */
 /*!**************************************!*\
   !*** ./src/components/pizza_item.js ***!
+  \**************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _ = __webpack_require__(/*! ./ */ 0);
+
+__webpack_require__(/*! ./pizza_item.scss */ 18);
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var PizzaItem = function (_Component) {
+    _inherits(PizzaItem, _Component);
+
+    function PizzaItem(props) {
+        _classCallCheck(this, PizzaItem);
+
+        var _this = _possibleConstructorReturn(this, (PizzaItem.__proto__ || Object.getPrototypeOf(PizzaItem)).call(this, props));
+
+        _this.el = document.createElement('section');
+        _this.el.classList.add('pizzaSection');
+
+        return _this;
+    }
+
+    _createClass(PizzaItem, [{
+        key: 'render',
+        value: function render() {
+            var items = this.props.items;
+
+            console.log(items);
+
+            var pizzaItemRender = items.map(function (item) {
+                return '<figure class="pizzaItem">\n                        <img src="' + item.imgSrc + '" alt="pizza img" class="pizzaItemImg">\n                        <figcaption>\n                            <time class="pizzaItem__timer" datetime="12:43:32">' + item.timerTime + '</time>\n                            <p class="pizzaItem__queue"><span class="pizzaItem__queue_hash">#</span>' + item.queueNumber + '</p>\n                            <p class="pizzaItem__cookedTime">ETA:\n                                <time>' + item.cookedTime + '&nbsp;min</time>\n                            </p>\n                            <p class="pizzaItem__price"><span class="pizzaItemPrice_moneyUnit">$</span>' + item.price + '</p>\n                        </figcaption>\n                    </figure>';
+            });
+
+            return pizzaItemRender.join('');
+        }
+    }]);
+
+    return PizzaItem;
+}(_.Component);
+
+exports.default = PizzaItem;
+
+/***/ }),
+/* 18 */
+/*!****************************************!*\
+  !*** ./src/components/pizza_item.scss ***!
+  \****************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 19 */
+/*!**********************************!*\
+  !*** ./src/components/footer.js ***!
+  \**********************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _ = __webpack_require__(/*! ./ */ 0);
+
+__webpack_require__(/*! ./footer.scss */ 20);
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Footer = function (_Component) {
+    _inherits(Footer, _Component);
+
+    function Footer(props) {
+        _classCallCheck(this, Footer);
+
+        var _this = _possibleConstructorReturn(this, (Footer.__proto__ || Object.getPrototypeOf(Footer)).call(this, props));
+
+        _this.el = document.createElement('footer');
+        return _this;
+    }
+
+    _createClass(Footer, [{
+        key: 'render',
+        value: function render() {
+            return '<p class="orgNameAndLocation"><span class="organization">Kottans,</span>Kottans&nbsp;Str.&nbsp;1</p>\n        <a class="phoneNumber" href="tel:577-788-87">tel:&nbsp;577&nbsp;-&nbsp;788&nbsp;-&nbsp;87</a>\n        <small class="copyright">Pizza Manager&nbsp;&copy;&nbsp;2018</small>';
+        }
+    }]);
+
+    return Footer;
+}(_.Component);
+
+exports.default = Footer;
+
+/***/ }),
+/* 20 */
+/*!************************************!*\
+  !*** ./src/components/footer.scss ***!
+  \************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 21 */
+/*!**************************************!*\
+  !*** ./src/components/login_form.js ***!
   \**************************************/
 /*! dynamic exports provided */
 /*! all exports used */
@@ -730,32 +982,47 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var PizzaItem = function (_Component) {
-    _inherits(PizzaItem, _Component);
+var LoginForm = function (_Component) {
+    _inherits(LoginForm, _Component);
 
-    function PizzaItem(props) {
-        _classCallCheck(this, PizzaItem);
+    function LoginForm(props) {
+        _classCallCheck(this, LoginForm);
 
-        var _this = _possibleConstructorReturn(this, (PizzaItem.__proto__ || Object.getPrototypeOf(PizzaItem)).call(this, props));
+        var _this = _possibleConstructorReturn(this, (LoginForm.__proto__ || Object.getPrototypeOf(LoginForm)).call(this, props));
 
-        _this.el = document.createElement('div');
+        _this.el = document.createElement('form');
+        _this.el.classList.add('loginForm');
+        _this.el.setAttribute('method', 'post');
         return _this;
     }
 
-    _createClass(PizzaItem, [{
+    _createClass(LoginForm, [{
         key: 'render',
-        value: function render() {}
+        value: function render() {
+            return '<div class="inputGroup">\n                    <label class="loginForm__label" for="userName">Email</label>\n                    <input type="text" id="userName" class="loginForm__input loginForm__input_name" class="email" maxlength="256" placeholder="email@domain.com" required>\n                </div>\n                <div class="inputGroup">\n                    <label class="loginForm__label" for="userName">Password</label>\n                    <input type="password" id="password" class="loginForm__input loginForm__input_password" class="password" pattern=".{8,}" required>\n                </div>\n                <div class="inputGroup inputGroup__buttonGroup">\n\t\t            <input type="submit" class="button loginForm__button button__signIn" value="Sign in">\n\t\t            <a href="" class="button loginForm__button button__signUp"> Sign up</a>\n\t            </div>';
+        }
     }]);
 
-    return PizzaItem;
+    return LoginForm;
 }(_.Component);
 
-exports.default = PizzaItem;
+exports.default = LoginForm;
 
 /***/ }),
-/* 16 */
+/* 22 */
+/*!*********************************************!*\
+  !*** ./src/containers/pizza_list_page.scss ***!
+  \*********************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 23 */
 /*!**********************************!*\
-  !*** ./src/components/footer.js ***!
+  !*** ./src/containers/header.js ***!
   \**********************************/
 /*! dynamic exports provided */
 /*! all exports used */
@@ -770,7 +1037,9 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _ = __webpack_require__(/*! ./ */ 0);
+var _components = __webpack_require__(/*! ../components */ 0);
+
+__webpack_require__(/*! ./header.scss */ 24);
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -778,33 +1047,40 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Footer = function (_Component) {
-    _inherits(Footer, _Component);
+var Header = function (_Component) {
+    _inherits(Header, _Component);
 
-    function Footer(props) {
-        _classCallCheck(this, Footer);
+    function Header(props) {
+        _classCallCheck(this, Header);
 
-        var _this = _possibleConstructorReturn(this, (Footer.__proto__ || Object.getPrototypeOf(Footer)).call(this, props));
+        var _this = _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).call(this, props));
 
-        _this.el = document.createElement('div');
+        _this.el = document.createElement('header');
+
+        // init components
+        _this.clock = new _components.Clock();
+        _this.logo = new _components.Logo();
+        _this.login = new _components.LogIn();
         return _this;
     }
 
-    _createClass(Footer, [{
+    _createClass(Header, [{
         key: 'render',
-        value: function render() {}
+        value: function render() {
+            return [this.el.appendChild(this.clock.update()), this.el.appendChild(this.logo.update()), this.el.appendChild(this.login.update())];
+        }
     }]);
 
-    return Footer;
-}(_.Component);
+    return Header;
+}(_components.Component);
 
-exports.default = Footer;
+exports.default = Header;
 
 /***/ }),
-/* 17 */
-/*!***********************************!*\
-  !*** ./src/containers/reset.scss ***!
-  \***********************************/
+/* 24 */
+/*!************************************!*\
+  !*** ./src/containers/header.scss ***!
+  \************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /***/ (function(module, exports) {
@@ -812,10 +1088,85 @@ exports.default = Footer;
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 18 */
-/*!*********************************************!*\
-  !*** ./src/containers/pizza_list_page.scss ***!
-  \*********************************************/
+/* 25 */
+/*!**************************************!*\
+  !*** ./src/containers/login_page.js ***!
+  \**************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _components = __webpack_require__(/*! ../components */ 0);
+
+var _ = __webpack_require__(/*! ./ */ 1);
+
+__webpack_require__(/*! ./reset.scss */ 2);
+
+__webpack_require__(/*! ./login_page.scss */ 26);
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var LoginPage = function (_Component) {
+    _inherits(LoginPage, _Component);
+
+    function LoginPage(props) {
+        _classCallCheck(this, LoginPage);
+
+        var _this = _possibleConstructorReturn(this, (LoginPage.__proto__ || Object.getPrototypeOf(LoginPage)).call(this, props));
+
+        _this.el = props.el || document.createElement('div');
+        _this.el.classList.add('wrapper');
+
+        // // init components
+        _this.header = new _.Header();
+        _this.loginForm = new _components.LoginForm();
+        _this.footer = new _components.Footer();
+
+        return _this;
+    }
+
+    _createClass(LoginPage, [{
+        key: 'render',
+        value: function render() {
+
+            var content = document.createElement('div');
+            content.classList.add('content');
+            content.appendChild(this.header.update());
+
+            var main = document.createElement('main');
+            main.classList.add('main_loginPage');
+            main.appendChild(this.loginForm.update());
+
+            content.appendChild(main);
+            content.appendChild(this.footer.update());
+
+            return [content];
+        }
+    }]);
+
+    return LoginPage;
+}(_components.Component);
+
+exports.default = LoginPage;
+
+/***/ }),
+/* 26 */
+/*!****************************************!*\
+  !*** ./src/containers/login_page.scss ***!
+  \****************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /***/ (function(module, exports) {

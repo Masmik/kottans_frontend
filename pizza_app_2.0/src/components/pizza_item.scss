@@ -1,0 +1,33 @@
+@import "variables";
+
+figcaption {
+  display: grid;
+  align-items: center;
+  grid-gap: 15px;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+}
+.pizzaItemImg {
+  width: 100%;
+  padding-bottom: 15px;
+
+  border-radius: 5px 5px 0 0;
+
+  grid-column: span 2;
+}
+.pizzaItem {
+  margin-bottom: 12%;
+
+  cursor: pointer;
+
+  color: $text-color;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, .87);
+
+  font-size: 15px;
+  &:hover {
+    transition: 500ms linear;
+
+    color: $hover-text-color;
+  }
+}

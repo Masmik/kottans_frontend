@@ -15,7 +15,7 @@ export function realTimeClock() {
         sec = '0' + sec;
     }
 
-    let clockString = hours + ' : ' + min + ' : ' + sec;
 
-    return clockString;
+    return `${hours}:${min}:${sec}`;
+
 }
