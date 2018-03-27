@@ -1,0 +1,22 @@
+.registrationForm {
+  display: grid;
+  grid-template-columns: 1fr 1fr; }
+
+.inputGroup_login {
+  grid-column: span 2; }
+
+.inputGroup_password {
+  margin-right: 5px; }
+
+.inputGroup_phone {
+  grid-column: span 2; }
+
+.inputGroup_email {
+  grid-column: span 2; }
+
+.inputGroup__buttonGroup {
+  grid-column: span 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr; }
+
+/*# sourceMappingURL=registration_form.css.map */

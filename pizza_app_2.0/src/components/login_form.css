@@ -1,0 +1,13 @@
+.button {
+  display: inline-block;
+  padding-left: 60px;
+  padding-right: 60px;
+  line-height: 40px;
+  font-family: Ubuntu, sans-serif;
+  font-size: 1em; }
+  .button__signUp {
+    text-decoration: none;
+    line-height: 43px;
+    margin-left: 3%; }
+
+/*# sourceMappingURL=login_form.css.map */

@@ -1,12 +1,12 @@
 import {
     Component,
-    LoginForm,
+    RegistrationForm,
     Footer
 } from '../components';
-import {Header} from './';
-import './login_page.scss';
+import { Header } from './';
+import './registration_page.scss';
 
-class LoginPage extends Component {
+class RegistrationPage extends Component {
     constructor(props) {
         super(props);
         this.el = document.createElement('div');
@@ -15,7 +15,7 @@ class LoginPage extends Component {
 
         // // init components
         this.header = new Header();
-        this.loginForm = new LoginForm();
+        this.registrationForm = new RegistrationForm();
         this.footer = new Footer();
 
     }
@@ -28,7 +28,7 @@ class LoginPage extends Component {
 
         let main = document.createElement('main');
         main.classList.add('main_loginPage');
-        main.appendChild(this.loginForm.update());
+        main.appendChild(this.registrationForm.update());
 
         content.appendChild(main);
         content.appendChild(this.footer.update());
@@ -41,4 +41,4 @@ class LoginPage extends Component {
     }
 }
 
-export default LoginPage;
+export default RegistrationPage;

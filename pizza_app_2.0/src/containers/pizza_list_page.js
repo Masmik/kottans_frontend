@@ -5,13 +5,12 @@ import {
     Footer
 } from '../components';
 import {Header} from './';
-import './reset.scss';
 import './pizza_list_page.scss';
 
 class PizzaListPage extends Component {
     constructor(props) {
         super(props);
-        this.el = props.el || document.createElement('div');
+        this.el = document.createElement('div');
         this.el.classList.add('wrapper');
 
 

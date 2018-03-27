@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,iBAAkB;EAChB,OAAO,EAAE,IAAI;EACb,qBAAqB,EAAE,OAAO;;AAGhC,iBAAkB;EAChB,WAAW,EAAE,MAAM;;AAGrB,oBAAqB;EACnB,YAAY,EAAE,GAAG;;AAGnB,iBAAkB;EAChB,WAAW,EAAE,MAAM;;AAGrB,iBAAkB;EAChB,WAAW,EAAE,MAAM;;AAGrB,wBAAyB;EACvB,WAAW,EAAE,MAAM;EACnB,OAAO,EAAE,IAAI;EACb,qBAAqB,EAAE,OAAO",
+"sources": ["registration_form.scss"],
+"names": [],
+"file": "registration_form.css"
+}

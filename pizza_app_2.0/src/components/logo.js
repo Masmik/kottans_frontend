@@ -5,7 +5,7 @@ class Logo extends Component {
     constructor(props) {
         super(props);
         this.el = document.createElement('a');
-        this.el.setAttribute('href', '#');
+        this.el.setAttribute('href', '#/');
         this.el.classList.add('logo');
     }
 
