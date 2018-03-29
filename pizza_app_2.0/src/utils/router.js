@@ -19,7 +19,6 @@ class Router extends Component {
         };
 
         this.el = props.el;
-        // console.log('props', props);
 
         window.addEventListener('hashchange', () => this.handleUrlChange(this.path));
 
