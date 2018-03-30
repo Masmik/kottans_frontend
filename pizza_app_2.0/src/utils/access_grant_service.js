@@ -12,8 +12,8 @@ export function checkGrantAccess(currentAccess, routeConfigItem) {
                 return true;
             }
         }
-
     }
+
     // or if he does not deserve)))
     return false;
 }

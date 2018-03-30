@@ -1,5 +1,5 @@
 import { Component } from '../components';
-import { bindAll, checkGrantAccess } from '../utils';
+import { bindAll, checkGrantAccess, Auth, navigateTo } from '../utils';
 
 
 class Router extends Component {
@@ -15,7 +15,8 @@ class Router extends Component {
             currentPath: null,
             currentComponent: null,
             activeComponent: null,
-            currentUserAccess: ['userAuth']
+            currentUserAccess: Auth.currentUserAccess,
+            user: {}
         };
 
         this.el = props.el;
@@ -29,22 +30,40 @@ class Router extends Component {
         return window.location.hash.slice(1);
     }
 
+    logOut() {
+        this.state.user = {};
+    }
+
+
     handleUrlChange(path) {
         const { routesConfig, currentPath } = this.state;
 
+        this.state.currentUserAccess = Auth.currentUserAccess;
+
+        if (Auth.isExpired()) {
+            this.logOut();
+        }
         var nextRoute = routesConfig.find(({ href }) => href === this.path);
 
         if (this.path == '') {
             nextRoute = routesConfig.find(({ href }) => href === '/login');
         }
 
+        console.log(this.path);
+
+        if (this.path == '/logout') {
+            Auth.logOut();
+            navigateTo('/login');
+            return;
+        }
+
+
         if (checkGrantAccess(this.state.currentUserAccess, nextRoute)) {
             console.log('access granted')
         } else {
             console.log('access denied');
-            this.navigateTo('/login');
+            navigateTo('/login');
             return;
-
         }
 
         // var nextRoute = routesConfig.reduce((previousValue, currentValue, index, array) => {
@@ -64,12 +83,8 @@ class Router extends Component {
                 activeComponent: new nextRoute.component()
             })
         }
+        this.update();
     }
-
-    navigateTo(url) {
-        window.location.hash = url;
-    }
-
 
     render() {
         let { activeComponent } = this.state;

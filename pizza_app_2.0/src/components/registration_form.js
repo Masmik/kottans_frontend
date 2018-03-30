@@ -13,14 +13,24 @@ class RegistrationForm extends Component {
 
 
     render() {
-        const { storeList } = this.props;
+        const { storeList, registrationValidationErrors } = this.props;
 
         let storeListEl = '';
-
-        for (let store of storeList) {
-
-            storeListEl += `<option ${store.id == 17 ? 'selected' : ''} value="${store.id}">${store.name}</option>`
+        if (storeList.length > 0) {
+            for (let store of storeList) {
+                storeListEl += `<option ${store.id == 17 ? 'selected' : ''} value="${store.id}">${store.name}</option>`
+            }
         }
+
+        let errorsEl = '';
+        if (registrationValidationErrors.length > 0) {
+            errorsEl = '<ul>';
+            for (let error of registrationValidationErrors) {
+                errorsEl += `<li class="error_text">${error}</li>`
+            }
+            errorsEl += '</ul>';
+        }
+
 
         return `<div class="inputGroup inputGroup_login">
                     <label class="form__label" for="login">Login</label>
@@ -56,6 +66,8 @@ class RegistrationForm extends Component {
                     <input type="password" id="store_password" name="store_password" class="form__input loginForm__input_password" 
                    pattern=".{8,}">
                 </div>
+                
+                  ${errorsEl}
                 
                 <div class="inputGroup inputGroup__buttonGroup">
 		            <a href="#/login" class="button loginForm__button button__signIn">Sign in</a>

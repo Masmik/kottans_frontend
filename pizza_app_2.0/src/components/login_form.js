@@ -1,4 +1,4 @@
-import {Component} from './';
+import { Component } from './';
 import './login_form.scss';
 
 class LoginForm extends Component {
@@ -12,9 +12,19 @@ class LoginForm extends Component {
 
 
     render() {
+
+        const { loginValidationErrors } = this.props;
+
+        let errorsEl = '';
+        if (loginValidationErrors.length > 0) {
+            errorsEl = '<ul>';
+            errorsEl += `<li class="error_text">${loginValidationErrors}</li>`;
+            errorsEl += '</ul>';
+        }
+
         return `<div class="inputGroup">
-                    <label class="form__label" for="username">Login</label>
-                    <input type="text" id="username" name="username" class="form__input loginForm__input_name" 
+                    <label class="form__label" for="login">Login</label>
+                    <input type="text" id="login" name="login" class="form__input loginForm__input_name" 
                     maxlength="256" required>
                 </div>
                 <div class="inputGroup">
@@ -22,8 +32,8 @@ class LoginForm extends Component {
                     <input type="password" name="password" id="password" class="form__input loginForm__input_password" 
                     class="password" pattern=".{8,}" required>
                 </div>
+                 ${errorsEl}
                 <div class="inputGroup inputGroup__buttonGroup">
-		            <!--<a href="#/" class="button loginForm__button button__signIn">Sign in</a>-->
 		            <button type="submit" class="button loginForm__button button__signIn">Sign in</button>
 		            <a href="#/registration" class="button loginForm__button button__signUp"> Sign up</a>
 	            </div>`

@@ -10,7 +10,13 @@ class StoreApi {
         return fetch(BASE_API_URL + STORE_URL, {
             method: 'GET',
             headers: new Headers({ 'content-type': 'application/json' })
-        }).then(res => res.json());
+        }).then(res => {
+            if (res.ok) {
+                return res.json().then(answer => Promise.resolve({ answer, status: res.status }));
+            } else {
+                return res.json().then(answer => Promise.reject({ answer, status: res.status }));
+            }
+        });
     }
 }
 

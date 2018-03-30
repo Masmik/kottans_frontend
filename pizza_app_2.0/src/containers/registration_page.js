@@ -4,7 +4,7 @@ import {
     Footer
 } from '../components';
 import { Header } from './';
-import  { bindAll } from '../utils';
+import  { bindAll, Auth, navigateTo } from '../utils';
 import PizzaApi from '../api/pizza_api';
 import './registration_page.scss';
 
@@ -19,9 +19,10 @@ class RegistrationPage extends Component {
 
         this.state = {
             storeList: [],
-            login: '',
-            password: ''
+            registrationValidationErrors: []
         };
+
+        console.log('exp', Auth.isExpired());
 
         this.getStoreList();
 
@@ -43,15 +44,20 @@ class RegistrationPage extends Component {
             store_password: e.target.store_password.value
         };
 
-        PizzaApi.User.createUser(registrationObj);
-        this.updateState({ login: registrationObj.login, password: registrationObj.password });
-        console.log(this.state);
-
+        PizzaApi.User.createUser(registrationObj).then(resp => {
+            PizzaApi.User.loginUser(registrationObj).then(resp => {
+                Auth.token = resp.answer.token;
+                navigateTo('/');
+            })
+        }).catch(err => {
+            this.state.registrationValidationErrors = err.answer.validations;
+            this.update();
+        });
     }
 
     getStoreList() {
         PizzaApi.Store.getStoreList().then(res => {
-            this.state.storeList = res;
+            this.state.storeList = res.answer;
             this.update();
         });
     }

@@ -4,23 +4,25 @@ import {
     Footer
 } from '../components';
 import { Header } from './';
-import { AUTH_SERVICE } from '../utils';
-import { bindAll } from '../utils';
+import PizzaApi from '../api/pizza_api';
+import { bindAll, Auth, navigateTo } from '../utils';
 import './login_page.scss';
 
 class LoginPage extends Component {
     constructor(props) {
         super(props);
+        bindAll(this, 'handleAuthentication');
 
         this.state = {
             username: '',
-            password: ''
+            password: '',
+            loginValidationErrors: ''
         };
 
         this.el = document.createElement('div');
         this.el.classList.add('wrapper');
         this.el.addEventListener('submit', this.handleAuthentication);
-        bindAll(this, 'handleAuthentication');
+
 
         // // init components
         this.header = new Header();
@@ -30,12 +32,19 @@ class LoginPage extends Component {
 
     handleAuthentication(e) {
         e.preventDefault();
+        let loginObj = {
+            login: e.target.login.value,
+            password: e.target.password.value
+        };
 
-        // const userName = e.target.username.value;
-        // const password = e.target.password.value;
-        //
-        // AUTH_SERVICE.login(userName, password);
-
+        PizzaApi.User.loginUser(loginObj).then(resp => {
+            console.log(resp);
+            Auth.token = resp.answer.token;
+            navigateTo('/');
+        }).catch(err => {
+            this.state.loginValidationErrors = err.answer.error;
+            this.update();
+        });
 
     }
 
@@ -48,7 +57,7 @@ class LoginPage extends Component {
 
         let main = document.createElement('main');
         main.classList.add('main_loginPage');
-        main.appendChild(this.loginForm.update());
+        main.appendChild(this.loginForm.update(this.state));
 
         content.appendChild(main);
         content.appendChild(this.footer.update());

@@ -4,17 +4,30 @@ import './login.scss';
 class LogIn extends Component {
     constructor(props) {
         super(props);
-        this.el = document.createElement('a');
-        this.el.setAttribute('href', '#/login');
+        this.el = document.createElement('div');
         this.el.classList.add('logInBlock');
-        this.el.setAttribute('type', 'button');
     }
 
     render() {
-        return `<i class="fa fa-sign-in" aria-hidden="true"></i>
-                Sign in / Sign up`;
-    }
 
+        const { userName } = this.props;
+
+        let userProfile = '';
+
+        if (userName) {
+            userProfile = `<a type="button" href="#/profile" >${userName}</a>
+                &nbsp;/&nbsp;
+                <a type="button" href="#/logout">Log out</a>`
+        } else {
+            userProfile = `<a type="button" href="#/login" >Sign in</a>
+                &nbsp;/&nbsp; 
+                <a type="button" href="#/registration">Sign up</a>`
+        }
+
+        return `<i class="fa fa-sign-in" aria-hidden="true"></i>
+                ${userProfile}
+                `;
+    }
 }
 
 export default LogIn;

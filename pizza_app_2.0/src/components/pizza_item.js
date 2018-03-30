@@ -12,7 +12,6 @@ class PizzaItem extends Component {
 
     render() {
         const {items} = this.props;
-        console.log(items);
 
         let pizzaItemRender = items.map(item => {
             return `<figure class="pizzaItem">
