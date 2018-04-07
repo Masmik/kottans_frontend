@@ -15,7 +15,8 @@ class CreatePizzaPage extends Component {
         bindAll(this, 'getPizzaIngredients');
 
         this.state = {
-            ingredients: []
+            ingredients: [],
+            tags: []
         };
 
         this.el = document.createElement('div');
@@ -27,6 +28,7 @@ class CreatePizzaPage extends Component {
         this.createPizzaContainer = new PizzaComponent();
         this.footer = new Footer();
 
+
         this.getPizzaIngredients();
         this.getPizzaTags();
     }
@@ -35,7 +37,6 @@ class CreatePizzaPage extends Component {
     getPizzaIngredients() {
         return PizzaApi.Pizza.getPizzaIngredient(Auth.token).then(resp => {
             this.state.ingredients = resp.answer.results;
-            console.log('ingr', this.state.ingredients);
             this.update();
         }).catch(err => {
             console.log(err);
@@ -44,7 +45,8 @@ class CreatePizzaPage extends Component {
 
     getPizzaTags() {
         return PizzaApi.Pizza.getPizzaTag(Auth.token).then(resp => {
-            console.log("tags", resp.answer.results);
+            this.state.tags = resp.answer.results;
+            this.update();
         }).catch(err => {
             console.log(err);
         });

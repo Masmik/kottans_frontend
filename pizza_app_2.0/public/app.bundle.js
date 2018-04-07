@@ -260,6 +260,24 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 /***/ }),
 /* 2 */
+/*!********************************!*\
+  !*** ./src/api/pizza/const.js ***!
+  \********************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var BASE_API_URL = exports.BASE_API_URL = 'https://pizza-tele.ga/api/v1';
+var DOMAIN = exports.DOMAIN = 'https://pizza-tele.ga/';
+
+/***/ }),
+/* 3 */
 /*!*********************************!*\
   !*** ./src/containers/index.js ***!
   \*********************************/
@@ -322,7 +340,7 @@ Object.defineProperty(exports, 'CreatePizzaPage', {
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
-/* 3 */
+/* 4 */
 /*!******************************!*\
   !*** ./src/api/pizza_api.js ***!
   \******************************/
@@ -356,23 +374,6 @@ var PizzaApi = function PizzaApi() {
 exports.default = PizzaApi = new PizzaApi();
 
 /***/ }),
-/* 4 */
-/*!********************************!*\
-  !*** ./src/api/pizza/const.js ***!
-  \********************************/
-/*! dynamic exports provided */
-/*! all exports used */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-var BASE_API_URL = exports.BASE_API_URL = 'https://pizza-tele.ga/api/v1';
-
-/***/ }),
 /* 5 */
 /*!*******************************************!*\
   !*** ./src/containers/pizza_list_page.js ***!
@@ -392,7 +393,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _components = __webpack_require__(/*! ../components */ 0);
 
-var _ = __webpack_require__(/*! ./ */ 2);
+var _ = __webpack_require__(/*! ./ */ 3);
 
 __webpack_require__(/*! ./pizza_list_page.scss */ 47);
 
@@ -506,9 +507,9 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _components = __webpack_require__(/*! ../components */ 0);
 
-var _ = __webpack_require__(/*! ./ */ 2);
+var _ = __webpack_require__(/*! ./ */ 3);
 
-var _pizza_api = __webpack_require__(/*! ../api/pizza_api */ 3);
+var _pizza_api = __webpack_require__(/*! ../api/pizza_api */ 4);
 
 var _pizza_api2 = _interopRequireDefault(_pizza_api);
 
@@ -614,11 +615,11 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _components = __webpack_require__(/*! ../components */ 0);
 
-var _ = __webpack_require__(/*! ./ */ 2);
+var _ = __webpack_require__(/*! ./ */ 3);
 
 var _utils = __webpack_require__(/*! ../utils */ 1);
 
-var _pizza_api = __webpack_require__(/*! ../api/pizza_api */ 3);
+var _pizza_api = __webpack_require__(/*! ../api/pizza_api */ 4);
 
 var _pizza_api2 = _interopRequireDefault(_pizza_api);
 
@@ -740,9 +741,9 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _components = __webpack_require__(/*! ../components */ 0);
 
-var _ = __webpack_require__(/*! ./ */ 2);
+var _ = __webpack_require__(/*! ./ */ 3);
 
-var _pizza_api = __webpack_require__(/*! ../api/pizza_api */ 3);
+var _pizza_api = __webpack_require__(/*! ../api/pizza_api */ 4);
 
 var _pizza_api2 = _interopRequireDefault(_pizza_api);
 
@@ -769,7 +770,8 @@ var CreatePizzaPage = function (_Component) {
         (0, _utils.bindAll)(_this, 'getPizzaIngredients');
 
         _this.state = {
-            ingredients: []
+            ingredients: [],
+            tags: []
         };
 
         _this.el = document.createElement('div');
@@ -793,7 +795,6 @@ var CreatePizzaPage = function (_Component) {
 
             return _pizza_api2.default.Pizza.getPizzaIngredient(_utils.Auth.token).then(function (resp) {
                 _this2.state.ingredients = resp.answer.results;
-                console.log('ingr', _this2.state.ingredients);
                 _this2.update();
             }).catch(function (err) {
                 console.log(err);
@@ -802,8 +803,11 @@ var CreatePizzaPage = function (_Component) {
     }, {
         key: 'getPizzaTags',
         value: function getPizzaTags() {
+            var _this3 = this;
+
             return _pizza_api2.default.Pizza.getPizzaTag(_utils.Auth.token).then(function (resp) {
-                console.log("tags", resp.answer.results);
+                _this3.state.tags = resp.answer.results;
+                _this3.update();
             }).catch(function (err) {
                 console.log(err);
             });
@@ -2024,6 +2028,8 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _ = __webpack_require__(/*! ./ */ 0);
 
+var _const = __webpack_require__(/*! ../api/pizza/const */ 2);
+
 __webpack_require__(/*! ./pizza_component.scss */ 36);
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -2042,16 +2048,26 @@ var PizzaComponent = function (_Component) {
 
         _this.el = document.createElement('section');
         _this.el.classList.add('pizzaComponent__Section');
+        _this.el.classList.add('pizza__Section');
         return _this;
     }
 
     _createClass(PizzaComponent, [{
         key: 'render',
         value: function render() {
-            var ingredients = this.props.ingredients;
+            var _props = this.props,
+                ingredients = _props.ingredients,
+                tags = _props.tags;
 
+            console.log("ingredients", ingredients);
 
-            return '<form>\n                <label for="pizza_name">Pizza name</label>\n                <input type="text" id="pizza_name" name="pizza_name" class="pizzaComponent__name">\n                <p class="pizzaComponent__description">Pizza description</p>\n                <section class="pizzaComponent__tags">\n                <h3>Tags</h3>\n                </section>\n                <section class="pizzaComponent__ingredients">\n                <h3>ingredients</h3>\n                </section>\n                </form>';
+            return '<form id="create">\n                <label class="pizzaComponent__label pizzaComponent__label_name" for="pizza_name">Pizza name</label>\n                <input type="text" id="pizza_name" name="pizza_name" class="form__input pizzaComponent__name">\n                \n                <label class="pizzaComponent__label" for="pizza_description">Pizza description</label>\n                <input type="text" id="pizza_description" name="pizza_description" class="form__input pizzaComponent__description">\n      \n                <p class="pizzaComponent__description">Pizza description</p>\n                <section class="pizzaComponent__size">\n                <h3>Size</h3>\n                <label for="30">30</label>\n                <input type="radio" name="size" id="30">\n                 <label for="45">45</label>\n                <input type="radio" name="size" id="45">\n                 <label for="60">60</label>\n                <input type="radio" name="size" id="60">\n                </section>\n                <section class="pizzaComponent__tags">\n                <h3>Tags</h3>\n                \n                ' + tags.reduce(function (html, tag) {
+                html += '\n                                <label title="' + tag.name + '">\n                                ' + tag.name + '\n                                    <input type="checkbox">\n                                </label>\n                            ';
+                return html;
+            }, "") + '\n                </section>\n                <section class="pizzaComponent__ingredients">\n                <h3>ingredients</h3>\n                  ' + ingredients.reduce(function (html, ingredient) {
+                html += '\n                                <label title="' + ingredient.name + '">\n                                 <img src="' + _const.DOMAIN + '/' + ingredient.image_url + '" alt="' + ingredient.name + '">\n                                    <input type="checkbox">\n                                </label>\n                            ';
+                return html;
+            }, "") + '\n                </section>\n                </form>';
         }
     }]);
 
@@ -2107,6 +2123,7 @@ var PizzaCanvas = function (_Component) {
 
         _this.el = document.createElement('section');
         _this.el.classList.add('pizzaCanvas__Section');
+        _this.el.classList.add('pizza__Section');
         return _this;
     }
 
@@ -2280,7 +2297,7 @@ exports.Store_Api = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _const = __webpack_require__(/*! ./const */ 4);
+var _const = __webpack_require__(/*! ./const */ 2);
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -2334,7 +2351,7 @@ exports.User_Api = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _const = __webpack_require__(/*! ./const */ 4);
+var _const = __webpack_require__(/*! ./const */ 2);
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -2441,7 +2458,7 @@ exports.Pizza_Api = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _const = __webpack_require__(/*! ./const */ 4);
+var _const = __webpack_require__(/*! ./const */ 2);
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 

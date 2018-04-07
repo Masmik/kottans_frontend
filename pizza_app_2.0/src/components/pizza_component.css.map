@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "",
-"sources": [],
+"mappings": "AAAA,qBAAqB;EACnB,KAAK,EAAE,GAAG;;AAEZ,2BAA2B;EACzB,aAAa,EAAE,EAAE",
+"sources": ["pizza_component.scss"],
 "names": [],
 "file": "pizza_component.css"
 }

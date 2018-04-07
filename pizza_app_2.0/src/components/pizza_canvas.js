@@ -5,6 +5,7 @@ class PizzaCanvas extends Component {
         super(props);
         this.el = document.createElement('section');
         this.el.classList.add('pizzaCanvas__Section');
+        this.el.classList.add('pizza__Section');
     }
 
     render() {

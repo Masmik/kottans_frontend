@@ -139,7 +139,7 @@ table {
     text-align: center;
     display: block;
     margin: 0 auto;
-    padding: 20px 30px; }
+    padding: 15px 30px; }
 figcaption {
   display: grid;
   align-items: center;
@@ -271,6 +271,11 @@ input[type=text]:focus, input:focus, input[type]:focus {
   grid-column: span 2;
   display: grid;
   grid-template-columns: 1fr 1fr; }
+.pizzaComponent__name {
+  width: 80%; }
+
+.pizzaComponent__label_name {
+  margin-bottom: 3%; }
 header {
   display: grid;
   width: 100%;
@@ -318,6 +323,13 @@ footer {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 30px; }
+
+.pizza__Section {
+  box-sizing: border-box;
+  border: solid 1px #000;
+  border-radius: 5px;
+  padding: 3% 11% 3% 11%;
+  color: #c29c5b; }
 html {
   height: 100%;
   box-sizing: border-box; }
