@@ -15,13 +15,13 @@ class LogIn extends Component {
         let userProfile = '';
 
         if (userName) {
-            userProfile = `<a type="button" href="#/profile" >${userName}</a>
+            userProfile = `<a type="button" class="login__item" href="#/profile" >${userName}</a>
                 &nbsp;/&nbsp;
-                <a type="button" href="#/logout">Log out</a>`
+                <a type="button" class="login__item" href="#/logout">Log out</a>`
         } else {
-            userProfile = `<a type="button" href="#/login" >Sign in</a>
+            userProfile = `<a type="button" class="login__item" href="#/login" >Sign in</a>
                 &nbsp;/&nbsp; 
-                <a type="button" href="#/registration">Sign up</a>`
+                <a type="button" class="login__item" href="#/registration">Sign up</a>`
         }
 
         return `<i class="fa fa-sign-in" aria-hidden="true"></i>

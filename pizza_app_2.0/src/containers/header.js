@@ -21,10 +21,10 @@ class Header extends Component {
         this.logo = new Logo();
         this.login = new LogIn();
 
-        // this.getUserData();
+        // this.getPizzaData();
     }
 
-    // getUserData() {
+    // getPizzaData() {
     //     // return PizzaApi.User.getUserInfo(Auth.token)
     //     //     .then(userData => {
     //     //         console.log(userData)

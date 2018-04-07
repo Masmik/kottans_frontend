@@ -9,6 +9,12 @@
   .logInBlock:hover {
     transition: 500ms linear;
     color: #c29c5b; }
+  .logInBlock:hover > .login__item {
+    transition: 500ms linear;
+    color: #c29c5b; }
+
+.login__item {
+  color: #fef1e0; }
 
 @media screen and (min-width: 768px) and (max-width: 959px) {
   .logInBlock {

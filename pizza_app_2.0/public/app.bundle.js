@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 8);
+/******/ 	return __webpack_require__(__webpack_require__.s = 9);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -79,7 +79,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _component = __webpack_require__(/*! ./component */ 16);
+var _component = __webpack_require__(/*! ./component */ 17);
 
 Object.defineProperty(exports, 'Component', {
   enumerable: true,
@@ -88,7 +88,7 @@ Object.defineProperty(exports, 'Component', {
   }
 });
 
-var _clock = __webpack_require__(/*! ./clock */ 17);
+var _clock = __webpack_require__(/*! ./clock */ 18);
 
 Object.defineProperty(exports, 'Clock', {
   enumerable: true,
@@ -97,7 +97,7 @@ Object.defineProperty(exports, 'Clock', {
   }
 });
 
-var _logo = __webpack_require__(/*! ./logo */ 19);
+var _logo = __webpack_require__(/*! ./logo */ 20);
 
 Object.defineProperty(exports, 'Logo', {
   enumerable: true,
@@ -106,7 +106,7 @@ Object.defineProperty(exports, 'Logo', {
   }
 });
 
-var _login = __webpack_require__(/*! ./login */ 21);
+var _login = __webpack_require__(/*! ./login */ 22);
 
 Object.defineProperty(exports, 'LogIn', {
   enumerable: true,
@@ -115,7 +115,7 @@ Object.defineProperty(exports, 'LogIn', {
   }
 });
 
-var _button_new_pizza = __webpack_require__(/*! ./button_new_pizza */ 23);
+var _button_new_pizza = __webpack_require__(/*! ./button_new_pizza */ 24);
 
 Object.defineProperty(exports, 'Btn', {
   enumerable: true,
@@ -124,7 +124,7 @@ Object.defineProperty(exports, 'Btn', {
   }
 });
 
-var _pizza_item = __webpack_require__(/*! ./pizza_item */ 25);
+var _pizza_item = __webpack_require__(/*! ./pizza_item */ 26);
 
 Object.defineProperty(exports, 'PizzaItem', {
   enumerable: true,
@@ -133,7 +133,7 @@ Object.defineProperty(exports, 'PizzaItem', {
   }
 });
 
-var _footer = __webpack_require__(/*! ./footer */ 27);
+var _footer = __webpack_require__(/*! ./footer */ 28);
 
 Object.defineProperty(exports, 'Footer', {
   enumerable: true,
@@ -142,7 +142,7 @@ Object.defineProperty(exports, 'Footer', {
   }
 });
 
-var _login_form = __webpack_require__(/*! ./login_form */ 29);
+var _login_form = __webpack_require__(/*! ./login_form */ 30);
 
 Object.defineProperty(exports, 'LoginForm', {
   enumerable: true,
@@ -151,12 +151,30 @@ Object.defineProperty(exports, 'LoginForm', {
   }
 });
 
-var _registration_form = __webpack_require__(/*! ./registration_form */ 31);
+var _registration_form = __webpack_require__(/*! ./registration_form */ 32);
 
 Object.defineProperty(exports, 'RegistrationForm', {
   enumerable: true,
   get: function get() {
     return _interopRequireDefault(_registration_form).default;
+  }
+});
+
+var _pizza_component = __webpack_require__(/*! ./pizza_component */ 35);
+
+Object.defineProperty(exports, 'PizzaComponent', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_pizza_component).default;
+  }
+});
+
+var _pizza_canvas = __webpack_require__(/*! ./pizza_canvas */ 37);
+
+Object.defineProperty(exports, 'PizzaCanvas', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_pizza_canvas).default;
   }
 });
 
@@ -178,7 +196,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _utils = __webpack_require__(/*! ./utils */ 10);
+var _utils = __webpack_require__(/*! ./utils */ 11);
 
 Object.defineProperty(exports, 'bindAll', {
   enumerable: true,
@@ -187,7 +205,7 @@ Object.defineProperty(exports, 'bindAll', {
   }
 });
 
-var _real_time = __webpack_require__(/*! ./real_time */ 11);
+var _real_time = __webpack_require__(/*! ./real_time */ 12);
 
 Object.defineProperty(exports, 'realTimeClock', {
   enumerable: true,
@@ -202,7 +220,7 @@ Object.defineProperty(exports, 'clock', {
   }
 });
 
-var _access_grant_service = __webpack_require__(/*! ./access_grant_service */ 12);
+var _access_grant_service = __webpack_require__(/*! ./access_grant_service */ 13);
 
 Object.defineProperty(exports, 'checkGrantAccess', {
   enumerable: true,
@@ -211,7 +229,7 @@ Object.defineProperty(exports, 'checkGrantAccess', {
   }
 });
 
-var _auth = __webpack_require__(/*! ./auth */ 13);
+var _auth = __webpack_require__(/*! ./auth */ 14);
 
 Object.defineProperty(exports, 'Auth', {
   enumerable: true,
@@ -220,7 +238,7 @@ Object.defineProperty(exports, 'Auth', {
   }
 });
 
-var _navigateTo = __webpack_require__(/*! ./navigateTo */ 14);
+var _navigateTo = __webpack_require__(/*! ./navigateTo */ 15);
 
 Object.defineProperty(exports, 'navigateTo', {
   enumerable: true,
@@ -229,7 +247,7 @@ Object.defineProperty(exports, 'navigateTo', {
   }
 });
 
-var _router = __webpack_require__(/*! ./router */ 15);
+var _router = __webpack_require__(/*! ./router */ 16);
 
 Object.defineProperty(exports, 'Router', {
   enumerable: true,
@@ -256,7 +274,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _pizza_list_page = __webpack_require__(/*! ./pizza_list_page */ 3);
+var _pizza_list_page = __webpack_require__(/*! ./pizza_list_page */ 5);
 
 Object.defineProperty(exports, 'PizzaListPage', {
   enumerable: true,
@@ -265,7 +283,7 @@ Object.defineProperty(exports, 'PizzaListPage', {
   }
 });
 
-var _header = __webpack_require__(/*! ./header */ 35);
+var _header = __webpack_require__(/*! ./header */ 39);
 
 Object.defineProperty(exports, 'Header', {
   enumerable: true,
@@ -274,7 +292,7 @@ Object.defineProperty(exports, 'Header', {
   }
 });
 
-var _login_page = __webpack_require__(/*! ./login_page */ 4);
+var _login_page = __webpack_require__(/*! ./login_page */ 6);
 
 Object.defineProperty(exports, 'LoginPage', {
   enumerable: true,
@@ -292,10 +310,70 @@ Object.defineProperty(exports, 'RegistrationPage', {
   }
 });
 
+var _create_pizza_page = __webpack_require__(/*! ./create_pizza_page */ 8);
+
+Object.defineProperty(exports, 'CreatePizzaPage', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_create_pizza_page).default;
+  }
+});
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
 /* 3 */
+/*!******************************!*\
+  !*** ./src/api/pizza_api.js ***!
+  \******************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _store = __webpack_require__(/*! ./pizza/store */ 41);
+
+var _user = __webpack_require__(/*! ./pizza/user */ 42);
+
+var _pizza = __webpack_require__(/*! ./pizza/pizza */ 43);
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var PizzaApi = function PizzaApi() {
+    _classCallCheck(this, PizzaApi);
+
+    this.Store = _store.Store_Api;
+    this.User = _user.User_Api;
+    this.Pizza = _pizza.Pizza_Api;
+};
+
+exports.default = PizzaApi = new PizzaApi();
+
+/***/ }),
+/* 4 */
+/*!********************************!*\
+  !*** ./src/api/pizza/const.js ***!
+  \********************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var BASE_API_URL = exports.BASE_API_URL = 'https://pizza-tele.ga/api/v1';
+
+/***/ }),
+/* 5 */
 /*!*******************************************!*\
   !*** ./src/containers/pizza_list_page.js ***!
   \*******************************************/
@@ -316,7 +394,7 @@ var _components = __webpack_require__(/*! ../components */ 0);
 
 var _ = __webpack_require__(/*! ./ */ 2);
 
-__webpack_require__(/*! ./pizza_list_page.scss */ 41);
+__webpack_require__(/*! ./pizza_list_page.scss */ 47);
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -409,7 +487,7 @@ var PizzaListPage = function (_Component) {
 exports.default = PizzaListPage;
 
 /***/ }),
-/* 4 */
+/* 6 */
 /*!**************************************!*\
   !*** ./src/containers/login_page.js ***!
   \**************************************/
@@ -430,13 +508,13 @@ var _components = __webpack_require__(/*! ../components */ 0);
 
 var _ = __webpack_require__(/*! ./ */ 2);
 
-var _pizza_api = __webpack_require__(/*! ../api/pizza_api */ 5);
+var _pizza_api = __webpack_require__(/*! ../api/pizza_api */ 3);
 
 var _pizza_api2 = _interopRequireDefault(_pizza_api);
 
 var _utils = __webpack_require__(/*! ../utils */ 1);
 
-__webpack_require__(/*! ./login_page.scss */ 39);
+__webpack_require__(/*! ./login_page.scss */ 44);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -485,7 +563,6 @@ var LoginPage = function (_Component) {
             };
 
             _pizza_api2.default.User.loginUser(loginObj).then(function (resp) {
-                console.log(resp);
                 _utils.Auth.token = resp.answer.token;
                 (0, _utils.navigateTo)('/');
             }).catch(function (err) {
@@ -518,54 +595,6 @@ var LoginPage = function (_Component) {
 exports.default = LoginPage;
 
 /***/ }),
-/* 5 */
-/*!******************************!*\
-  !*** ./src/api/pizza_api.js ***!
-  \******************************/
-/*! dynamic exports provided */
-/*! all exports used */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _store = __webpack_require__(/*! ./pizza/store */ 37);
-
-var _user = __webpack_require__(/*! ./pizza/user */ 38);
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var PizzaApi = function PizzaApi() {
-    _classCallCheck(this, PizzaApi);
-
-    this.Store = _store.Store_Api;
-    this.User = _user.User_Api;
-};
-
-exports.default = PizzaApi = new PizzaApi();
-
-/***/ }),
-/* 6 */
-/*!********************************!*\
-  !*** ./src/api/pizza/const.js ***!
-  \********************************/
-/*! dynamic exports provided */
-/*! all exports used */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-var BASE_API_URL = exports.BASE_API_URL = 'https://pizza-tele.ga/api/v1';
-
-/***/ }),
 /* 7 */
 /*!*********************************************!*\
   !*** ./src/containers/registration_page.js ***!
@@ -589,11 +618,11 @@ var _ = __webpack_require__(/*! ./ */ 2);
 
 var _utils = __webpack_require__(/*! ../utils */ 1);
 
-var _pizza_api = __webpack_require__(/*! ../api/pizza_api */ 5);
+var _pizza_api = __webpack_require__(/*! ../api/pizza_api */ 3);
 
 var _pizza_api2 = _interopRequireDefault(_pizza_api);
 
-__webpack_require__(/*! ./registration_page.scss */ 40);
+__webpack_require__(/*! ./registration_page.scss */ 45);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -693,6 +722,119 @@ exports.default = RegistrationPage;
 
 /***/ }),
 /* 8 */
+/*!*********************************************!*\
+  !*** ./src/containers/create_pizza_page.js ***!
+  \*********************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _components = __webpack_require__(/*! ../components */ 0);
+
+var _ = __webpack_require__(/*! ./ */ 2);
+
+var _pizza_api = __webpack_require__(/*! ../api/pizza_api */ 3);
+
+var _pizza_api2 = _interopRequireDefault(_pizza_api);
+
+var _utils = __webpack_require__(/*! ../utils */ 1);
+
+__webpack_require__(/*! ./create_pizza_page.scss */ 46);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var CreatePizzaPage = function (_Component) {
+    _inherits(CreatePizzaPage, _Component);
+
+    function CreatePizzaPage(props) {
+        _classCallCheck(this, CreatePizzaPage);
+
+        var _this = _possibleConstructorReturn(this, (CreatePizzaPage.__proto__ || Object.getPrototypeOf(CreatePizzaPage)).call(this, props));
+
+        (0, _utils.bindAll)(_this, 'getPizzaIngredients');
+
+        _this.state = {
+            ingredients: []
+        };
+
+        _this.el = document.createElement('div');
+        _this.el.classList.add('wrapper');
+
+        // // init components
+        _this.header = new _.Header();
+        _this.pizzaCanvas = new _components.PizzaCanvas();
+        _this.createPizzaContainer = new _components.PizzaComponent();
+        _this.footer = new _components.Footer();
+
+        _this.getPizzaIngredients();
+        _this.getPizzaTags();
+        return _this;
+    }
+
+    _createClass(CreatePizzaPage, [{
+        key: 'getPizzaIngredients',
+        value: function getPizzaIngredients() {
+            var _this2 = this;
+
+            return _pizza_api2.default.Pizza.getPizzaIngredient(_utils.Auth.token).then(function (resp) {
+                _this2.state.ingredients = resp.answer.results;
+                console.log('ingr', _this2.state.ingredients);
+                _this2.update();
+            }).catch(function (err) {
+                console.log(err);
+            });
+        }
+    }, {
+        key: 'getPizzaTags',
+        value: function getPizzaTags() {
+            return _pizza_api2.default.Pizza.getPizzaTag(_utils.Auth.token).then(function (resp) {
+                console.log("tags", resp.answer.results);
+            }).catch(function (err) {
+                console.log(err);
+            });
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+
+            var content = document.createElement('div');
+            content.classList.add('content');
+            content.appendChild(this.header.update());
+
+            var main = document.createElement('main');
+            main.classList.add('main_createPizzaPage');
+            main.appendChild(this.pizzaCanvas.update());
+            main.appendChild(this.createPizzaContainer.update(this.state));
+
+            content.appendChild(main);
+            content.appendChild(this.footer.update());
+
+            return [content];
+        }
+    }]);
+
+    return CreatePizzaPage;
+}(_components.Component);
+
+exports.default = CreatePizzaPage;
+
+/***/ }),
+/* 9 */
 /*!********************!*\
   !*** ./src/app.js ***!
   \********************/
@@ -703,11 +845,11 @@ exports.default = RegistrationPage;
 "use strict";
 
 
-__webpack_require__(/*! ../src/containers/reset.scss */ 9);
+__webpack_require__(/*! ../src/containers/reset.scss */ 10);
 
 var _utils = __webpack_require__(/*! ../src/utils */ 1);
 
-var _routes_config = __webpack_require__(/*! ../src/utils/routes_config */ 34);
+var _routes_config = __webpack_require__(/*! ../src/utils/routes_config */ 38);
 
 var _routes_config2 = _interopRequireDefault(_routes_config);
 
@@ -727,7 +869,7 @@ var router = new _utils.Router({ el: document.getElementById("root"), routesConf
 // w.update();
 
 /***/ }),
-/* 9 */
+/* 10 */
 /*!***********************************!*\
   !*** ./src/containers/reset.scss ***!
   \***********************************/
@@ -738,7 +880,7 @@ var router = new _utils.Router({ el: document.getElementById("root"), routesConf
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 10 */
+/* 11 */
 /*!****************************!*\
   !*** ./src/utils/utils.js ***!
   \****************************/
@@ -770,7 +912,7 @@ var bindAll = exports.bindAll = function bindAll(context) {
 };
 
 /***/ }),
-/* 11 */
+/* 12 */
 /*!********************************!*\
   !*** ./src/utils/real_time.js ***!
   \********************************/
@@ -806,7 +948,7 @@ function realTimeClock() {
 }
 
 /***/ }),
-/* 12 */
+/* 13 */
 /*!*******************************************!*\
   !*** ./src/utils/access_grant_service.js ***!
   \*******************************************/
@@ -884,7 +1026,7 @@ function checkGrantAccess(currentAccess, routeConfigItem) {
 }
 
 /***/ }),
-/* 13 */
+/* 14 */
 /*!***************************!*\
   !*** ./src/utils/auth.js ***!
   \***************************/
@@ -965,7 +1107,7 @@ var AuthUser = function () {
 var Auth = exports.Auth = new AuthUser();
 
 /***/ }),
-/* 14 */
+/* 15 */
 /*!*********************************!*\
   !*** ./src/utils/navigateTo.js ***!
   \*********************************/
@@ -985,7 +1127,7 @@ function navigateTo(url) {
 }
 
 /***/ }),
-/* 15 */
+/* 16 */
 /*!*****************************!*\
   !*** ./src/utils/router.js ***!
   \*****************************/
@@ -1132,7 +1274,7 @@ var Router = function (_Component) {
 exports.default = Router;
 
 /***/ }),
-/* 16 */
+/* 17 */
 /*!*************************************!*\
   !*** ./src/components/component.js ***!
   \*************************************/
@@ -1222,7 +1364,7 @@ var Component = function () {
 exports.default = Component;
 
 /***/ }),
-/* 17 */
+/* 18 */
 /*!*********************************!*\
   !*** ./src/components/clock.js ***!
   \*********************************/
@@ -1243,7 +1385,7 @@ var _ = __webpack_require__(/*! ./ */ 0);
 
 var _utils = __webpack_require__(/*! ../utils */ 1);
 
-__webpack_require__(/*! ./clock.scss */ 18);
+__webpack_require__(/*! ./clock.scss */ 19);
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -1291,7 +1433,7 @@ var Clock = function (_Component) {
 exports.default = Clock;
 
 /***/ }),
-/* 18 */
+/* 19 */
 /*!***********************************!*\
   !*** ./src/components/clock.scss ***!
   \***********************************/
@@ -1302,7 +1444,7 @@ exports.default = Clock;
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 19 */
+/* 20 */
 /*!********************************!*\
   !*** ./src/components/logo.js ***!
   \********************************/
@@ -1321,7 +1463,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _ = __webpack_require__(/*! ./ */ 0);
 
-__webpack_require__(/*! ./logo.scss */ 20);
+__webpack_require__(/*! ./logo.scss */ 21);
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -1356,7 +1498,7 @@ var Logo = function (_Component) {
 exports.default = Logo;
 
 /***/ }),
-/* 20 */
+/* 21 */
 /*!**********************************!*\
   !*** ./src/components/logo.scss ***!
   \**********************************/
@@ -1367,7 +1509,7 @@ exports.default = Logo;
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 21 */
+/* 22 */
 /*!*********************************!*\
   !*** ./src/components/login.js ***!
   \*********************************/
@@ -1386,7 +1528,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _ = __webpack_require__(/*! ./ */ 0);
 
-__webpack_require__(/*! ./login.scss */ 22);
+__webpack_require__(/*! ./login.scss */ 23);
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -1416,9 +1558,9 @@ var LogIn = function (_Component) {
             var userProfile = '';
 
             if (userName) {
-                userProfile = '<a type="button" href="#/profile" >' + userName + '</a>\n                &nbsp;/&nbsp;\n                <a type="button" href="#/logout">Log out</a>';
+                userProfile = '<a type="button" class="login__item" href="#/profile" >' + userName + '</a>\n                &nbsp;/&nbsp;\n                <a type="button" class="login__item" href="#/logout">Log out</a>';
             } else {
-                userProfile = '<a type="button" href="#/login" >Sign in</a>\n                &nbsp;/&nbsp; \n                <a type="button" href="#/registration">Sign up</a>';
+                userProfile = '<a type="button" class="login__item" href="#/login" >Sign in</a>\n                &nbsp;/&nbsp; \n                <a type="button" class="login__item" href="#/registration">Sign up</a>';
             }
 
             return '<i class="fa fa-sign-in" aria-hidden="true"></i>\n                ' + userProfile + '\n                ';
@@ -1431,7 +1573,7 @@ var LogIn = function (_Component) {
 exports.default = LogIn;
 
 /***/ }),
-/* 22 */
+/* 23 */
 /*!***********************************!*\
   !*** ./src/components/login.scss ***!
   \***********************************/
@@ -1442,7 +1584,7 @@ exports.default = LogIn;
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 23 */
+/* 24 */
 /*!********************************************!*\
   !*** ./src/components/button_new_pizza.js ***!
   \********************************************/
@@ -1461,7 +1603,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _ = __webpack_require__(/*! ./ */ 0);
 
-__webpack_require__(/*! ./button_new_pizza.scss */ 24);
+__webpack_require__(/*! ./button_new_pizza.scss */ 25);
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -1477,7 +1619,8 @@ var Btn = function (_Component) {
 
         var _this = _possibleConstructorReturn(this, (Btn.__proto__ || Object.getPrototypeOf(Btn)).call(this, props));
 
-        _this.el = document.createElement('button');
+        _this.el = document.createElement('a');
+        _this.el.setAttribute('href', '#/create');
         _this.el.classList.add('button');
         _this.el.classList.add('button_add');
 
@@ -1497,7 +1640,7 @@ var Btn = function (_Component) {
 exports.default = Btn;
 
 /***/ }),
-/* 24 */
+/* 25 */
 /*!**********************************************!*\
   !*** ./src/components/button_new_pizza.scss ***!
   \**********************************************/
@@ -1508,7 +1651,7 @@ exports.default = Btn;
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 25 */
+/* 26 */
 /*!**************************************!*\
   !*** ./src/components/pizza_item.js ***!
   \**************************************/
@@ -1527,7 +1670,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _ = __webpack_require__(/*! ./ */ 0);
 
-__webpack_require__(/*! ./pizza_item.scss */ 26);
+__webpack_require__(/*! ./pizza_item.scss */ 27);
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -1569,7 +1712,7 @@ var PizzaItem = function (_Component) {
 exports.default = PizzaItem;
 
 /***/ }),
-/* 26 */
+/* 27 */
 /*!****************************************!*\
   !*** ./src/components/pizza_item.scss ***!
   \****************************************/
@@ -1580,7 +1723,7 @@ exports.default = PizzaItem;
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 27 */
+/* 28 */
 /*!**********************************!*\
   !*** ./src/components/footer.js ***!
   \**********************************/
@@ -1599,7 +1742,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _ = __webpack_require__(/*! ./ */ 0);
 
-__webpack_require__(/*! ./footer.scss */ 28);
+__webpack_require__(/*! ./footer.scss */ 29);
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -1632,7 +1775,7 @@ var Footer = function (_Component) {
 exports.default = Footer;
 
 /***/ }),
-/* 28 */
+/* 29 */
 /*!************************************!*\
   !*** ./src/components/footer.scss ***!
   \************************************/
@@ -1643,7 +1786,7 @@ exports.default = Footer;
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 29 */
+/* 30 */
 /*!**************************************!*\
   !*** ./src/components/login_form.js ***!
   \**************************************/
@@ -1662,7 +1805,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _ = __webpack_require__(/*! ./ */ 0);
 
-__webpack_require__(/*! ./login_form.scss */ 30);
+__webpack_require__(/*! ./login_form.scss */ 31);
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -1693,7 +1836,7 @@ var LoginForm = function (_Component) {
 
             var errorsEl = '';
             if (loginValidationErrors.length > 0) {
-                errorsEl = '<ul>';
+                errorsEl = '<ul class="error_block">';
                 errorsEl += '<li class="error_text">' + loginValidationErrors + '</li>';
                 errorsEl += '</ul>';
             }
@@ -1708,7 +1851,7 @@ var LoginForm = function (_Component) {
 exports.default = LoginForm;
 
 /***/ }),
-/* 30 */
+/* 31 */
 /*!****************************************!*\
   !*** ./src/components/login_form.scss ***!
   \****************************************/
@@ -1719,7 +1862,7 @@ exports.default = LoginForm;
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 31 */
+/* 32 */
 /*!*********************************************!*\
   !*** ./src/components/registration_form.js ***!
   \*********************************************/
@@ -1738,9 +1881,9 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _ = __webpack_require__(/*! ./ */ 0);
 
-__webpack_require__(/*! ./form.scss */ 32);
+__webpack_require__(/*! ./form.scss */ 33);
 
-__webpack_require__(/*! ./registration_form.scss */ 33);
+__webpack_require__(/*! ./registration_form.scss */ 34);
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -1840,7 +1983,7 @@ var RegistrationForm = function (_Component) {
 exports.default = RegistrationForm;
 
 /***/ }),
-/* 32 */
+/* 33 */
 /*!**********************************!*\
   !*** ./src/components/form.scss ***!
   \**********************************/
@@ -1851,7 +1994,7 @@ exports.default = RegistrationForm;
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 33 */
+/* 34 */
 /*!***********************************************!*\
   !*** ./src/components/registration_form.scss ***!
   \***********************************************/
@@ -1862,7 +2005,126 @@ exports.default = RegistrationForm;
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 34 */
+/* 35 */
+/*!*******************************************!*\
+  !*** ./src/components/pizza_component.js ***!
+  \*******************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _ = __webpack_require__(/*! ./ */ 0);
+
+__webpack_require__(/*! ./pizza_component.scss */ 36);
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var PizzaComponent = function (_Component) {
+    _inherits(PizzaComponent, _Component);
+
+    function PizzaComponent(props) {
+        _classCallCheck(this, PizzaComponent);
+
+        var _this = _possibleConstructorReturn(this, (PizzaComponent.__proto__ || Object.getPrototypeOf(PizzaComponent)).call(this, props));
+
+        _this.el = document.createElement('section');
+        _this.el.classList.add('pizzaComponent__Section');
+        return _this;
+    }
+
+    _createClass(PizzaComponent, [{
+        key: 'render',
+        value: function render() {
+            var ingredients = this.props.ingredients;
+
+
+            return '<form>\n                <label for="pizza_name">Pizza name</label>\n                <input type="text" id="pizza_name" name="pizza_name" class="pizzaComponent__name">\n                <p class="pizzaComponent__description">Pizza description</p>\n                <section class="pizzaComponent__tags">\n                <h3>Tags</h3>\n                </section>\n                <section class="pizzaComponent__ingredients">\n                <h3>ingredients</h3>\n                </section>\n                </form>';
+        }
+    }]);
+
+    return PizzaComponent;
+}(_.Component);
+
+exports.default = PizzaComponent;
+
+/***/ }),
+/* 36 */
+/*!*********************************************!*\
+  !*** ./src/components/pizza_component.scss ***!
+  \*********************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 37 */
+/*!****************************************!*\
+  !*** ./src/components/pizza_canvas.js ***!
+  \****************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _ = __webpack_require__(/*! ./ */ 0);
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var PizzaCanvas = function (_Component) {
+    _inherits(PizzaCanvas, _Component);
+
+    function PizzaCanvas(props) {
+        _classCallCheck(this, PizzaCanvas);
+
+        var _this = _possibleConstructorReturn(this, (PizzaCanvas.__proto__ || Object.getPrototypeOf(PizzaCanvas)).call(this, props));
+
+        _this.el = document.createElement('section');
+        _this.el.classList.add('pizzaCanvas__Section');
+        return _this;
+    }
+
+    _createClass(PizzaCanvas, [{
+        key: 'render',
+        value: function render() {
+
+            return '<div class="canvasImage"></div>';
+        }
+    }]);
+
+    return PizzaCanvas;
+}(_.Component);
+
+exports.default = PizzaCanvas;
+
+/***/ }),
+/* 38 */
 /*!************************************!*\
   !*** ./src/utils/routes_config.js ***!
   \************************************/
@@ -1877,17 +2139,21 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _pizza_list_page = __webpack_require__(/*! ../containers/pizza_list_page */ 3);
+var _pizza_list_page = __webpack_require__(/*! ../containers/pizza_list_page */ 5);
 
 var _pizza_list_page2 = _interopRequireDefault(_pizza_list_page);
 
-var _login_page = __webpack_require__(/*! ../containers/login_page */ 4);
+var _login_page = __webpack_require__(/*! ../containers/login_page */ 6);
 
 var _login_page2 = _interopRequireDefault(_login_page);
 
 var _registration_page = __webpack_require__(/*! ../containers/registration_page */ 7);
 
 var _registration_page2 = _interopRequireDefault(_registration_page);
+
+var _create_pizza_page = __webpack_require__(/*! ../containers/create_pizza_page */ 8);
+
+var _create_pizza_page2 = _interopRequireDefault(_create_pizza_page);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1903,12 +2169,16 @@ var routesConfig = [{
     component: _registration_page2.default,
     href: '/registration',
     access: []
+}, {
+    component: _create_pizza_page2.default,
+    href: '/create',
+    access: ['userAuth']
 }];
 
 exports.default = routesConfig;
 
 /***/ }),
-/* 35 */
+/* 39 */
 /*!**********************************!*\
   !*** ./src/containers/header.js ***!
   \**********************************/
@@ -1929,7 +2199,7 @@ var _components = __webpack_require__(/*! ../components */ 0);
 
 var _utils = __webpack_require__(/*! ../utils */ 1);
 
-__webpack_require__(/*! ./header.scss */ 36);
+__webpack_require__(/*! ./header.scss */ 40);
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -1956,11 +2226,11 @@ var Header = function (_Component) {
         _this.logo = new _components.Logo();
         _this.login = new _components.LogIn();
 
-        // this.getUserData();
+        // this.getPizzaData();
         return _this;
     }
 
-    // getUserData() {
+    // getPizzaData() {
     //     // return PizzaApi.User.getUserInfo(Auth.token)
     //     //     .then(userData => {
     //     //         console.log(userData)
@@ -1981,7 +2251,7 @@ exports.default = Header;
 // this.updateState({ userData })
 
 /***/ }),
-/* 36 */
+/* 40 */
 /*!************************************!*\
   !*** ./src/containers/header.scss ***!
   \************************************/
@@ -1992,7 +2262,7 @@ exports.default = Header;
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 37 */
+/* 41 */
 /*!********************************!*\
   !*** ./src/api/pizza/store.js ***!
   \********************************/
@@ -2010,7 +2280,7 @@ exports.Store_Api = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _const = __webpack_require__(/*! ./const */ 6);
+var _const = __webpack_require__(/*! ./const */ 4);
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -2046,7 +2316,7 @@ var StoreApi = function () {
 var Store_Api = exports.Store_Api = new StoreApi();
 
 /***/ }),
-/* 38 */
+/* 42 */
 /*!*******************************!*\
   !*** ./src/api/pizza/user.js ***!
   \*******************************/
@@ -2064,7 +2334,7 @@ exports.User_Api = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _const = __webpack_require__(/*! ./const */ 6);
+var _const = __webpack_require__(/*! ./const */ 4);
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -2153,7 +2423,80 @@ var UserApi = function () {
 var User_Api = exports.User_Api = new UserApi();
 
 /***/ }),
-/* 39 */
+/* 43 */
+/*!********************************!*\
+  !*** ./src/api/pizza/pizza.js ***!
+  \********************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.Pizza_Api = undefined;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _const = __webpack_require__(/*! ./const */ 4);
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var PizzaApi = function () {
+    function PizzaApi() {
+        _classCallCheck(this, PizzaApi);
+    }
+
+    _createClass(PizzaApi, [{
+        key: 'getPizzaIngredient',
+        value: function getPizzaIngredient(token) {
+            var INGREDIENT_URL = '/ingredient/list';
+            return fetch(_const.BASE_API_URL + INGREDIENT_URL, {
+                method: 'GET',
+                headers: new Headers({ 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + token })
+            }).then(function (res) {
+                if (res.ok) {
+                    return res.json().then(function (answer) {
+                        return Promise.resolve({ answer: answer, status: res.status });
+                    });
+                } else {
+                    return res.json().then(function (answer) {
+                        return Promise.reject({ answer: answer, status: res.status });
+                    });
+                }
+            });
+        }
+    }, {
+        key: 'getPizzaTag',
+        value: function getPizzaTag(token) {
+            var Tag_URL = '/tag/list';
+            return fetch(_const.BASE_API_URL + Tag_URL, {
+                method: 'GET',
+                headers: new Headers({ 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + token })
+            }).then(function (res) {
+                if (res.ok) {
+                    return res.json().then(function (answer) {
+                        return Promise.resolve({ answer: answer, status: res.status });
+                    });
+                } else {
+                    return res.json().then(function (answer) {
+                        return Promise.reject({ answer: answer, status: res.status });
+                    });
+                }
+            });
+        }
+    }]);
+
+    return PizzaApi;
+}();
+
+var Pizza_Api = exports.Pizza_Api = new PizzaApi();
+
+/***/ }),
+/* 44 */
 /*!****************************************!*\
   !*** ./src/containers/login_page.scss ***!
   \****************************************/
@@ -2164,7 +2507,7 @@ var User_Api = exports.User_Api = new UserApi();
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 40 */
+/* 45 */
 /*!***********************************************!*\
   !*** ./src/containers/registration_page.scss ***!
   \***********************************************/
@@ -2175,7 +2518,18 @@ var User_Api = exports.User_Api = new UserApi();
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 41 */
+/* 46 */
+/*!***********************************************!*\
+  !*** ./src/containers/create_pizza_page.scss ***!
+  \***********************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 47 */
 /*!*********************************************!*\
   !*** ./src/containers/pizza_list_page.scss ***!
   \*********************************************/

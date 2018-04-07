@@ -17,7 +17,7 @@ class LoginForm extends Component {
 
         let errorsEl = '';
         if (loginValidationErrors.length > 0) {
-            errorsEl = '<ul>';
+            errorsEl = '<ul class="error_block">';
             errorsEl += `<li class="error_text">${loginValidationErrors}</li>`;
             errorsEl += '</ul>';
         }

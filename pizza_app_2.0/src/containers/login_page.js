@@ -38,14 +38,12 @@ class LoginPage extends Component {
         };
 
         PizzaApi.User.loginUser(loginObj).then(resp => {
-            console.log(resp);
             Auth.token = resp.answer.token;
             navigateTo('/');
         }).catch(err => {
             this.state.loginValidationErrors = err.answer.error;
             this.update();
         });
-
     }
 
 

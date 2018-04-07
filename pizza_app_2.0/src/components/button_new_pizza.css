@@ -16,9 +16,10 @@
   .button:hover {
     background: #a61715;
     box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.25), inset 0 0 6px #da3b2c, inset 0 80px 80px -40px #dd4330, 1px 1px 3px rgba(0, 0, 0, 0.75);
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.75), 0 0 40px #ffffff; }
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.75), 0 0 40px #fff; }
   .button.button_add {
-    display: none;
+    text-align: center;
+    display: block;
     margin: 0 auto;
     padding: 20px 30px; }
 

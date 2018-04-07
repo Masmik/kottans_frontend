@@ -95,6 +95,12 @@ table {
   .logInBlock:hover {
     transition: 500ms linear;
     color: #c29c5b; }
+  .logInBlock:hover > .login__item {
+    transition: 500ms linear;
+    color: #c29c5b; }
+
+.login__item {
+  color: #fef1e0; }
 
 @media screen and (min-width: 768px) and (max-width: 959px) {
   .logInBlock {
@@ -128,9 +134,10 @@ table {
   .button:hover {
     background: #a61715;
     box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.25), inset 0 0 6px #da3b2c, inset 0 80px 80px -40px #dd4330, 1px 1px 3px rgba(0, 0, 0, 0.75);
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.75), 0 0 40px #ffffff; }
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.75), 0 0 40px #fff; }
   .button.button_add {
-    display: none;
+    text-align: center;
+    display: block;
     margin: 0 auto;
     padding: 20px 30px; }
 figcaption {
@@ -205,6 +212,14 @@ footer {
     text-decoration: none;
     line-height: 43px;
     margin-left: 3%; }
+
+.error_block {
+  display: block; }
+
+.error_text {
+  color: #da3b2c;
+  text-align: center;
+  padding-bottom: 20px; }
 .inputGroup {
   margin: 0 0 2em;
   padding: 0;
@@ -299,6 +314,10 @@ footer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 500px));
   justify-content: center; }
+.main_createPizzaPage {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px; }
 html {
   height: 100%;
   box-sizing: border-box; }

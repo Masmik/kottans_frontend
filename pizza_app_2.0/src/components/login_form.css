@@ -10,4 +10,12 @@
     line-height: 43px;
     margin-left: 3%; }
 
+.error_block {
+  display: block; }
+
+.error_text {
+  color: #da3b2c;
+  text-align: center;
+  padding-bottom: 20px; }
+
 /*# sourceMappingURL=login_form.css.map */

@@ -7,6 +7,8 @@ export { default as PizzaItem } from './pizza_item';
 export { default as Footer } from './footer';
 export { default as LoginForm } from './login_form';
 export { default as RegistrationForm } from './registration_form';
+export { default as PizzaComponent } from './pizza_component';
+export { default as PizzaCanvas } from './pizza_canvas';
 
 
 
