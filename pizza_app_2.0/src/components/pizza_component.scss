@@ -1,6 +1,66 @@
-.pizzaComponent__name{
-  width: 80%;
-}
-.pizzaComponent__label_name{
+@import "variables";
+
+.pizzaComponent__label_name {
   margin-bottom: 3%;
 }
+
+.pizzaComponent__title {
+  margin-bottom: 15px;
+}
+
+.pizzaComponent__input {
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  margin-top: 10px;
+  border-color: $text-color;
+}
+
+.form__input_pizzaComponent {
+  padding-left: 0;
+}
+
+.pizzaComponent__section {
+  margin-top: 20px;
+}
+
+::placeholder { /* Most modern browsers support this now. */
+  color: $hover-text-color;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 14px;
+}
+
+.pizzaComponent__size input[type="radio"], .pizzaComponent__tags input[type="checkbox"] {
+  display: none;
+}
+
+.pizzaComponent__size label, .pizzaComponent__tags label {
+  display: inline-block;
+  background-color: $text-color;
+  padding: 5px 25px;
+  margin-right: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.pizzaComponent__tags input[type="checkbox"]:checked + label {
+  background-color: #da3b2c;
+  color: $text-color;
+}
+
+.pizzaComponent__size input[type="radio"]:checked + label {
+  background-color: #da3b2c;
+  color: $text-color;
+}
+
+.pizzaComponent__order {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.price_sum{
+  color: #da3b2c;
+  font-size: 18px;
+}
+

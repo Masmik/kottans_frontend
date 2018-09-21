@@ -12,7 +12,7 @@ import './create_pizza_page.scss';
 class CreatePizzaPage extends Component {
     constructor(props) {
         super(props);
-        bindAll(this, 'getPizzaIngredients');
+        bindAll(this, 'getPizzaIngredients', 'getPizzaTags', 'loadDependencies');
 
         this.state = {
             ingredients: [],
@@ -29,15 +29,24 @@ class CreatePizzaPage extends Component {
         this.footer = new Footer();
 
 
-        this.getPizzaIngredients();
-        this.getPizzaTags();
+        this.loadDependencies();
+
+
+    }
+
+    loadDependencies() {
+        Promise.all([this.getPizzaIngredients(),this.getPizzaTags()]).then(() => {
+                this.update()
+        }).catch(err => {
+            console.log(err);
+        });
     }
 
 
     getPizzaIngredients() {
         return PizzaApi.Pizza.getPizzaIngredient(Auth.token).then(resp => {
             this.state.ingredients = resp.answer.results;
-            this.update();
+            // this.update();
         }).catch(err => {
             console.log(err);
         });
@@ -46,7 +55,7 @@ class CreatePizzaPage extends Component {
     getPizzaTags() {
         return PizzaApi.Pizza.getPizzaTag(Auth.token).then(resp => {
             this.state.tags = resp.answer.results;
-            this.update();
+            // this.update();
         }).catch(err => {
             console.log(err);
         });

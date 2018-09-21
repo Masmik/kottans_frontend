@@ -14,7 +14,8 @@ class Component {
         this._render();
     }
 
-    componentReceivedProps(nextProps) {}
+    componentReceivedProps(nextProps) {
+    }
 
     update(nextProps) {
         if (typeof nextProps == 'undefined') {
@@ -44,9 +45,11 @@ class Component {
         return this.el;
     }
 
-    render() {}
+    render() {
+    }
 
-    afterRender() {}
+    afterRender() {
+    }
 }
 
 export default Component;

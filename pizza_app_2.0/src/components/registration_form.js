@@ -24,7 +24,7 @@ class RegistrationForm extends Component {
 
         let errorsEl = '';
         if (registrationValidationErrors.length > 0) {
-            errorsEl = '<ul>';
+            errorsEl = '<ul class="validation__block">';
             for (let error of registrationValidationErrors) {
                 errorsEl += `<li class="error_text">${error}</li>`
             }
@@ -57,7 +57,7 @@ class RegistrationForm extends Component {
                 </div>
                   <div class="inputGroup inputGroup_store">
                     <label class="form__label" for="store">Store</label>
-                    <select name="store">
+                    <select name="store" class="form__input form__input_select">
                         ${storeListEl}
                     </select>
                 </div>

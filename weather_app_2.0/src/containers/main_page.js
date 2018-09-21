@@ -123,6 +123,7 @@ class MainPage extends Component {
 
     searchWeatherButton(e) {
         e.preventDefault();
+        console.log('showweather',this.state);
         this.getWeatherForecast();
     }
 

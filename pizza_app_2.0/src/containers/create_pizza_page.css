@@ -4,10 +4,6 @@
   grid-gap: 30px; }
 
 .pizza__Section {
-  box-sizing: border-box;
-  border: solid 1px #000;
-  border-radius: 5px;
-  padding: 3% 11% 3% 11%;
   color: #c29c5b; }
 
 /*# sourceMappingURL=create_pizza_page.css.map */

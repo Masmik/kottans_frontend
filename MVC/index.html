@@ -2,9 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+    <!--<script src="cat_clicker_v1.js"></script>-->
+
 </head>
 <body>
-$END$
+<!--<div class="wrapper">-->
+    <!--<div class="button_block"></div>-->
+    <!--<div class="cats_block"></div>-->
+<!--</div>-->
+
+<ul id="cat-list"></ul>
+<div id="cat">
+    <h2 id="cat-name"></h2>
+    <div id="cat-count"></div>
+    <img id="cat-img" src="" alt="cute cat">
+</div>
+<button class="admin">Admin</button>
+<form  class="adminForm" action="">
+    <label for="name"> Name
+        <input type="text" id="name">
+    </label>
+    <label for="imgUrl"> imgUrl
+        <input type="text" id="imgUrl">
+    </label>
+    <label for="clickNum"> #clicks
+        <input type="text" id="clickNum">
+    </label>
+    <button class="cancel">Cancel</button>
+    <button class="save">Save</button>
+</form>
+<script src="cat_clicker_v2.js"></script>
 </body>
 </html>

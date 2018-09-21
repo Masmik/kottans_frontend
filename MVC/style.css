@@ -1,14 +1,12 @@
 .wrapper {
   display: block;
-  margin: 2%;
-}
+  margin: 2%; }
 
 .cat__image {
   width: 400px;
   vertical-align: top;
   height: 300px;
-  background-size: cover;
-}
+  background-size: cover; }
 
 .cat__block {
   display: inline-block;
@@ -16,8 +14,7 @@
   font-weight: 600;
   text-align: center;
   margin-left: 450px;
-  margin-top: 10px;
-}
+  margin-top: 10px; }
 
 .cat__button {
   display: inline-block;
@@ -26,10 +23,8 @@
   margin-left: 10px;
   border-radius: 5px;
   background-color: rgba(95, 16, 44, 0.9);
-  color: #fff;
+  color: #fff; }
+  .cat__button:hover {
+    background-color: #5f102c; }
 
-  &:hover {
-    background-color: rgba(95, 16, 44, 1);
-  }
-}
-
+/*# sourceMappingURL=style.css.map */
